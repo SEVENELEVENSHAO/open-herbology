@@ -1,0 +1,1287 @@
+[
+  {
+    "ID": 2,
+    "Alias": "紫苏子",
+    "Medicine": "苏子"
+  },
+  {
+    "ID": 3,
+    "Alias": "赤茯苓",
+    "Medicine": "茯苓"
+  },
+  {
+    "ID": 4,
+    "Alias": "橘皮",
+    "Medicine": "陈皮"
+  },
+  {
+    "ID": 5,
+    "Alias": "芍药",
+    "Medicine": "白芍"
+  },
+  {
+    "ID": 6,
+    "Alias": "生地",
+    "Medicine": "生地黄"
+  },
+  {
+    "ID": 7,
+    "Alias": "荆芥穗",
+    "Medicine": "荆芥"
+  },
+  {
+    "ID": 8,
+    "Alias": "白扁豆",
+    "Medicine": "扁豆"
+  },
+  {
+    "ID": 9,
+    "Alias": "银花",
+    "Medicine": "金银花"
+  },
+  {
+    "ID": 10,
+    "Alias": "炙甘草",
+    "Medicine": "甘草"
+  },
+  {
+    "ID": 11,
+    "Alias": "竹叶",
+    "Medicine": "淡竹叶"
+  },
+  {
+    "ID": 12,
+    "Alias": "生甘草",
+    "Medicine": "甘草"
+  },
+  {
+    "ID": 13,
+    "Alias": "苇根",
+    "Medicine": "芦根"
+  },
+  {
+    "ID": 14,
+    "Alias": "干葛",
+    "Medicine": "葛根"
+  },
+  {
+    "ID": 15,
+    "Alias": "丹皮",
+    "Medicine": "牡丹皮"
+  },
+  {
+    "ID": 16,
+    "Alias": "贝母",
+    "Medicine": "川贝母"
+  },
+  {
+    "ID": 17,
+    "Alias": "枳壳",
+    "Medicine": "枳实"
+  },
+  {
+    "ID": 18,
+    "Alias": "紫苏叶",
+    "Medicine": "紫苏"
+  },
+  {
+    "ID": 19,
+    "Alias": "熟附子",
+    "Medicine": "附子"
+  },
+  {
+    "ID": 20,
+    "Alias": "煨生姜",
+    "Medicine": "生姜"
+  },
+  {
+    "ID": 21,
+    "Alias": "生葱白",
+    "Medicine": "葱白"
+  },
+  {
+    "ID": 22,
+    "Alias": "苏薄荷",
+    "Medicine": "薄荷"
+  },
+  {
+    "ID": 23,
+    "Alias": "东白薇",
+    "Medicine": "白薇"
+  },
+  {
+    "ID": 24,
+    "Alias": "青木香",
+    "Medicine": "木香"
+  },
+  {
+    "ID": 25,
+    "Alias": "干地黄",
+    "Medicine": "生地黄"
+  },
+  {
+    "ID": 26,
+    "Alias": "新豉",
+    "Medicine": "淡豆豉"
+  },
+  {
+    "ID": 27,
+    "Alias": "豆豉",
+    "Medicine": "淡豆豉"
+  },
+  {
+    "ID": 28,
+    "Alias": "生麦门冬",
+    "Medicine": "麦门冬"
+  },
+  {
+    "ID": 29,
+    "Alias": "牡丹",
+    "Medicine": "牡丹皮"
+  },
+  {
+    "ID": 30,
+    "Alias": "玄胡",
+    "Medicine": "延胡索"
+  },
+  {
+    "ID": 31,
+    "Alias": "麻子仁",
+    "Medicine": "胡麻仁"
+  },
+  {
+    "ID": 32,
+    "Alias": "麻仁",
+    "Medicine": "胡麻仁"
+  },
+  {
+    "ID": 33,
+    "Alias": "当归梢",
+    "Medicine": "当归"
+  },
+  {
+    "ID": 34,
+    "Alias": "麦冬",
+    "Medicine": "麦门冬"
+  },
+  {
+    "ID": 35,
+    "Alias": "细生地黄",
+    "Medicine": "生地黄"
+  },
+  {
+    "ID": 36,
+    "Alias": "细生地",
+    "Medicine": "生地黄"
+  },
+  {
+    "ID": 38,
+    "Alias": "生大黄",
+    "Medicine": "大黄"
+  },
+  {
+    "ID": 39,
+    "Alias": "大戟",
+    "Medicine": "京大戟"
+  },
+  {
+    "ID": 40,
+    "Alias": "黑丑",
+    "Medicine": "牵牛子"
+  },
+  {
+    "ID": 41,
+    "Alias": "黑牵牛",
+    "Medicine": "牵牛子"
+  },
+  {
+    "ID": 42,
+    "Alias": "淡竹茹",
+    "Medicine": "竹茹"
+  },
+  {
+    "ID": 43,
+    "Alias": "仙半夏",
+    "Medicine": "半夏"
+  },
+  {
+    "ID": 44,
+    "Alias": "赤茯苓",
+    "Medicine": "茯苓"
+  },
+  {
+    "ID": 45,
+    "Alias": "青子芩",
+    "Medicine": "黄芩"
+  },
+  {
+    "ID": 46,
+    "Alias": "生枳壳",
+    "Medicine": "枳实"
+  },
+  {
+    "ID": 47,
+    "Alias": "广陈皮",
+    "Medicine": "陈皮"
+  },
+  {
+    "ID": 48,
+    "Alias": "白芍药",
+    "Medicine": "白芍"
+  },
+  {
+    "ID": 49,
+    "Alias": "山栀",
+    "Medicine": "栀子"
+  },
+  {
+    "ID": 50,
+    "Alias": "熟地",
+    "Medicine": "熟地黄"
+  },
+  {
+    "ID": 51,
+    "Alias": "薄荷叶",
+    "Medicine": "薄荷"
+  },
+  {
+    "ID": 52,
+    "Alias": "椒目",
+    "Medicine": "蜀椒"
+  },
+  {
+    "ID": 53,
+    "Alias": "茯苓皮",
+    "Medicine": "茯苓"
+  },
+  {
+    "ID": 54,
+    "Alias": "元参",
+    "Medicine": "玄参"
+  },
+  {
+    "ID": 55,
+    "Alias": "竹叶心",
+    "Medicine": "淡竹叶"
+  },
+  {
+    "ID": 56,
+    "Alias": "生石膏",
+    "Medicine": "石膏"
+  },
+  {
+    "ID": 57,
+    "Alias": "小生地",
+    "Medicine": "生地黄"
+  },
+  {
+    "ID": 58,
+    "Alias": "真川连",
+    "Medicine": "黄连"
+  },
+  {
+    "ID": 59,
+    "Alias": "真怀生地",
+    "Medicine": "生地黄"
+  },
+  {
+    "ID": 60,
+    "Alias": "香豉",
+    "Medicine": "淡豆豉"
+  },
+  {
+    "ID": 61,
+    "Alias": "花粉",
+    "Medicine": "天花粉"
+  },
+  {
+    "ID": 62,
+    "Alias": "川大黄",
+    "Medicine": "大黄"
+  },
+  {
+    "ID": 63,
+    "Alias": "朴硝",
+    "Medicine": "芒硝"
+  },
+  {
+    "ID": 64,
+    "Alias": "山栀子仁",
+    "Medicine": "栀子"
+  },
+  {
+    "ID": 65,
+    "Alias": "赤芍药",
+    "Medicine": "赤芍"
+  },
+  {
+    "ID": 66,
+    "Alias": "当归尾",
+    "Medicine": "当归"
+  },
+  {
+    "ID": 67,
+    "Alias": "甘草节",
+    "Medicine": "甘草"
+  },
+  {
+    "ID": 68,
+    "Alias": "皂角刺",
+    "Medicine": "皂荚"
+  },
+  {
+    "ID": 69,
+    "Alias": "紫背天葵子",
+    "Medicine": "天葵子"
+  },
+  {
+    "ID": 70,
+    "Alias": "生甘草梢",
+    "Medicine": "甘草"
+  },
+  {
+    "ID": 71,
+    "Alias": "白茯苓",
+    "Medicine": "茯苓"
+  },
+  {
+    "ID": 72,
+    "Alias": "石莲肉",
+    "Medicine": "莲子"
+  },
+  {
+    "ID": 73,
+    "Alias": "苇茎",
+    "Medicine": "芦根"
+  },
+  {
+    "ID": 74,
+    "Alias": "当归身",
+    "Medicine": "当归"
+  },
+  {
+    "ID": 75,
+    "Alias": "山栀仁",
+    "Medicine": "栀子"
+  },
+  {
+    "ID": 76,
+    "Alias": "藿香叶",
+    "Medicine": "藿香"
+  },
+  {
+    "ID": 77,
+    "Alias": "官桂",
+    "Medicine": "肉桂"
+  },
+  {
+    "ID": 78,
+    "Alias": "辰砂",
+    "Medicine": "朱砂"
+  },
+  {
+    "ID": 79,
+    "Alias": "荷梗",
+    "Medicine": "荷叶"
+  },
+  {
+    "ID": 80,
+    "Alias": "西瓜翠衣",
+    "Medicine": "西瓜皮"
+  },
+  {
+    "ID": 81,
+    "Alias": "黑附子",
+    "Medicine": "附子"
+  },
+  {
+    "ID": 82,
+    "Alias": "鹿角胶",
+    "Medicine": "鹿角"
+  },
+  {
+    "ID": 83,
+    "Alias": "地龙",
+    "Medicine": "蚯蚓"
+  },
+  {
+    "ID": 84,
+    "Alias": "制草乌",
+    "Medicine": "川乌"
+  },
+  {
+    "ID": 85,
+    "Alias": "归身",
+    "Medicine": "当归"
+  },
+  {
+    "ID": 86,
+    "Alias": "莲子肉",
+    "Medicine": "莲子"
+  },
+  {
+    "ID": 87,
+    "Alias": "缩砂仁",
+    "Medicine": "砂仁"
+  },
+  {
+    "ID": 88,
+    "Alias": "怀山药",
+    "Medicine": "山药"
+  },
+  {
+    "ID": 89,
+    "Alias": "川黄连",
+    "Medicine": "黄连"
+  },
+  {
+    "ID": 90,
+    "Alias": "白豆蔻仁",
+    "Medicine": "白豆蔻"
+  },
+  {
+    "ID": 91,
+    "Alias": "莲肉",
+    "Medicine": "莲子"
+  },
+  {
+    "ID": 92,
+    "Alias": "芡实粉",
+    "Medicine": "芡实"
+  },
+  {
+    "ID": 93,
+    "Alias": "生黄芪",
+    "Medicine": "黄芪"
+  },
+  {
+    "ID": 94,
+    "Alias": "枸杞",
+    "Medicine": "枸杞子"
+  },
+  {
+    "ID": 95,
+    "Alias": "茯神",
+    "Medicine": "茯苓"
+  },
+  {
+    "ID": 96,
+    "Alias": "龙眼肉",
+    "Medicine": "桂圆肉"
+  },
+  {
+    "ID": 97,
+    "Alias": "川当归",
+    "Medicine": "当归"
+  },
+  {
+    "ID": 98,
+    "Alias": "桂心",
+    "Medicine": "肉桂"
+  },
+  {
+    "ID": 99,
+    "Alias": "川续断",
+    "Medicine": "续断"
+  },
+  {
+    "ID": 100,
+    "Alias": "芥穗",
+    "Medicine": "荆芥"
+  },
+  {
+    "ID": 101,
+    "Alias": "黑芥穗",
+    "Medicine": "荆芥"
+  },
+  {
+    "ID": 102,
+    "Alias": "炙黄芪",
+    "Medicine": "黄芪"
+  },
+  {
+    "ID": 103,
+    "Alias": "姜",
+    "Medicine": "生姜"
+  },
+  {
+    "ID": 104,
+    "Alias": "干山药",
+    "Medicine": "山药"
+  },
+  {
+    "ID": 105,
+    "Alias": "龟板胶",
+    "Medicine": "龟板"
+  },
+  {
+    "ID": 106,
+    "Alias": "大熟地",
+    "Medicine": "熟地黄"
+  },
+  {
+    "ID": 107,
+    "Alias": "北沙参",
+    "Medicine": "沙参"
+  },
+  {
+    "ID": 108,
+    "Alias": "生白芍",
+    "Medicine": "白芍"
+  },
+  {
+    "ID": 109,
+    "Alias": "川牛膝",
+    "Medicine": "牛膝"
+  },
+  {
+    "ID": 110,
+    "Alias": "制附子",
+    "Medicine": "附子"
+  },
+  {
+    "ID": 111,
+    "Alias": "莲须",
+    "Medicine": "莲子"
+  },
+  {
+    "ID": 112,
+    "Alias": "菖蒲",
+    "Medicine": "石菖蒲"
+  },
+  {
+    "ID": 113,
+    "Alias": "龟甲",
+    "Medicine": "龟板"
+  },
+  {
+    "ID": 114,
+    "Alias": "萸肉",
+    "Medicine": "山茱萸"
+  },
+  {
+    "ID": 115,
+    "Alias": "生杭芍",
+    "Medicine": "白芍"
+  },
+  {
+    "ID": 116,
+    "Alias": "海螵蛸",
+    "Medicine": "桑螵蛸"
+  },
+  {
+    "ID": 117,
+    "Alias": "生山药",
+    "Medicine": "山药"
+  },
+  {
+    "ID": 118,
+    "Alias": "生龙骨",
+    "Medicine": "龙骨"
+  },
+  {
+    "ID": 119,
+    "Alias": "生牡蛎",
+    "Medicine": "牡蛎"
+  },
+  {
+    "ID": 120,
+    "Alias": "天冬",
+    "Medicine": "天门冬"
+  },
+  {
+    "ID": 121,
+    "Alias": "胆星",
+    "Medicine": "天南星"
+  },
+  {
+    "ID": 122,
+    "Alias": "橘红",
+    "Medicine": "陈皮"
+  },
+  {
+    "ID": 123,
+    "Alias": "远志肉",
+    "Medicine": "远志"
+  },
+  {
+    "ID": 124,
+    "Alias": "青木香",
+    "Medicine": "木香"
+  },
+  {
+    "ID": 125,
+    "Alias": "生玳瑁",
+    "Medicine": "玳瑁"
+  },
+  {
+    "ID": 126,
+    "Alias": "西牛黄",
+    "Medicine": "牛黄"
+  },
+  {
+    "ID": 127,
+    "Alias": "明雄黄",
+    "Medicine": "雄黄"
+  },
+  {
+    "ID": 128,
+    "Alias": "白檀香",
+    "Medicine": "檀香"
+  },
+  {
+    "ID": 129,
+    "Alias": "荜茇",
+    "Medicine": "荜菝"
+  },
+  {
+    "ID": 130,
+    "Alias": "诃黎勒",
+    "Medicine": "诃子"
+  },
+  {
+    "ID": 131,
+    "Alias": "红大戟",
+    "Medicine": "京大戟"
+  },
+  {
+    "ID": 132,
+    "Alias": "千金子",
+    "Medicine": "续随子"
+  },
+  {
+    "ID": 133,
+    "Alias": "苏叶",
+    "Medicine": "紫苏"
+  },
+  {
+    "ID": 134,
+    "Alias": "草豆蔻仁",
+    "Medicine": "草豆蔻"
+  },
+  {
+    "ID": 135,
+    "Alias": "麦芽曲",
+    "Medicine": "麦芽"
+  },
+  {
+    "ID": 136,
+    "Alias": "半夏曲",
+    "Medicine": "半夏"
+  },
+  {
+    "ID": 137,
+    "Alias": "海带",
+    "Medicine": "昆布"
+  },
+  {
+    "ID": 138,
+    "Alias": "天台乌药",
+    "Medicine": "乌药"
+  },
+  {
+    "ID": 139,
+    "Alias": "香附末",
+    "Medicine": "香附"
+  },
+  {
+    "ID": 140,
+    "Alias": "香附子",
+    "Medicine": "香附"
+  },
+  {
+    "ID": 141,
+    "Alias": "玄胡索",
+    "Medicine": "延胡索"
+  },
+  {
+    "ID": 142,
+    "Alias": "瓜蒌实",
+    "Medicine": "瓜蒌"
+  },
+  {
+    "ID": 144,
+    "Alias": "老葱",
+    "Medicine": "葱白"
+  },
+  {
+    "ID": 145,
+    "Alias": "瓜蒌根",
+    "Medicine": "瓜蒌"
+  },
+  {
+    "ID": 146,
+    "Alias": "儿茶",
+    "Medicine": "孩儿茶"
+  },
+  {
+    "ID": 147,
+    "Alias": "大川芎",
+    "Medicine": "川芎"
+  },
+  {
+    "ID": 148,
+    "Alias": "川归",
+    "Medicine": "当归"
+  },
+  {
+    "ID": 149,
+    "Alias": "全当归",
+    "Medicine": "当归"
+  },
+  {
+    "ID": 150,
+    "Alias": "生明乳香",
+    "Medicine": "乳香"
+  },
+  {
+    "ID": 151,
+    "Alias": "生明没药",
+    "Medicine": "没药"
+  },
+  {
+    "ID": 152,
+    "Alias": "乌扇",
+    "Medicine": "射干"
+  },
+  {
+    "ID": 154,
+    "Alias": "紫葳",
+    "Medicine": "凌霄花"
+  },
+  {
+    "ID": 155,
+    "Alias": "葶苈",
+    "Medicine": "葶苈子"
+  },
+  {
+    "ID": 156,
+    "Alias": "蜂窠",
+    "Medicine": "蜂房"
+  },
+  {
+    "ID": 157,
+    "Alias": "茜根",
+    "Medicine": "茜草"
+  },
+  {
+    "ID": 158,
+    "Alias": "棕榈皮",
+    "Medicine": "棕榈炭"
+  },
+  {
+    "ID": 159,
+    "Alias": "生荷叶",
+    "Medicine": "荷叶"
+  },
+  {
+    "ID": 160,
+    "Alias": "生艾叶",
+    "Medicine": "艾叶"
+  },
+  {
+    "ID": 161,
+    "Alias": "生柏叶",
+    "Medicine": "侧柏叶"
+  },
+  {
+    "ID": 162,
+    "Alias": "瓜蒌仁",
+    "Medicine": "瓜蒌"
+  },
+  {
+    "ID": 163,
+    "Alias": "山栀子",
+    "Medicine": "栀子"
+  },
+  {
+    "ID": 164,
+    "Alias": "柏叶",
+    "Medicine": "侧柏叶"
+  },
+  {
+    "ID": 165,
+    "Alias": "灶心黄土",
+    "Medicine": "灶心土"
+  },
+  {
+    "ID": 166,
+    "Alias": "首乌",
+    "Medicine": "何首乌"
+  },
+  {
+    "ID": 167,
+    "Alias": "贯仲",
+    "Medicine": "贯众"
+  },
+  {
+    "ID": 168,
+    "Alias": "豹骨",
+    "Medicine": "虎骨"
+  },
+  {
+    "ID": 169,
+    "Alias": "松脂",
+    "Medicine": "松香"
+  },
+  {
+    "ID": 170,
+    "Alias": "芎穷",
+    "Medicine": "川芎"
+  },
+  {
+    "ID": 171,
+    "Alias": "羚角片",
+    "Medicine": "羚羊角"
+  },
+  {
+    "ID": 172,
+    "Alias": "双钩藤",
+    "Medicine": "钩藤"
+  },
+  {
+    "ID": 173,
+    "Alias": "霜桑叶",
+    "Medicine": "桑叶"
+  },
+  {
+    "ID": 174,
+    "Alias": "滁菊花",
+    "Medicine": "菊花"
+  },
+  {
+    "ID": 175,
+    "Alias": "茯神木",
+    "Medicine": "茯苓"
+  },
+  {
+    "ID": 176,
+    "Alias": "鲜生地",
+    "Medicine": "生地黄"
+  },
+  {
+    "ID": 177,
+    "Alias": "怀牛膝",
+    "Medicine": "牛膝"
+  },
+  {
+    "ID": 178,
+    "Alias": "生赭石",
+    "Medicine": "代赭石"
+  },
+  {
+    "ID": 179,
+    "Alias": "生龟板",
+    "Medicine": "龟板"
+  },
+  {
+    "ID": 180,
+    "Alias": "生麦芽",
+    "Medicine": "麦芽"
+  },
+  {
+    "ID": 181,
+    "Alias": "茵陈",
+    "Medicine": "茵陈蒿"
+  },
+  {
+    "ID": 182,
+    "Alias": "生怀山药",
+    "Medicine": "山药"
+  },
+  {
+    "ID": 183,
+    "Alias": "朱茯神",
+    "Medicine": "茯苓"
+  },
+  {
+    "ID": 184,
+    "Alias": "陈阿胶",
+    "Medicine": "阿胶"
+  },
+  {
+    "ID": 185,
+    "Alias": "大生地",
+    "Medicine": "生地黄"
+  },
+  {
+    "ID": 186,
+    "Alias": "清炙草",
+    "Medicine": "甘草"
+  },
+  {
+    "ID": 187,
+    "Alias": "苦桔梗",
+    "Medicine": "桔梗"
+  },
+  {
+    "ID": 188,
+    "Alias": "象贝",
+    "Medicine": "浙贝母"
+  },
+  {
+    "ID": 189,
+    "Alias": "真阿胶",
+    "Medicine": "阿胶"
+  },
+  {
+    "ID": 190,
+    "Alias": "冬桑叶",
+    "Medicine": "桑叶"
+  },
+  {
+    "ID": 191,
+    "Alias": "生扁豆",
+    "Medicine": "扁豆"
+  },
+  {
+    "ID": 192,
+    "Alias": "炒白芍",
+    "Medicine": "白芍"
+  },
+  {
+    "ID": 193,
+    "Alias": "白蜜",
+    "Medicine": "蜂蜜"
+  },
+  {
+    "ID": 194,
+    "Alias": "生黄芪",
+    "Medicine": "黄芪"
+  },
+  {
+    "ID": 195,
+    "Alias": "生鸡内金",
+    "Medicine": "鸡内金"
+  },
+  {
+    "ID": 196,
+    "Alias": "飞滑石",
+    "Medicine": "滑石"
+  },
+  {
+    "ID": 197,
+    "Alias": "白通草",
+    "Medicine": "通草"
+  },
+  {
+    "ID": 198,
+    "Alias": "白蔻仁",
+    "Medicine": "白豆蔻"
+  },
+  {
+    "ID": 199,
+    "Alias": "生薏苡仁",
+    "Medicine": "薏苡仁"
+  },
+  {
+    "ID": 200,
+    "Alias": "生苡仁",
+    "Medicine": "薏苡仁"
+  },
+  {
+    "ID": 201,
+    "Alias": "赤苓",
+    "Medicine": "茯苓"
+  },
+  {
+    "ID": 202,
+    "Alias": "淡黄芩",
+    "Medicine": "黄芩"
+  },
+  {
+    "ID": 203,
+    "Alias": "绵茵陈",
+    "Medicine": "茵陈蒿"
+  },
+  {
+    "ID": 204,
+    "Alias": "制厚朴",
+    "Medicine": "厚朴"
+  },
+  {
+    "ID": 205,
+    "Alias": "制半夏",
+    "Medicine": "半夏"
+  },
+  {
+    "ID": 206,
+    "Alias": "大豆黄卷",
+    "Medicine": "豆卷"
+  },
+  {
+    "ID": 207,
+    "Alias": "陈木瓜",
+    "Medicine": "木瓜"
+  },
+  {
+    "ID": 208,
+    "Alias": "川连",
+    "Medicine": "黄连"
+  },
+  {
+    "ID": 209,
+    "Alias": "焦栀",
+    "Medicine": "栀子"
+  },
+  {
+    "ID": 210,
+    "Alias": "陈吴萸",
+    "Medicine": "吴茱萸"
+  },
+  {
+    "ID": 211,
+    "Alias": "扁蓄",
+    "Medicine": "萹蓄"
+  },
+  {
+    "ID": 212,
+    "Alias": "陈橘皮",
+    "Medicine": "陈皮"
+  },
+  {
+    "ID": 213,
+    "Alias": "生姜皮",
+    "Medicine": "生姜"
+  },
+  {
+    "ID": 214,
+    "Alias": "草果仁",
+    "Medicine": "草果"
+  },
+  {
+    "ID": 215,
+    "Alias": "大腹子",
+    "Medicine": "大腹皮"
+  },
+  {
+    "ID": 216,
+    "Alias": "川萆薢",
+    "Medicine": "萆薢"
+  },
+  {
+    "ID": 217,
+    "Alias": "益智",
+    "Medicine": "益智仁"
+  },
+  {
+    "ID": 218,
+    "Alias": "南星",
+    "Medicine": "天南星"
+  },
+  {
+    "ID": 219,
+    "Alias": "大远志",
+    "Medicine": "远志"
+  },
+  {
+    "ID": 220,
+    "Alias": "北五味子",
+    "Medicine": "五味子"
+  },
+  {
+    "ID": 221,
+    "Alias": "胆南星",
+    "Medicine": "天南星"
+  },
+  {
+    "ID": 222,
+    "Alias": "栝蒌",
+    "Medicine": "瓜蒌"
+  },
+  {
+    "ID": 223,
+    "Alias": "栝蒌实",
+    "Medicine": "瓜蒌"
+  },
+  {
+    "ID": 224,
+    "Alias": "姜半夏",
+    "Medicine": "半夏"
+  },
+  {
+    "ID": 225,
+    "Alias": "小川连",
+    "Medicine": "黄连"
+  },
+  {
+    "ID": 226,
+    "Alias": "小枳实",
+    "Medicine": "枳实"
+  },
+  {
+    "ID": 227,
+    "Alias": "生姜汁",
+    "Medicine": "生姜"
+  },
+  {
+    "ID": 228,
+    "Alias": "姜汁",
+    "Medicine": "生姜"
+  },
+  {
+    "ID": 229,
+    "Alias": "片黄芩",
+    "Medicine": "黄芩"
+  },
+  {
+    "ID": 230,
+    "Alias": "白矾",
+    "Medicine": "明矾"
+  },
+  {
+    "ID": 231,
+    "Alias": "牙皂",
+    "Medicine": "皂荚"
+  },
+  {
+    "ID": 232,
+    "Alias": "陈胆星",
+    "Medicine": "天南星"
+  },
+  {
+    "ID": 233,
+    "Alias": "紫菀茸",
+    "Medicine": "紫菀"
+  },
+  {
+    "ID": 234,
+    "Alias": "明天麻",
+    "Medicine": "天麻"
+  },
+  {
+    "ID": 235,
+    "Alias": "真琥珀",
+    "Medicine": "琥珀"
+  },
+  {
+    "ID": 236,
+    "Alias": "萝卜子",
+    "Medicine": "莱菔子"
+  },
+  {
+    "ID": 237,
+    "Alias": "牵牛",
+    "Medicine": "牵牛子"
+  },
+  {
+    "ID": 238,
+    "Alias": "炙草",
+    "Medicine": "甘草"
+  },
+  {
+    "ID": 239,
+    "Alias": "川椒",
+    "Medicine": "蜀椒"
+  },
+  {
+    "ID": 240,
+    "Alias": "白雷丸",
+    "Medicine": "雷丸"
+  },
+  {
+    "ID": 241,
+    "Alias": "乌梅肉",
+    "Medicine": "乌梅"
+  },
+  {
+    "ID": 242,
+    "Alias": "生川柏",
+    "Medicine": "黄柏"
+  },
+  {
+    "ID": 243,
+    "Alias": "尖槟榔",
+    "Medicine": "槟榔"
+  },
+  {
+    "ID": 244,
+    "Alias": "苦楝根",
+    "Medicine": "苦楝根皮"
+  },
+  {
+    "ID": 245,
+    "Alias": "茅山苍朮",
+    "Medicine": "苍朮"
+  },
+  {
+    "ID": 246,
+    "Alias": "皂矾",
+    "Medicine": "绿矾"
+  },
+  {
+    "ID": 247,
+    "Alias": "猪牙皂角",
+    "Medicine": "皂荚"
+  },
+  {
+    "ID": 248,
+    "Alias": "蛰虫",
+    "Medicine": "蟅虫"
+  },
+  {
+    "ID": 249,
+    "Alias": "桑椹",
+    "Medicine": "桑椹子"
+  },
+  {
+    "ID": 250,
+    "Alias": "炮山甲",
+    "Medicine": "穿山甲"
+  },
+  {
+    "ID": 251,
+    "Alias": "甘草梢",
+    "Medicine": "甘草"
+  },
+  {
+    "ID": 252,
+    "Alias": "巴戟",
+    "Medicine": "巴戟天"
+  },
+  {
+    "ID": 253,
+    "Alias": "地黄",
+    "Medicine": "生地黄"
+  },
+  {
+    "ID": 254,
+    "Alias": "炒荆芥",
+    "Medicine": "荆芥"
+  },
+  {
+    "ID": 255,
+    "Alias": "生鳖甲",
+    "Medicine": "鳖甲"
+  },
+  {
+    "ID": 256,
+    "Alias": "青蒿脑",
+    "Medicine": "青蒿"
+  },
+  {
+    "ID": 257,
+    "Alias": "黄耆",
+    "Medicine": "黄芪"
+  },
+  {
+    "ID": 258,
+    "Alias": "葳蕤",
+    "Medicine": "玉竹"
+  },
+  {
+    "ID": 259,
+    "Alias": "生葳蕤",
+    "Medicine": "玉竹"
+  },
+  {
+    "ID": 260,
+    "Alias": "神曲",
+    "Medicine": "六曲"
+  },
+  {
+    "ID": 261,
+    "Alias": "山萸肉",
+    "Medicine": "山茱萸"
+  }
+]

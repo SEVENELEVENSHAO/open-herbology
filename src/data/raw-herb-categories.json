@@ -1,0 +1,217 @@
+[
+  {
+    "ID": 1,
+    "Category": "解表药",
+    "SubCategory": "发散风寒药"
+  },
+  {
+    "ID": 2,
+    "Category": "解表药",
+    "SubCategory": "发散风热药"
+  },
+  {
+    "ID": 3,
+    "Category": "清热药",
+    "SubCategory": "清热泻火药"
+  },
+  {
+    "ID": 4,
+    "Category": "清热药",
+    "SubCategory": "清热燥湿药"
+  },
+  {
+    "ID": 5,
+    "Category": "清热药",
+    "SubCategory": "清热解毒药"
+  },
+  {
+    "ID": 6,
+    "Category": "清热药",
+    "SubCategory": "清热凉血药"
+  },
+  {
+    "ID": 7,
+    "Category": "清热药",
+    "SubCategory": "清虚热药"
+  },
+  {
+    "ID": 8,
+    "Category": "泻下药",
+    "SubCategory": "攻下药"
+  },
+  {
+    "ID": 9,
+    "Category": "泻下药",
+    "SubCategory": "润下药"
+  },
+  {
+    "ID": 10,
+    "Category": "泻下药",
+    "SubCategory": "峻下逐水药"
+  },
+  {
+    "ID": 11,
+    "Category": "祛风湿药",
+    "SubCategory": "祛风湿散寒药"
+  },
+  {
+    "ID": 12,
+    "Category": "祛风湿药",
+    "SubCategory": "祛风湿清热药"
+  },
+  {
+    "ID": 13,
+    "Category": "祛风湿药",
+    "SubCategory": "祛风湿强筋骨药"
+  },
+  {
+    "ID": 14,
+    "Category": "化湿药",
+    "SubCategory": ""
+  },
+  {
+    "ID": 15,
+    "Category": "利水渗湿药",
+    "SubCategory": ""
+  },
+  {
+    "ID": 16,
+    "Category": "温里药",
+    "SubCategory": ""
+  },
+  {
+    "ID": 17,
+    "Category": "理气药",
+    "SubCategory": ""
+  },
+  {
+    "ID": 18,
+    "Category": "消食药",
+    "SubCategory": ""
+  },
+  {
+    "ID": 19,
+    "Category": "驱虫药",
+    "SubCategory": ""
+  },
+  {
+    "ID": 20,
+    "Category": "止血药",
+    "SubCategory": "凉血止血药"
+  },
+  {
+    "ID": 21,
+    "Category": "止血药",
+    "SubCategory": "化瘀止血药"
+  },
+  {
+    "ID": 22,
+    "Category": "止血药",
+    "SubCategory": "收敛止血药"
+  },
+  {
+    "ID": 23,
+    "Category": "止血药",
+    "SubCategory": "温经止血药"
+  },
+  {
+    "ID": 24,
+    "Category": "活血化瘀药",
+    "SubCategory": "活血止痛药"
+  },
+  {
+    "ID": 25,
+    "Category": "活血化瘀药",
+    "SubCategory": "活血调经药"
+  },
+  {
+    "ID": 26,
+    "Category": "活血化瘀药",
+    "SubCategory": "活血疗伤药"
+  },
+  {
+    "ID": 27,
+    "Category": "活血化瘀药",
+    "SubCategory": "破血消癥药"
+  },
+  {
+    "ID": 29,
+    "Category": "化痰药",
+    "SubCategory": ""
+  },
+  {
+    "ID": 30,
+    "Category": "止咳平喘药",
+    "SubCategory": ""
+  },
+  {
+    "ID": 31,
+    "Category": "安神药",
+    "SubCategory": "重镇安神药"
+  },
+  {
+    "ID": 32,
+    "Category": "安神药",
+    "SubCategory": "养心安神药"
+  },
+  {
+    "ID": 33,
+    "Category": "平肝息风药",
+    "SubCategory": ""
+  },
+  {
+    "ID": 34,
+    "Category": "开窍药",
+    "SubCategory": ""
+  },
+  {
+    "ID": 35,
+    "Category": "补虚药",
+    "SubCategory": "补气药"
+  },
+  {
+    "ID": 36,
+    "Category": "补虚药",
+    "SubCategory": "助阳药"
+  },
+  {
+    "ID": 37,
+    "Category": "补虚药",
+    "SubCategory": "养血药"
+  },
+  {
+    "ID": 38,
+    "Category": "补虚药",
+    "SubCategory": "滋阴药"
+  },
+  {
+    "ID": 39,
+    "Category": "收敛药",
+    "SubCategory": "固表止汗药"
+  },
+  {
+    "ID": 40,
+    "Category": "收敛药",
+    "SubCategory": "敛肺涩肠药"
+  },
+  {
+    "ID": 41,
+    "Category": "收敛药",
+    "SubCategory": "固精缩尿止带药"
+  },
+  {
+    "ID": 42,
+    "Category": "涌吐药",
+    "SubCategory": ""
+  },
+  {
+    "ID": 43,
+    "Category": "解毒杀虫燥湿止痒药",
+    "SubCategory": null
+  },
+  {
+    "ID": 44,
+    "Category": "拔毒化腐生肌药",
+    "SubCategory": null
+  }
+]

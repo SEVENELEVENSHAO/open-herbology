@@ -1,0 +1,292 @@
+[
+  {
+    "ID": 1,
+    "Category": "解表剂",
+    "SubCategory": "辛温解表"
+  },
+  {
+    "ID": 2,
+    "Category": "解表剂",
+    "SubCategory": "辛凉解表"
+  },
+  {
+    "ID": 3,
+    "Category": "解表剂",
+    "SubCategory": "扶正解表"
+  },
+  {
+    "ID": 4,
+    "Category": "泻下剂",
+    "SubCategory": "寒下"
+  },
+  {
+    "ID": 5,
+    "Category": "泻下剂",
+    "SubCategory": "温下"
+  },
+  {
+    "ID": 6,
+    "Category": "泻下剂",
+    "SubCategory": "润下"
+  },
+  {
+    "ID": 7,
+    "Category": "泻下剂",
+    "SubCategory": "攻补兼施"
+  },
+  {
+    "ID": 8,
+    "Category": "泻下剂",
+    "SubCategory": "逐水"
+  },
+  {
+    "ID": 9,
+    "Category": "和解剂",
+    "SubCategory": "和解少阳"
+  },
+  {
+    "ID": 10,
+    "Category": "和解剂",
+    "SubCategory": "调和肝脾"
+  },
+  {
+    "ID": 11,
+    "Category": "和解剂",
+    "SubCategory": "调和寒热"
+  },
+  {
+    "ID": 12,
+    "Category": "和解剂",
+    "SubCategory": "表里双解"
+  },
+  {
+    "ID": 13,
+    "Category": "清热剂",
+    "SubCategory": "清气分热"
+  },
+  {
+    "ID": 14,
+    "Category": "清热剂",
+    "SubCategory": "清营凉血"
+  },
+  {
+    "ID": 15,
+    "Category": "清热剂",
+    "SubCategory": "清热解毒"
+  },
+  {
+    "ID": 16,
+    "Category": "清热剂",
+    "SubCategory": "清脏腑热"
+  },
+  {
+    "ID": 17,
+    "Category": "清热剂",
+    "SubCategory": "清热祛暑"
+  },
+  {
+    "ID": 18,
+    "Category": "清热剂",
+    "SubCategory": "清虚热"
+  },
+  {
+    "ID": 19,
+    "Category": "温里剂",
+    "SubCategory": "温中祛寒"
+  },
+  {
+    "ID": 20,
+    "Category": "温里剂",
+    "SubCategory": "回阳救逆"
+  },
+  {
+    "ID": 21,
+    "Category": "温里剂",
+    "SubCategory": "温经散寒"
+  },
+  {
+    "ID": 22,
+    "Category": "补益剂",
+    "SubCategory": "补气"
+  },
+  {
+    "ID": 23,
+    "Category": "补益剂",
+    "SubCategory": "补血"
+  },
+  {
+    "ID": 24,
+    "Category": "补益剂",
+    "SubCategory": "气血双补"
+  },
+  {
+    "ID": 25,
+    "Category": "补益剂",
+    "SubCategory": "补阴"
+  },
+  {
+    "ID": 26,
+    "Category": "补益剂",
+    "SubCategory": "补阳"
+  },
+  {
+    "ID": 27,
+    "Category": "补益剂",
+    "SubCategory": "阴阳并补"
+  },
+  {
+    "ID": 28,
+    "Category": "固涩剂",
+    "SubCategory": "固表止汗"
+  },
+  {
+    "ID": 29,
+    "Category": "固涩剂",
+    "SubCategory": "敛肺止咳"
+  },
+  {
+    "ID": 30,
+    "Category": "固涩剂",
+    "SubCategory": "涩肠固脱"
+  },
+  {
+    "ID": 31,
+    "Category": "固涩剂",
+    "SubCategory": "涩精止遗"
+  },
+  {
+    "ID": 32,
+    "Category": "固涩剂",
+    "SubCategory": "固崩止带"
+  },
+  {
+    "ID": 33,
+    "Category": "安神剂",
+    "SubCategory": "重镇安神"
+  },
+  {
+    "ID": 34,
+    "Category": "安神剂",
+    "SubCategory": "补养安神"
+  },
+  {
+    "ID": 35,
+    "Category": "开窍剂",
+    "SubCategory": "凉开"
+  },
+  {
+    "ID": 36,
+    "Category": "开窍剂",
+    "SubCategory": "温开"
+  },
+  {
+    "ID": 37,
+    "Category": "理气剂",
+    "SubCategory": "行气"
+  },
+  {
+    "ID": 38,
+    "Category": "理气剂",
+    "SubCategory": "降气"
+  },
+  {
+    "ID": 39,
+    "Category": "理血剂",
+    "SubCategory": "活血祛瘀"
+  },
+  {
+    "ID": 40,
+    "Category": "理血剂",
+    "SubCategory": "止血"
+  },
+  {
+    "ID": 41,
+    "Category": "治风剂",
+    "SubCategory": "疏散外风"
+  },
+  {
+    "ID": 42,
+    "Category": "治风剂",
+    "SubCategory": "平熄内风"
+  },
+  {
+    "ID": 43,
+    "Category": "治燥剂",
+    "SubCategory": "轻宣外燥"
+  },
+  {
+    "ID": 44,
+    "Category": "治燥剂",
+    "SubCategory": "滋阴润燥"
+  },
+  {
+    "ID": 45,
+    "Category": "祛湿剂",
+    "SubCategory": "化湿和胃"
+  },
+  {
+    "ID": 46,
+    "Category": "祛湿剂",
+    "SubCategory": "清热祛湿"
+  },
+  {
+    "ID": 47,
+    "Category": "祛湿剂",
+    "SubCategory": "利水渗湿"
+  },
+  {
+    "ID": 48,
+    "Category": "祛湿剂",
+    "SubCategory": "温化水湿"
+  },
+  {
+    "ID": 49,
+    "Category": "祛湿剂",
+    "SubCategory": "祛湿化浊"
+  },
+  {
+    "ID": 50,
+    "Category": "祛痰剂",
+    "SubCategory": "燥湿化痰"
+  },
+  {
+    "ID": 51,
+    "Category": "祛痰剂",
+    "SubCategory": "清热化痰"
+  },
+  {
+    "ID": 52,
+    "Category": "祛痰剂",
+    "SubCategory": "润燥化痰"
+  },
+  {
+    "ID": 53,
+    "Category": "祛痰剂",
+    "SubCategory": "温化寒痰"
+  },
+  {
+    "ID": 54,
+    "Category": "祛痰剂",
+    "SubCategory": "化痰熄风"
+  },
+  {
+    "ID": 55,
+    "Category": "消食剂",
+    "SubCategory": ""
+  },
+  {
+    "ID": 56,
+    "Category": "驱虫剂",
+    "SubCategory": null
+  },
+  {
+    "ID": 57,
+    "Category": "涌吐剂",
+    "SubCategory": null
+  },
+  {
+    "ID": 58,
+    "Category": "验方",
+    "SubCategory": null
+  }
+]
