@@ -224,13 +224,12 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
   return (
     <div className="app-shell">
       <aside className={`sidebar ${mobileNav ? "sidebar-open" : ""}`}>
+        <button className="icon-button mobile-close" onClick={() => setMobileNav(false)} aria-label="关闭菜单"><X size={18} /></button>
         <div className="brand">
           <div className="brand-mark" aria-hidden="true">{brandIcon}</div>
           <div>
             <strong>Open Herbology</strong>
-            <span>方药库</span>
           </div>
-          <button className="icon-button mobile-close" onClick={() => setMobileNav(false)} aria-label="关闭菜单"><X size={18} /></button>
         </div>
         <nav className="main-nav" aria-label="Primary navigation">
           {navSections.map((key) => {
