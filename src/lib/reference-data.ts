@@ -126,6 +126,11 @@ function toPinyin(value: string) {
 }
 
 const bareDosePattern = /^\d+(\.\d+)?\s*(g|mg|ml|克|两|钱|分|斤|升|枚|个|条)?$/i;
+const doseUnit = "g|mg|ml|克|两|钱|分|斤|升";
+const trailingDosePattern = new RegExp(
+  `[，,、]\\s*(\\d+(?:\\.\\d+)?\\s*(?:${doseUnit})(?:\\s*[～~\\-]\\s*\\d+(?:\\.\\d+)?\\s*(?:${doseUnit})?)?)\\s*$`,
+  "i"
+);
 
 function parseDoseToken(text: string) {
   const isShared = text.includes("各");
@@ -139,13 +144,19 @@ function parseDoseToken(text: string) {
     dose = tail.replace(/[，,、].*$/, "").trim() || null;
   } else if (bareDosePattern.test(text.trim())) {
     dose = text.trim();
+  } else {
+    // e.g. "炙，6g" or "去心，9g～15g" — processing note followed by a bare trailing dose.
+    const trailingMatch = text.match(trailingDosePattern);
+    if (trailingMatch) dose = trailingMatch[1].trim();
   }
 
   let processing = text
     .replace(/【[^】]+】/g, "")
-    .replace(/各[^，,、]*/g, "")
-    .trim()
-    .replace(/^[，,、]+|[，,、]+$/g, "");
+    .replace(/各[^，,、]*/g, "");
+  if (dose && !bracketMatch && !isShared) {
+    processing = processing.replace(trailingDosePattern, "");
+  }
+  processing = processing.trim().replace(/^[，,、]+|[，,、]+$/g, "");
   if (dose && processing === text.trim()) processing = "";
 
   return { dose, processing: processing || null, isShared };
@@ -218,6 +229,42 @@ function parseIngredients(ingredientText: string | null, herbIdByName: Map<strin
     herbId: chip.herbId,
     thermalProperty: chip.thermalProperty,
   }));
+}
+
+// Some formula entries only record what was ADDED to a base formula (e.g. "四物汤加桃仁、红花"
+// for 桃红四物汤) instead of listing the full composition. When that happens, the entry's own
+// parsed ingredient count is far smaller than the referenced base formula's — so we detect the
+// base formula's name inside the raw text and splice its ingredients in ahead of the additions.
+function resolveBaseFormulaIngredients(formulas: Formula[]) {
+  const byName = new Map(formulas.map((formula) => [formula.name, formula]));
+
+  for (const formula of formulas) {
+    if (!formula.ingredientsRaw) continue;
+    const ownNames = new Set(formula.ingredients.map((chip) => chip.name));
+    const additions: IngredientChip[] = [];
+
+    for (const [baseName, base] of byName) {
+      if (baseName === formula.name) continue;
+      if (base.ingredients.length === 0) continue;
+      if (formula.ingredients.length >= base.ingredients.length) continue;
+      if (!formula.ingredientsRaw.includes(baseName)) continue;
+      if (formula.ingredientsRaw.includes(`<<${baseName}>>`)) continue;
+
+      for (const baseChip of base.ingredients) {
+        if (ownNames.has(baseChip.name)) continue;
+        ownNames.add(baseChip.name);
+        additions.push(baseChip);
+      }
+    }
+
+    if (additions.length > 0) {
+      formula.ingredients = [...additions, ...formula.ingredients].map((chip, index) => ({ ...chip, position: index }));
+      formula.herbIds = unique([
+        ...formula.herbIds,
+        ...additions.map((chip) => chip.herbId).filter((v): v is string => Boolean(v)),
+      ]);
+    }
+  }
 }
 
 function extractBraceRefs(value: string | null) {
@@ -328,6 +375,7 @@ export function getReferenceData(): ReferenceData {
       herbIds,
     };
   });
+  resolveBaseFormulaIngredients(formulas);
   const formulaById = new Map(formulas.map((formula) => [formula.id, formula]));
 
   for (const formula of formulas) {
