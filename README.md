@@ -16,6 +16,8 @@ app. Built with the same visual design and UI system as `herbz-app`.
 - Colloquial-symptom → TCM-term search expansion (e.g. "怕冷" also matches "恶寒")
 - Formula/herb detail views, comparison (up to 3 formulas), bookmarks, and a
   flashcard study mode
+- Bilingual UI (中文 / English) with a top-bar language toggle; English content
+  is translated in batches — see `docs/EN_TRANSLATION.md`
 - PWA manifest and offline application shell
 
 ## Data pipeline
@@ -48,6 +50,22 @@ tooling (webpack's symlink resolution) fails with `EISDIR` errors on exFAT —
 which is what an external drive at `E:` in this environment turned out to be.
 The working copy lives at `C:\Users\ASUS\projects\tcm-fangyao-app`; this `E:`
 copy is the source-of-truth for editing, kept in sync manually.
+
+## English edition
+
+The app is bilingual. Chinese is the source language and is always complete;
+the English layer is additive and filled in batches. Fixed UI strings live in
+`src/lib/i18n.ts`; translated herb/formula prose lives in `src/data/en/` and is
+overlaid on the raw data by `getReferenceData(locale)`, falling back to Chinese
+for any field not yet translated. Verbatim classical-text quotations (古籍摘录,
+出处, 组成原文) are never translated.
+
+```powershell
+npm run i18n:progress                 # completion by field
+npm run i18n:progress -- herbs 20      # skeleton for the next 20 untranslated herbs
+```
+
+Full workflow and translation conventions: `docs/EN_TRANSLATION.md`.
 
 ## Safety and copyright
 

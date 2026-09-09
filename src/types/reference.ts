@@ -8,7 +8,10 @@ export interface Channel {
 
 export interface IngredientChip {
   position: number;
+  /** Localized herb name (English name when translated, otherwise Chinese). */
   name: string;
+  /** Chinese herb name as written in the composition. */
+  nameZh: string;
   processing: string | null;
   dose: string | null;
   herbId: string | null;
@@ -23,7 +26,10 @@ export interface Category {
 
 export interface Herb {
   id: string;
+  /** Localized display name. Equal to `nameZh` under the "zh" locale. */
   name: string;
+  /** Chinese name — always present, used as the stable key for cross-links. */
+  nameZh: string;
   pinyin: string;
   aliases: string[];
   categoryId: string;
@@ -47,7 +53,10 @@ export interface Herb {
 
 export interface Formula {
   id: string;
+  /** Localized display name. Equal to `nameZh` under the "zh" locale. */
   name: string;
+  /** Chinese name — always present, used as the stable key for cross-links. */
+  nameZh: string;
   pinyin: string;
   categoryId: string;
   category: string;

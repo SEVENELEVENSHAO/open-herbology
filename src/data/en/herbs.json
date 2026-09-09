@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "about": "English translations for herb prose, overlaid on raw-herbs.json by id in reference-data.ts. Keys under `entries` are herb ids (String(ID)).",
+    "translatableFields": [
+      "name", "source", "tasteAndNature", "function", "keyPoint",
+      "appliedTo", "prescriptionForms", "usage", "classicalFormulas", "note"
+    ],
+    "keepChinese": ["pinyin", "aliases", "digest (古籍摘录)"],
+    "rules": [
+      "name: the standard English common name (e.g. 'Ephedra'); the Chinese name and pinyin still show alongside it.",
+      "Any field left absent or set to null falls back to the Chinese source text.",
+      "Preserve {{方名}} formula references verbatim, Chinese, inside the braces — they are resolved as cross-links.",
+      "Preserve 《...》 book titles in Chinese.",
+      "Keep the source's numbered-paragraph structure (1. / 2. / 3.) and blank lines.",
+      "digest (古籍摘录) is a verbatim classical quotation — never translated, so it has no key here.",
+      "Terminology: Bensky, Chinese Herbal Medicine: Materia Medica, 3rd ed."
+    ],
+    "progress": "Run `npm run i18n:progress` for completion by field."
+  },
+  "entries": {
+    "1": {
+      "name": "Ephedra",
+      "source": "The herbaceous stem of the ephedra-family plants Ephedra sinica, Ephedra equisetina, or other ephedrine-bearing species of the same genus.",
+      "tasteAndNature": "Acrid, slightly bitter; warm. Enters the Lung and Bladder channels.",
+      "function": "Induces sweating and releases the exterior, diffuses the Lung qi and calms wheezing, promotes urination and reduces swelling.",
+      "keyPoint": "Promotes sweating, calms wheezing, promotes urination.",
+      "appliedTo": "1. For wind-cold common cold.\nAcrid and dispersing, warm and cold-scattering, this herb enters mainly the Lung and Bladder channels. It opens the interstices and pores and induces sweating to release the exterior and scatter wind-cold. As the most vigorous of the acrid, warm exterior-releasing herbs, it is used chiefly for severe wind-cold exterior patterns with aversion to cold, absence of sweating, fever, headache, and a floating, tight pulse — that is, wind-cold exterior-excess. It is regularly paired with cinnamon twig (桂枝), as in Ephedra Decoction (麻黄汤).\n\n2. For cough and wheezing.\nAcrid and dispersing, bitter and draining, warm and freely unblocking, it enters the Lung channel: outwardly it scatters wind-cold, inwardly it opens and diffuses the Lung qi, giving it a strong ability to diffuse the Lungs and calm wheezing. It suits excess patterns of coughing and wheezing from wind-cold fettering the exterior and Lung qi obstruction, and is commonly combined with apricot kernel (杏仁) and licorice (甘草), as in Three-Unbinding Decoction (三拗汤). Combined with asarum (细辛), dried ginger (干姜), and pinellia (半夏), it also treats cold phlegm and lodged thin mucus with cough and wheezing and copious, thin, clear sputum, as in Minor Bluegreen Dragon Decoction (小青龙汤). When Lung heat is exuberant with high fever and urgent wheezing, it is paired with gypsum (石膏), apricot kernel (杏仁), and licorice (甘草) to clear the Lungs and calm wheezing, as in Ephedra, Apricot Kernel, Licorice, and Gypsum Decoction (麻杏石甘汤).\n\n3. For wind-water edema.\nIt opens the Lung qi above and drains it down to the Bladder, making it a key herb for diffusing the Lungs and promoting urination. For wind-water patterns — wind evil assailing the exterior, the Lungs failing to diffuse and downbear, with edema and inhibited urination together with exterior signs — it is regularly used with licorice (甘草), i.e. \"Licorice and Ephedra Decoction\" (甘草麻黄汤); if there is also internal heat or spleen deficiency, it may be combined with gypsum (石膏), fresh ginger (生姜), licorice (甘草), and white atractylodes (白朮).\n\nIn addition, drawing on ephedra's ability to scatter cold and unblock stagnation, it is used to treat wind-cold painful obstruction, yin-type flat abscesses, and phlegm nodules.",
+      "prescriptionForms": "Unprepared ephedra / cleaned ephedra (used raw; stronger acrid-dispersing action). Water-fried ephedra (stir-fried with a little water added; milder acrid-dispersing action). Honey-fried ephedra (stir-fried mixed with honey; weakened acrid-dispersing action, with an added Lung-moistening effect).",
+      "usage": "Decoct, 3–10 g. Use unprepared to induce sweating and release the exterior; use honey-fried mostly to stop cough and calm wheezing.",
+      "classicalFormulas": "{{麻黄汤}} (Discussion of Cold Damage): ephedra, cinnamon twig, apricot kernel, licorice. For wind-cold contracted externally with aversion to cold, absence of sweating, headache, and body aches — an exterior-excess pattern.\n\n{{三拗汤}} (Formulary of the Pharmacy Service): ephedra, apricot kernel, licorice. For wind-cold common cold with cough and wheezing.\n\n{{麻黄杏仁甘草石膏汤}} (Discussion of Cold Damage): ephedra, apricot kernel, licorice, gypsum. For interior heat pent up and blocked, with fever and thirst, wheezing and coughing with coarse breathing, and flaring of the nostrils.",
+      "note": "This herb has a strong dispersing action; use it with caution in all cases of exterior deficiency with spontaneous sweating, yin deficiency with night sweats, and deficiency wheezing.\n1. Ephedra is first recorded in the Divine Farmer's Classic of the Materia Medica. After the Han-dynasty Discussion of Cold Damage recorded Ephedra Decoction, later physicians all regarded ephedra as an essential herb for inducing sweating to release the exterior and for stopping cough and calming wheezing.\n2. Its action centers on dispersing and on diffusing the Lungs: paired with cinnamon twig it induces sweating and releases the exterior; with apricot kernel it stops cough and calms wheezing; with dried ginger it diffuses the Lungs and scatters cold; with gypsum it diffuses the Lungs and drains heat; in Ephedra, Aconite Accessory Root, and Asarum Decoction, paired with aconite accessory root, it warms the channels and effuses the exterior; in Harmonious Yang Decoction, paired with cinnamon bark, it warmly scatters cold evil and frees the qi and blood.\n3. In sum, the clinical use of ephedra draws mainly on its two aspects: diffusing (the Lungs) and dispersing (the exterior)."
+    }
+  }
+}

@@ -5,6 +5,10 @@ import rawHerbCategories from "@/data/raw-herb-categories.json";
 import rawFormulaCategories from "@/data/raw-formula-categories.json";
 import rawHerbAliases from "@/data/raw-herb-aliases.json";
 import rawKeywordMapping from "@/data/raw-keyword-mapping.json";
+import enHerbs from "@/data/en/herbs.json";
+import enFormulas from "@/data/en/formulas.json";
+import enCategories from "@/data/en/categories.json";
+import type { Locale } from "@/lib/i18n";
 import type {
   Category,
   Channel,
@@ -14,6 +18,43 @@ import type {
   ReferenceData,
   ThermalProperty,
 } from "@/types/reference";
+
+interface EnHerbEntry {
+  name?: string;
+  source?: string | null;
+  tasteAndNature?: string | null;
+  function?: string | null;
+  keyPoint?: string | null;
+  appliedTo?: string | null;
+  prescriptionForms?: string | null;
+  usage?: string | null;
+  classicalFormulas?: string | null;
+  note?: string | null;
+}
+
+interface EnFormulaEntry {
+  name?: string;
+  usage?: string | null;
+  mainTreatment?: string | null;
+  function?: string | null;
+  appliedTo?: string | null;
+  notes?: string | null;
+  ingredients?: Record<string, { processing?: string | null }>;
+}
+
+const enHerbEntries = (enHerbs as { entries?: Record<string, EnHerbEntry> }).entries ?? {};
+const enFormulaEntries = (enFormulas as { entries?: Record<string, EnFormulaEntry> }).entries ?? {};
+const enCategoryMaps = enCategories as {
+  herbCategories: Record<string, string>;
+  herbSubcategories: Record<string, string>;
+  formulaCategories: Record<string, string>;
+  formulaSubcategories: Record<string, string>;
+};
+
+/** Prefer a non-empty translation, otherwise fall back to the source text. */
+function pick<T extends string | null>(translated: string | null | undefined, source: T): string | T {
+  return translated ? translated : source;
+}
 
 interface RawCategory {
   ID: number;
@@ -204,6 +245,7 @@ function parseIngredients(ingredientText: string | null, herbIdByName: Map<strin
     return {
       position: i,
       name: current.name,
+      nameZh: current.name,
       processing,
       dose,
       herbId: herbIdByName.get(current.name) ?? null,
@@ -224,6 +266,7 @@ function parseIngredients(ingredientText: string | null, herbIdByName: Map<strin
   return result.map((chip) => ({
     position: chip.position,
     name: chip.name,
+    nameZh: chip.nameZh,
     processing: chip.processing,
     dose: chip.dose,
     herbId: chip.herbId,
@@ -236,23 +279,25 @@ function parseIngredients(ingredientText: string | null, herbIdByName: Map<strin
 // parsed ingredient count is far smaller than the referenced base formula's — so we detect the
 // base formula's name inside the raw text and splice its ingredients in ahead of the additions.
 function resolveBaseFormulaIngredients(formulas: Formula[]) {
-  const byName = new Map(formulas.map((formula) => [formula.name, formula]));
+  // Keyed on the Chinese name — `ingredientsRaw` is always Chinese, so base-formula
+  // detection must match against `nameZh`, not the (possibly localized) `name`.
+  const byName = new Map(formulas.map((formula) => [formula.nameZh, formula]));
 
   for (const formula of formulas) {
     if (!formula.ingredientsRaw) continue;
-    const ownNames = new Set(formula.ingredients.map((chip) => chip.name));
+    const ownNames = new Set(formula.ingredients.map((chip) => chip.nameZh));
     const additions: IngredientChip[] = [];
 
     for (const [baseName, base] of byName) {
-      if (baseName === formula.name) continue;
+      if (baseName === formula.nameZh) continue;
       if (base.ingredients.length === 0) continue;
       if (formula.ingredients.length >= base.ingredients.length) continue;
       if (!formula.ingredientsRaw.includes(baseName)) continue;
       if (formula.ingredientsRaw.includes(`<<${baseName}>>`)) continue;
 
       for (const baseChip of base.ingredients) {
-        if (ownNames.has(baseChip.name)) continue;
-        ownNames.add(baseChip.name);
+        if (ownNames.has(baseChip.nameZh)) continue;
+        ownNames.add(baseChip.nameZh);
         additions.push(baseChip);
       }
     }
@@ -280,23 +325,33 @@ function unique<T>(values: T[]) {
   return [...new Set(values)];
 }
 
-export function getReferenceData(): ReferenceData {
+export function getReferenceData(locale: Locale = "zh"): ReferenceData {
+  const isEn = locale === "en";
   const herbCategoryRows = rawHerbCategories as RawCategory[];
   const formulaCategoryRows = rawFormulaCategories as RawCategory[];
   const herbRows = rawHerbs as RawHerb[];
   const formulaRows = rawFormulas as RawFormula[];
   const aliasRows = rawHerbAliases as RawAlias[];
 
-  const herbCategories: Category[] = herbCategoryRows.map((row) => ({
-    id: String(row.ID),
-    category: row.Category,
-    subcategory: row.SubCategory || null,
-  }));
-  const formulaCategories: Category[] = formulaCategoryRows.map((row) => ({
-    id: String(row.ID),
-    category: row.Category,
-    subcategory: row.SubCategory || null,
-  }));
+  const localizeCategory = (
+    row: RawCategory,
+    catMap: Record<string, string>,
+    subMap: Record<string, string>,
+  ): Category => {
+    const sub = row.SubCategory || null;
+    return {
+      id: String(row.ID),
+      category: isEn ? catMap[row.Category] ?? row.Category : row.Category,
+      subcategory: sub && isEn ? subMap[sub] ?? sub : sub,
+    };
+  };
+
+  const herbCategories: Category[] = herbCategoryRows.map((row) =>
+    localizeCategory(row, enCategoryMaps.herbCategories, enCategoryMaps.herbSubcategories),
+  );
+  const formulaCategories: Category[] = formulaCategoryRows.map((row) =>
+    localizeCategory(row, enCategoryMaps.formulaCategories, enCategoryMaps.formulaSubcategories),
+  );
   const herbCategoryById = new Map(herbCategories.map((category) => [category.id, category]));
   const formulaCategoryById = new Map(formulaCategories.map((category) => [category.id, category]));
 
@@ -317,32 +372,39 @@ export function getReferenceData(): ReferenceData {
     const categoryId = String(row.CategoryId);
     const category = herbCategoryById.get(categoryId);
     const ownAliases = row.Alias ? row.Alias.split(/[、，,\n]/).map((v) => v.trim()).filter(Boolean) : [];
+    const en = isEn ? enHerbEntries[id] : undefined;
     return {
       id,
-      name: row.Medicine,
+      name: pick(en?.name, row.Medicine),
+      nameZh: row.Medicine,
       pinyin: toPinyin(row.Medicine),
+      // Herb aliases stay in their original script.
       aliases: unique([...(aliasesByMedicine.get(row.Medicine) ?? []), ...ownAliases]),
       categoryId,
       category: category?.category ?? "",
       subcategory: category?.subcategory ?? null,
-      source: row.Source,
-      tasteAndNature: row.GuiJing,
+      source: pick(en?.source, row.Source),
+      // thermalProperty / channels are always parsed from the Chinese 性味归经;
+      // only the displayed text is localized.
+      tasteAndNature: pick(en?.tasteAndNature, row.GuiJing),
       thermalProperty: parseThermalProperty(row.GuiJing),
       channels: parseChannels(row.GuiJing),
-      function: row.Function,
-      keyPoint: row.Character,
-      appliedTo: row.AppliedTo,
-      prescriptionForms: row.Prescription,
-      usage: row.Usage,
-      classicalFormulas: row.Formula,
+      function: pick(en?.function, row.Function),
+      keyPoint: pick(en?.keyPoint, row.Character),
+      appliedTo: pick(en?.appliedTo, row.AppliedTo),
+      prescriptionForms: pick(en?.prescriptionForms, row.Prescription),
+      usage: pick(en?.usage, row.Usage),
+      classicalFormulas: pick(en?.classicalFormulas, row.Formula),
+      // 古籍摘录 — verbatim classical quotation, never translated.
       digest: row.Digest,
-      note: row.Note,
+      note: pick(en?.note, row.Note),
       image: row.Figure,
       formulaIds: [],
     };
   });
   const herbById = new Map(herbs.map((herb) => [herb.id, herb]));
   const herbThermalById = new Map(herbs.map((herb) => [herb.id, herb.thermalProperty]));
+  const herbNameByZh = new Map(herbs.map((herb) => [herb.nameZh, herb.name]));
 
   const formulaIdByName = new Map(formulaRows.map((row) => [row.Formula, String(row.ID)]));
 
@@ -350,27 +412,34 @@ export function getReferenceData(): ReferenceData {
     const id = String(row.ID);
     const categoryId = String(row.CategoryId);
     const category = formulaCategoryById.get(categoryId);
+    const en = isEn ? enFormulaEntries[id] : undefined;
     const ingredients = parseIngredients(row.Ingredient, herbIdByName).map((chip) => ({
       ...chip,
+      name: isEn ? herbNameByZh.get(chip.nameZh) ?? chip.name : chip.name,
+      processing: pick(en?.ingredients?.[chip.nameZh]?.processing, chip.processing),
       thermalProperty: chip.herbId ? herbThermalById.get(chip.herbId) ?? "neutral" : "neutral",
     }));
     const herbIds = unique(ingredients.map((chip) => chip.herbId).filter((v): v is string => Boolean(v)));
 
     return {
       id,
-      name: row.Formula,
+      name: pick(en?.name, row.Formula),
+      nameZh: row.Formula,
       pinyin: toPinyin(row.Formula),
       categoryId,
       category: category?.category ?? "",
       subcategory: category?.subcategory ?? null,
+      // 组成原文 — left as written in the source.
       ingredientsRaw: row.Ingredient,
       ingredients,
+      // 出处 — classical citation / quotation, never translated.
       source: row.Source,
-      usage: row.Usage,
-      mainTreatment: row.MainTreatment,
-      function: row.Function,
-      appliedTo: row.AppliedTo,
-      notes: row.Notes,
+      usage: pick(en?.usage, row.Usage),
+      mainTreatment: pick(en?.mainTreatment, row.MainTreatment),
+      function: pick(en?.function, row.Function),
+      appliedTo: pick(en?.appliedTo, row.AppliedTo),
+      notes: pick(en?.notes, row.Notes),
+      // 古籍摘录 / 实验研究 — verbatim, never translated.
       digest: row.Digest,
       herbIds,
     };

@@ -10,6 +10,7 @@ import {
   Columns2,
   FlaskConical,
   GraduationCap,
+  Languages,
   Leaf,
   Menu,
   Search,
@@ -18,19 +19,13 @@ import {
 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { getKeywordMapping } from "@/lib/reference-data";
+import { channelName } from "@/lib/i18n";
+import { useLocale } from "@/lib/locale-context";
 import type { Formula, Herb, IngredientChip, ReferenceData } from "@/types/reference";
 
 type Section = "home" | "herbs" | "compare" | "study";
 type Detail = { type: "formula"; item: Formula } | { type: "herb"; item: Herb };
 type ThermalFilter = "all" | "hot" | "warm" | "neutral" | "cool" | "cold";
-
-const thermalLabels: Record<Exclude<ThermalFilter, "all">, string> = {
-  hot: "热",
-  warm: "温",
-  neutral: "平",
-  cool: "凉",
-  cold: "寒",
-};
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -86,27 +81,31 @@ type CategoryGroup<T> = {
   count: number;
 };
 
-function groupByCategory<T extends { category: string; subcategory: string | null }>(items: T[]): CategoryGroup<T>[] {
-  const order: string[] = [];
-  const map = new Map<string, Map<string, T[]>>();
-  for (const item of items) {
-    const cat = item.category || "其他";
-    const sub = item.subcategory || "综合";
-    if (!map.has(cat)) {
-      map.set(cat, new Map());
-      order.push(cat);
+function useGroupByCategory<T extends { category: string; subcategory: string | null }>(items: T[]): CategoryGroup<T>[] {
+  const { t } = useLocale();
+  return useMemo(() => {
+    const order: string[] = [];
+    const map = new Map<string, Map<string, T[]>>();
+    for (const item of items) {
+      const cat = item.category || t.fallbackCategory;
+      const sub = item.subcategory || t.fallbackSubcategory;
+      if (!map.has(cat)) {
+        map.set(cat, new Map());
+        order.push(cat);
+      }
+      const subMap = map.get(cat)!;
+      subMap.set(sub, [...(subMap.get(sub) ?? []), item]);
     }
-    const subMap = map.get(cat)!;
-    subMap.set(sub, [...(subMap.get(sub) ?? []), item]);
-  }
-  return order.map((category) => {
-    const subMap = map.get(category)!;
-    const subcategories = [...subMap.entries()].map(([subcategory, items]) => ({ subcategory, items }));
-    return { category, subcategories, count: subcategories.reduce((sum, group) => sum + group.items.length, 0) };
-  });
+    return order.map((category) => {
+      const subMap = map.get(category)!;
+      const subcategories = [...subMap.entries()].map(([subcategory, items]) => ({ subcategory, items }));
+      return { category, subcategories, count: subcategories.reduce((sum, group) => sum + group.items.length, 0) };
+    });
+  }, [items, t]);
 }
 
 export function ReferenceApp({ data }: { data: ReferenceData }) {
+  const { t, locale, toggleLocale } = useLocale();
   const [section, setSection] = useState<Section>("home");
   const [query, setQuery] = useState("");
   const [detail, setDetail] = useState<Detail | null>(null);
@@ -118,7 +117,10 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
 
   const herbById = useMemo(() => new Map(data.herbs.map((herb) => [herb.id, herb])), [data.herbs]);
   const formulaById = useMemo(() => new Map(data.formulas.map((formula) => [formula.id, formula])), [data.formulas]);
-  const formulaByName = useMemo(() => new Map(data.formulas.map((formula) => [formula.name, formula])), [data.formulas]);
+  const formulaByName = useMemo(
+    () => new Map(data.formulas.map((formula) => [formula.nameZh, formula])),
+    [data.formulas],
+  );
 
   useEffect(() => {
     const saved = localStorage.getItem("fangyao-bookmarks");
@@ -148,19 +150,21 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
 
   const formulas = useMemo(() => data.formulas.filter((formula) => matchesAny([
     formula.name,
+    formula.nameZh,
     formula.pinyin,
     formula.function,
     formula.mainTreatment,
     formula.appliedTo,
     formula.category,
     formula.subcategory,
-    ...formula.ingredients.map((item) => item.name),
+    ...formula.ingredients.flatMap((item) => [item.name, item.nameZh]),
   ], queryTerms)), [data.formulas, queryTerms]);
 
   const herbs = useMemo(() => data.herbs.filter((herb) =>
     (thermal === "all" || herb.thermalProperty === thermal) &&
     matchesAny([
       herb.name,
+      herb.nameZh,
       herb.pinyin,
       ...herb.aliases,
       herb.function,
@@ -215,20 +219,21 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
 
   const navSections: Section[] = ["home", "herbs", "compare", "study"];
   const navMeta: Record<Section, [typeof FlaskConical, string]> = {
-    home: [FlaskConical, "方剂"],
-    herbs: [Leaf, "中药"],
-    compare: [Columns2, "对照"],
-    study: [GraduationCap, "研习"],
+    home: [FlaskConical, t.nav.home],
+    herbs: [Leaf, t.nav.herbs],
+    compare: [Columns2, t.nav.compare],
+    study: [GraduationCap, t.nav.study],
   };
 
   return (
     <div className="app-shell">
       <aside className={`sidebar ${mobileNav ? "sidebar-open" : ""}`}>
-        <button className="icon-button mobile-close" onClick={() => setMobileNav(false)} aria-label="关闭菜单"><X size={18} /></button>
+        <button className="icon-button mobile-close" onClick={() => setMobileNav(false)} aria-label={t.closeMenu}><X size={18} /></button>
         <div className="brand">
           <div className="brand-mark" aria-hidden="true">{brandIcon}</div>
           <div>
             <strong>Open Herbology</strong>
+            <span>{t.brandTagline}</span>
           </div>
         </div>
         <nav className="main-nav" aria-label="Primary navigation">
@@ -246,16 +251,21 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
 
       <main className="main">
         <header className="topbar">
-          <button className="icon-button menu-button" onClick={() => setMobileNav(true)}><Menu size={21} /></button>
+          <button className="icon-button menu-button" onClick={() => setMobileNav(true)} aria-label={t.openMenu}><Menu size={21} /></button>
           <div className="global-search">
             <Search size={19} />
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="搜索方名、中药、功效、主治或症状…"
+              placeholder={t.searchPlaceholder}
+              lang={locale === "en" ? "en" : "zh-CN"}
             />
-            {query && <button onClick={() => setQuery("")} aria-label="清除搜索"><X size={17} /></button>}
+            {query && <button onClick={() => setQuery("")} aria-label={t.clearSearch}><X size={17} /></button>}
           </div>
+          <button className="language-switch" onClick={toggleLocale} title={t.languageSwitchTitle} aria-label={t.languageSwitchTitle}>
+            <Languages size={15} />
+            <span>{t.languageSwitchLabel}</span>
+          </button>
         </header>
 
         <div className="content">
@@ -342,14 +352,15 @@ function HomePage({ formulas, query, onOpenFormula }: {
   query: string;
   onOpenFormula: (formula: Formula) => void;
 }) {
+  const { t } = useLocale();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
-  const grouped = useMemo(() => groupByCategory(formulas), [formulas]);
+  const grouped = useGroupByCategory(formulas);
 
   if (query) {
     return (
       <section className="category-browser">
-        <NavigatorHeading kicker="搜索结果" title={`${formulas.length} 个匹配方剂`} description="选择方剂以查看完整资料。" />
+        <NavigatorHeading kicker={t.home.resultsKicker} title={t.home.resultsTitle(formulas.length)} description={t.home.resultsDescription} />
         <div className="navigator-formula-grid">
           {grouped.flatMap(({ category, subcategories }) =>
             subcategories.flatMap(({ subcategory, items }) =>
@@ -364,7 +375,7 @@ function HomePage({ formulas, query, onOpenFormula }: {
             )
           )}
         </div>
-        {!formulas.length && <EmptyState label="没有找到匹配的方剂" />}
+        {!formulas.length && <EmptyState label={t.home.empty} />}
       </section>
     );
   }
@@ -433,6 +444,7 @@ function HomePage({ formulas, query, onOpenFormula }: {
 }
 
 function HerbCard({ herb, onOpen }: { herb: Herb; onOpen: (herb: Herb) => void }) {
+  const { t } = useLocale();
   return (
     <button className="herb-card" key={herb.id} onClick={() => onOpen(herb)}>
       <div className={`herb-color thermal-${herb.thermalProperty}`}><Leaf size={19} /></div>
@@ -440,7 +452,7 @@ function HerbCard({ herb, onOpen }: { herb: Herb; onOpen: (herb: Herb) => void }
       <div className="herb-card-bottom">
         <span>{herb.pinyin}</span>
       </div>
-      <div><span>{herb.formulaIds.length} 方</span><ArrowRight size={15} /></div>
+      <div><span>{t.herbs.formulaCount(herb.formulaIds.length)}</span><ArrowRight size={15} /></div>
     </button>
   );
 }
@@ -448,16 +460,17 @@ function HerbCard({ herb, onOpen }: { herb: Herb; onOpen: (herb: Herb) => void }
 function HerbLibrary({ herbs, thermal, setThermal, onOpen }: {
   herbs: Herb[]; thermal: ThermalFilter; setThermal: (value: ThermalFilter) => void; onOpen: (herb: Herb) => void;
 }) {
+  const { t } = useLocale();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
-  const grouped = useMemo(() => groupByCategory(herbs), [herbs]);
+  const grouped = useGroupByCategory(herbs);
 
   return (
     <section>
       <div className="thermal-filters">
         {(["all", "hot", "warm", "neutral", "cool", "cold"] as const).map((item) => (
           <button key={item} className={`${thermal === item ? "active" : ""} filter-${item}`} onClick={() => setThermal(item)}>
-            {item === "all" ? "全部" : thermalLabels[item]}
+            {t.thermal[item]}
           </button>
         ))}
       </div>
@@ -493,7 +506,7 @@ function HerbLibrary({ herbs, thermal, setThermal, onOpen }: {
             </section>
           );
         })}
-        {!herbs.length && <EmptyState label="没有找到匹配的中药" />}
+        {!herbs.length && <EmptyState label={t.herbs.empty} />}
       </div>
     </section>
   );
@@ -502,12 +515,13 @@ function HerbLibrary({ herbs, thermal, setThermal, onOpen }: {
 function CompareView({ formulas, compareIds, onRemove, onBrowse }: {
   formulas: Formula[]; compareIds: string[]; onRemove: (id: string) => void; onBrowse: () => void;
 }) {
+  const { t } = useLocale();
   const selected = compareIds.map((id) => formulas.find((formula) => formula.id === id)).filter(Boolean) as Formula[];
   return (
     <section>
-      <PageHeading kicker="并列比较" title="方剂对照" description="最多选择三个方剂进行比较。" />
+      <PageHeading kicker={t.compare.kicker} title={t.compare.title} description={t.compare.description} />
       {selected.length < 2 ? (
-        <div className="empty-panel"><Columns2 size={34} /><h3>选择至少两个方剂</h3><button className="primary-button" onClick={onBrowse}>浏览方剂</button></div>
+        <div className="empty-panel"><Columns2 size={34} /><h3>{t.compare.emptyTitle}</h3><button className="primary-button" onClick={onBrowse}>{t.compare.browse}</button></div>
       ) : (
         <div className="comparison-grid" style={{ gridTemplateColumns: `repeat(${selected.length}, minmax(0, 1fr))` }}>
           {selected.map((formula) => (
@@ -515,11 +529,11 @@ function CompareView({ formulas, compareIds, onRemove, onBrowse }: {
               <button className="comparison-remove" onClick={() => onRemove(formula.id)}><X size={16} /></button>
               <h2>{formula.name}</h2><span className="formula-pinyin">{formula.pinyin}</span>
               <section className="compare-section">
-                <h4>组成</h4>
+                <h4>{t.compare.composition}</h4>
                 <div className="compare-ingredients">{formula.ingredients.map((item) => <span className={`ingredient-${item.thermalProperty}`} key={item.position}>{item.name}<small>{item.dose ?? ""}</small></span>)}</div>
               </section>
-              <section className="compare-section"><h4>功效</h4><p>{formula.function ?? "—"}</p></section>
-              <section className="compare-section"><h4>主治</h4><p>{formula.mainTreatment ?? "—"}</p></section>
+              <section className="compare-section"><h4>{t.compare.actions}</h4><p>{formula.function ?? t.dash}</p></section>
+              <section className="compare-section"><h4>{t.compare.indications}</h4><p>{formula.mainTreatment ?? t.dash}</p></section>
             </article>
           ))}
         </div>
@@ -529,6 +543,7 @@ function CompareView({ formulas, compareIds, onRemove, onBrowse }: {
 }
 
 function StudyView({ formulas, bookmarks, onOpen }: { formulas: Formula[]; bookmarks: string[]; onOpen: (formula: Formula) => void }) {
+  const { t } = useLocale();
   const pool = bookmarks.length ? formulas.filter((formula) => bookmarks.includes(formula.id)) : formulas;
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
@@ -542,20 +557,20 @@ function StudyView({ formulas, bookmarks, onOpen }: { formulas: Formula[]; bookm
 
   return (
     <section>
-      <PageHeading kicker="研习模式" title="方剂研习" description={`当前卡组含 ${pool.length} 个方剂。`} />
+      <PageHeading kicker={t.study.kicker} title={t.study.title} description={t.study.description(pool.length)} />
       {formula && <div className="study-layout">
         <div className={`study-card ${revealed ? "revealed" : ""}`}>
-          <div className="study-card-label">辨认方剂</div>
+          <div className="study-card-label">{t.study.cardLabel}</div>
           <div className="study-clues">{formula.ingredients.slice(0, 6).map((item) => <span className={`ingredient-${item.thermalProperty}`} key={item.position}>{item.name}</span>)}</div>
-          {!revealed ? <button className="primary-button" onClick={() => setRevealed(true)}>显示答案</button> : (
+          {!revealed ? <button className="primary-button" onClick={() => setRevealed(true)}>{t.study.reveal}</button> : (
             <div className="study-answer"><Check size={23} /><div><strong>{formula.name}</strong><span>{formula.pinyin}</span><small>{formula.mainTreatment ?? ""}</small></div></div>
           )}
         </div>
         <div className="study-controls">
-          <div><span>卡组进度</span><strong>{index + 1} / {pool.length}</strong></div><progress value={index + 1} max={pool.length} />
-          <button onClick={() => next(false)}>下一张 <ArrowRight size={16} /></button>
-          <button onClick={() => next(true)}><Shuffle size={16} /> 随机抽取</button>
-          <button onClick={() => onOpen(formula)}><BookOpen size={16} /> 查看完整条目</button>
+          <div><span>{t.study.deckProgress}</span><strong>{index + 1} / {pool.length}</strong></div><progress value={index + 1} max={pool.length} />
+          <button onClick={() => next(false)}>{t.study.next} <ArrowRight size={16} /></button>
+          <button onClick={() => next(true)}><Shuffle size={16} /> {t.study.shuffle}</button>
+          <button onClick={() => onOpen(formula)}><BookOpen size={16} /> {t.study.viewEntry}</button>
         </div>
       </div>}
     </section>
@@ -569,12 +584,13 @@ function DetailDrawer({ detail, bookmarked, compareIds, onBookmark, onAddCompare
   onOpenFormulaByName: (name: string) => void;
   herbById: Map<string, Herb>; formulaById: Map<string, Formula>;
 }) {
+  const { t } = useLocale();
   return (
     <div className="drawer-backdrop" onMouseDown={onClose}>
       <aside className="detail-drawer" onMouseDown={(event) => event.stopPropagation()}>
         <div className="drawer-toolbar">
-          <button onClick={onClose}><ArrowLeft size={18} /> 返回</button>
-          <span>{detail.type === "formula" ? "方剂条目" : "中药条目"}</span>
+          <button onClick={onClose}><ArrowLeft size={18} /> {t.drawer.back}</button>
+          <span>{detail.type === "formula" ? t.drawer.formulaEntry : t.drawer.herbEntry}</span>
           <button onClick={() => onBookmark(detail.item.id)}><Bookmark size={18} fill={bookmarked ? "currentColor" : "none"} /></button>
         </div>
         {detail.type === "formula" ? (
@@ -614,7 +630,11 @@ function ProseBlock({ value }: { value: string | null }) {
 }
 
 function IngredientTile({ ingredient, onOpenHerb, herbById }: { ingredient: IngredientChip; onOpenHerb: (herb: Herb) => void; herbById: Map<string, Herb> }) {
+  const { locale } = useLocale();
   const herb = ingredient.herbId ? herbById.get(ingredient.herbId) : undefined;
+  // A localized name in Latin script must not use the vertical Chinese layout.
+  const latinName = /[A-Za-z]/.test(ingredient.name);
+  const tileClass = `ingredient-tile ingredient-${ingredient.thermalProperty}${locale === "en" && latinName ? " ingredient-tile--latin" : ""}`;
   const content = (
     <>
       <div className="ingredient-color-panel">
@@ -634,35 +654,36 @@ function IngredientTile({ ingredient, onOpenHerb, herbById }: { ingredient: Ingr
 
   if (herb) {
     return (
-      <button className={`ingredient-tile ingredient-${ingredient.thermalProperty}`} onClick={() => onOpenHerb(herb)}>
+      <button className={tileClass} onClick={() => onOpenHerb(herb)}>
         {content}
       </button>
     );
   }
-  return <article className={`ingredient-tile ingredient-${ingredient.thermalProperty}`}>{content}</article>;
+  return <article className={tileClass}>{content}</article>;
 }
 
 function FormulaDetail({ formula, isCompared, onAddCompare, onOpenHerb, herbById }: {
   formula: Formula; isCompared: boolean; onAddCompare: (id: string) => void;
   onOpenHerb: (herb: Herb) => void; herbById: Map<string, Herb>;
 }) {
+  const { t } = useLocale();
   const hasStructuredIngredients = formula.ingredients.length > 0;
   return (
     <div className="detail-content">
       <button className={`formula-detail-compare-button ${isCompared ? "is-selected" : ""}`} onClick={() => onAddCompare(formula.id)}>
         <Columns2 size={16} />
-        <span>{isCompared ? "已加入" : "加入对照"}</span>
+        <span>{isCompared ? t.drawer.added : t.drawer.addCompare}</span>
       </button>
       <div className="detail-title formula-detail-title">
         <div>
-          <span>方剂 · {formula.category}{formula.subcategory ? ` · ${formula.subcategory}` : ""}</span>
+          <span>{t.formula.breadcrumb} · {formula.category}{formula.subcategory ? ` · ${formula.subcategory}` : ""}</span>
           <h1>{formula.name}</h1>
           <p>{formula.pinyin}</p>
         </div>
       </div>
 
       {hasStructuredIngredients && (
-        <DetailSection title="组成">
+        <DetailSection title={t.formula.composition}>
           <div className="ingredient-grid">
             {formula.ingredients.map((ingredient) => (
               <IngredientTile key={ingredient.position} ingredient={ingredient} onOpenHerb={onOpenHerb} herbById={herbById} />
@@ -671,52 +692,52 @@ function FormulaDetail({ formula, isCompared, onAddCompare, onOpenHerb, herbById
         </DetailSection>
       )}
       {formula.ingredientsRaw && (
-        <DetailSection title="组成原文">
-          <p>{formula.ingredientsRaw}</p>
+        <DetailSection title={t.formula.compositionRaw}>
+          <p lang="zh-CN">{formula.ingredientsRaw}</p>
         </DetailSection>
       )}
 
       {(formula.function || formula.mainTreatment) && (
         <div className="two-column-detail">
           {formula.function && (
-            <DetailSection title="功效"><ProseBlock value={formula.function} /></DetailSection>
+            <DetailSection title={t.formula.actions}><ProseBlock value={formula.function} /></DetailSection>
           )}
           {formula.mainTreatment && (
-            <DetailSection title="主治"><ProseBlock value={formula.mainTreatment} /></DetailSection>
+            <DetailSection title={t.formula.indications}><ProseBlock value={formula.mainTreatment} /></DetailSection>
           )}
         </div>
       )}
 
       {formula.appliedTo && (
-        <DetailSection title="方解与应用">
+        <DetailSection title={t.formula.analysis}>
           <ProseBlock value={formula.appliedTo} />
         </DetailSection>
       )}
 
       {formula.usage && (
-        <DetailSection title="用法">
+        <DetailSection title={t.formula.usage}>
           <ProseBlock value={formula.usage} />
         </DetailSection>
       )}
 
       {formula.notes && (
-        <DetailSection title="附注">
+        <DetailSection title={t.formula.notes}>
           <ProseBlock value={formula.notes} />
         </DetailSection>
       )}
 
       {formula.digest && (
         <details className="english-details textbook-extracts">
-          <summary>古籍摘录<span>展开阅读</span></summary>
-          <ProseBlock value={formula.digest} />
+          <summary>{t.formula.classicalExcerpts}<span>{t.formula.expand}</span></summary>
+          <div lang="zh-CN"><ProseBlock value={formula.digest} /></div>
         </details>
       )}
 
       {formula.source && (
         <div className="source-note">
           <BookOpen size={18} />
-          <strong>出处</strong>
-          <p>{formula.source}</p>
+          <strong>{t.formula.source}</strong>
+          <p lang="zh-CN">{formula.source}</p>
         </div>
       )}
     </div>
@@ -726,6 +747,7 @@ function FormulaDetail({ formula, isCompared, onAddCompare, onOpenHerb, herbById
 function HerbDetail({ herb, onOpenFormula, onOpenFormulaByName, formulaById }: {
   herb: Herb; onOpenFormula: (formula: Formula) => void; onOpenFormulaByName: (name: string) => void; formulaById: Map<string, Formula>;
 }) {
+  const { t, locale } = useLocale();
   const related = herb.formulaIds.map((id) => formulaById.get(id)).filter(Boolean) as Formula[];
   const imageSrc = herb.image ? `${basePath}/images/herbs/${herb.image}` : null;
 
@@ -733,10 +755,10 @@ function HerbDetail({ herb, onOpenFormula, onOpenFormulaByName, formulaById }: {
     <div className="detail-content">
       <div className={`detail-title herb-detail-title thermal-${herb.thermalProperty}`}>
         <div>
-          <span>中药 · {herb.category}{herb.subcategory ? ` · ${herb.subcategory}` : ""}</span>
+          <span>{t.herb.breadcrumb} · {herb.category}{herb.subcategory ? ` · ${herb.subcategory}` : ""}</span>
           <h1>{herb.name}</h1>
-          <p>{herb.pinyin}</p>
-          {herb.aliases.length > 0 && <small>别名：{herb.aliases.join(" / ")}</small>}
+          <p>{herb.pinyin}{locale === "en" && herb.nameZh !== herb.name ? ` · ${herb.nameZh}` : ""}</p>
+          {herb.aliases.length > 0 && <small>{t.herb.aliases}：{herb.aliases.join(" / ")}</small>}
         </div>
       </div>
 
@@ -748,42 +770,42 @@ function HerbDetail({ herb, onOpenFormula, onOpenFormulaByName, formulaById }: {
       )}
 
       {herb.channels.length > 0 && (
-        <div className="channel-row" aria-label="归经">
-          <span className="channel-row-label">归经</span>
+        <div className="channel-row" aria-label={t.herb.channels}>
+          <span className="channel-row-label">{t.herb.channels}</span>
           <div className="channel-chip-list">
             {herb.channels.map((channel) => (
-              <span className={`channel-chip ${channel.className}`} title={channel.name} key={channel.name}>{channel.label}</span>
+              <span className={`channel-chip ${channel.className}`} title={channelName(locale, channel.name)} key={channel.name}>{channel.label}</span>
             ))}
           </div>
         </div>
       )}
 
       <div className="herb-facts herb-detail-facts">
-        {herb.tasteAndNature && <article><span>性味归经</span><strong>{herb.tasteAndNature}</strong></article>}
-        {herb.keyPoint && <article><span>要点</span><strong>{herb.keyPoint}</strong></article>}
-        {herb.usage && <article><span>用法用量</span><strong>{herb.usage}</strong></article>}
+        {herb.tasteAndNature && <article><span>{t.herb.tasteAndNature}</span><strong>{herb.tasteAndNature}</strong></article>}
+        {herb.keyPoint && <article><span>{t.herb.keyPoint}</span><strong>{herb.keyPoint}</strong></article>}
+        {herb.usage && <article><span>{t.herb.dosage}</span><strong>{herb.usage}</strong></article>}
       </div>
 
       {herb.function && (
-        <DetailSection title="功效">
+        <DetailSection title={t.herb.actions}>
           <ProseBlock value={herb.function} />
         </DetailSection>
       )}
 
       {herb.appliedTo && (
-        <DetailSection title="应用">
+        <DetailSection title={t.herb.applications}>
           <ProseBlock value={herb.appliedTo} />
         </DetailSection>
       )}
 
       {herb.prescriptionForms && (
-        <DetailSection title="处方用名">
+        <DetailSection title={t.herb.prescriptionForms}>
           <ProseBlock value={herb.prescriptionForms} />
         </DetailSection>
       )}
 
       {herb.classicalFormulas && (
-        <DetailSection title="配伍典方">
+        <DetailSection title={t.herb.classicalFormulas}>
           <div className="textbook-extracts">
             {splitProse(herb.classicalFormulas).map((line, index) => (
               <p key={index}>{renderWithFormulaRefs(line, onOpenFormulaByName)}</p>
@@ -793,20 +815,20 @@ function HerbDetail({ herb, onOpenFormula, onOpenFormulaByName, formulaById }: {
       )}
 
       {herb.note && (
-        <DetailSection title="使用注意">
+        <DetailSection title={t.herb.cautions}>
           <ProseBlock value={herb.note} />
         </DetailSection>
       )}
 
       {herb.digest && (
         <details className="english-details textbook-extracts">
-          <summary>古籍摘录<span>展开阅读</span></summary>
-          <ProseBlock value={herb.digest} />
+          <summary>{t.herb.classicalExcerpts}<span>{t.herb.expand}</span></summary>
+          <div lang="zh-CN"><ProseBlock value={herb.digest} /></div>
         </details>
       )}
 
       {related.length > 0 && (
-        <DetailSection title="相关方剂">
+        <DetailSection title={t.herb.relatedFormulas}>
           <div className="related-list">
             {related.map((formula) => (
               <button key={formula.id} onClick={() => onOpenFormula(formula)}>
@@ -821,7 +843,7 @@ function HerbDetail({ herb, onOpenFormula, onOpenFormulaByName, formulaById }: {
       {herb.source && (
         <div className="source-note">
           <BookOpen size={18} />
-          <strong>来源</strong>
+          <strong>{t.herb.origin}</strong>
           <p>{herb.source}</p>
         </div>
       )}

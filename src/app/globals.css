@@ -542,3 +542,43 @@ body { background: #000; }
 .row-tools button.selected {
   background: rgba(255,255,255,.16);
 }
+
+/* English edition — herb cards carry longer Latin names, allow two lines */
+html[lang="en"] .herb-card { grid-template-rows: 58px 40px; }
+html[lang="en"] .herb-card h3 {
+  top: 6px;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: .01em;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* English edition — ingredient tiles hold Latin herb names, not vertical hanzi */
+.ingredient-tile--latin .ingredient-identity { grid-template-columns: 1fr; }
+.ingredient-tile--latin .ingredient-identity strong {
+  justify-self: start;
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+.ingredient-tile--latin .ingredient-western-names { order: 2; margin-top: 6px; }
+.ingredient-tile--latin .ingredient-identity { align-content: start; }
+
+/* Language switch in the topbar */
+.topbar .language-switch { flex: 0 0 auto; gap: 7px; height: 38px; white-space: nowrap; }
+.topbar .language-switch svg { flex: 0 0 auto; }
+.brand > div > span { color: var(--fg); opacity: .5; }
+@media(max-width:800px){
+  .topbar .language-switch { width: 38px; height: 38px; padding: 0; gap: 0; }
+  .topbar .language-switch span { display: none; }
+}

@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "about": "English translations for formula prose, overlaid on raw-formulas.json by id in reference-data.ts. Keys under `entries` are formula ids (String(ID)).",
+    "translatableFields": [
+      "name", "usage", "mainTreatment", "function", "appliedTo", "notes", "ingredients"
+    ],
+    "keepChinese": [
+      "pinyin",
+      "ingredientsRaw (组成原文)",
+      "source (出处 — classical citation / quotation)",
+      "digest (古籍摘录 / 实验研究)"
+    ],
+    "rules": [
+      "name: the standard English formula name (e.g. 'Ephedra Decoction').",
+      "Any field left absent or set to null falls back to the Chinese source text.",
+      "source (出处) usually contains a verbatim classical quotation — never translated, no key here.",
+      "ingredientsRaw (组成原文) stays Chinese and is shown as-is.",
+      "ingredients (optional): map of Chinese herb name -> { processing } to translate the preparation note shown on each ingredient tile; the herb name itself is localized automatically from herbs.json. Doses are left as written.",
+      "Keep the source's numbered / circled-number structure and blank lines.",
+      "Terminology: Bensky, Formulas & Strategies, 2nd ed."
+    ],
+    "progress": "Run `npm run i18n:progress` for completion by field."
+  },
+  "entries": {
+    "1": {
+      "name": "Ephedra Decoction",
+      "usage": "Decoct the four herbs in nine sheng of water, first boiling the ephedra until reduced by two sheng and skimming off the foam, then adding the remaining herbs and boiling down to two and a half sheng. Strain and take eight ge warm. Cover to induce a light sweat; there is no need to take gruel afterward. In other respects, follow the aftercare instructions for Cinnamon Twig Decoction.",
+      "mainTreatment": "Wind-cold exterior-excess pattern from external contraction. Aversion to cold and fever, headache and generalized body aches, absence of sweating with wheezing, a thin white tongue coating, and a floating, tight pulse.",
+      "function": "Induces sweating and releases the exterior, diffuses the Lungs and calms wheezing.",
+      "appliedTo": "1. This is the representative formula for treating wind-cold exterior-excess patterns from external contraction. Aversion to cold and fever, absence of sweating with wheezing, and a floating, tight pulse are the key diagnostic points. Because it is a vigorous acrid-warm sweat-inducing formula, the Discussion of Cold Damage prohibits it — even when a cold exterior pattern is present — in \"sore-afflicted\" people, \"dribbling-urination\" people, \"nosebleed\" people, and \"blood-loss\" people, as well as in exterior deficiency with spontaneous sweating, blood deficiency with a \"slow pulse at the cubit position,\" and cases of \"generalized heaviness and palpitations\" following mistaken purgation.\n2. The common cold, influenza, and also acute bronchitis and bronchial asthma that present as a wind-cold exterior-excess pattern may be treated with this formula.",
+      "notes": "This formula is a vigorous agent for inducing sweating to expel the evil, designed for wind-cold exterior-excess patterns. Physicians through the ages have listed many contraindications for it; broadly summarized, they include:\n① Yang deficiency — sweating prohibited\n② Constitutional cold with spleen-stomach yang deficiency — sweating prohibited\n③ Habitual sweaters — sweating prohibited\n④ Sore-afflicted people — sweating prohibited\n⑤ Blood-loss people — sweating prohibited\n⑥ Nosebleed people — sweating prohibited\n⑦ Dribbling-urination people — sweating prohibited\n⑧ Yin deficiency — sweating prohibited\n⑨ Nutritive-blood deficiency — sweating prohibited",
+      "ingredients": {
+        "麻黄": { "processing": "nodes removed" },
+        "甘草": { "processing": "dry-fried" },
+        "杏仁": { "processing": "skins and tips removed" }
+      }
+    }
+  }
+}

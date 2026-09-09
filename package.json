@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "extract:apk-data": "python scripts/extract_apk_data.py"
+    "extract:apk-data": "python scripts/extract_apk_data.py",
+    "i18n:progress": "node scripts/i18n_progress.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.469.0",
