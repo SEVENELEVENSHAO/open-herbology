@@ -65,10 +65,12 @@ are locale-independent — only the displayed `tasteAndNature` text is translate
 1. `npm run i18n:progress` — see overall completion.
 2. `npm run i18n:progress -- herbs 20` (or `formulas 20`) — prints a JSON
    skeleton for the next N untranslated entries, each field prefilled with
-   `【译】<Chinese source>`. Copy it into the `entries` object of the matching
-   `src/data/en/*.json`.
-3. Replace every `【译】…` string with the English translation. Delete the
-   `【译】` marker and the Chinese with it.
+   `【译】<Chinese source>`.
+3. Translate into a patch file `{ "<id>": { <field>: "<English>" }, ... }` and
+   merge it: `node scripts/i18n_merge.mjs herbs <patch.json>` (or `formulas`).
+   The merge is additive — it only touches the fields you supply, re-sorts
+   `entries` by id, and skips empty values. (You can also hand-edit
+   `src/data/en/*.json` directly.)
 4. Work in category order (the skeleton already comes in id order, which follows
    the source's category grouping) so terminology stays consistent within a class.
 5. `npm run i18n:progress` again; `npm run build` to typecheck; spot-check in the
@@ -92,6 +94,13 @@ are locale-independent — only the displayed `tasteAndNature` text is translate
 - Doses: leave numbers and Chinese units as written unless a whole sentence is
   being rendered (e.g. `三两【9g】` stays; "nine sheng of water" is fine in a
   translated usage sentence).
+
+## Status
+
+- **Done:** all 508 herb names; all 384 formula names; formula `function` (功效)
+  and `mainTreatment` (主治) for every formula that has them.
+- **To do:** all herb prose fields (only herb `1` done); formula `appliedTo`,
+  `usage`, `notes` (only formula `1` done); formula ingredient `processing` notes.
 
 ## Reference example
 
