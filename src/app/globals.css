@@ -544,19 +544,56 @@ body { background: #000; }
 }
 
 /* English edition — herb cards carry longer Latin names, allow two lines */
-html[lang="en"] .herb-card { grid-template-rows: 58px 40px; }
+/* English edition — cards lead with the romanized name, English name beneath */
+html[lang="en"] .herb-card { grid-template-rows: 52px 46px; }
 html[lang="en"] .herb-card h3 {
-  top: 6px;
+  top: 5px;
   font-family: var(--font-sans), sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 800;
   line-height: 1.12;
   letter-spacing: .01em;
   white-space: normal;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+html[lang="en"] .herb-card-bottom span {
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1.12;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+html[lang="en"] .strip-formula-card strong,
+html[lang="en"] .navigator-formula-card strong,
+html[lang="en"] .comparison-card h2 {
+  font-family: var(--font-sans), sans-serif;
+}
+html[lang="en"] .strip-formula-card .formula-pinyin,
+html[lang="en"] .navigator-formula-card .formula-pinyin {
+  font-style: normal;
+  opacity: .75;
+  white-space: normal;
+}
+
+/* English edition — detail header leads with the romanized name */
+html[lang="en"] .detail-title h1 {
+  font-family: var(--font-sans), sans-serif;
+  letter-spacing: 0;
+  font-size: 30px;
+  line-height: 1.1;
+}
+html[lang="en"] .detail-title p {
+  font-size: 15px;
+  font-weight: 700;
+  opacity: .82;
+  line-height: 1.3;
+}
+html[lang="en"] .herb-detail-title h1 { font-size: 30px; }
+html[lang="en"] .herb-detail-title p { font-size: 14px; font-weight: 700; }
 
 /* English edition — ingredient tiles hold Latin herb names, not vertical hanzi */
 .ingredient-tile--latin .ingredient-identity { grid-template-columns: 1fr; }

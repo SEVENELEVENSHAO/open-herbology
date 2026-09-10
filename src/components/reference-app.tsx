@@ -19,9 +19,22 @@ import {
 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { getKeywordMapping } from "@/lib/reference-data";
-import { channelName } from "@/lib/i18n";
+import { channelName, type Locale } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
 import type { Formula, Herb, IngredientChip, ReferenceData } from "@/types/reference";
+
+// Which string leads and which follows in a name/pinyin pair. In the English
+// edition the romanized name reads as the primary label with the English
+// translation beneath it; in Chinese the character name leads.
+function displayNames(
+  item: { name: string; nameZh: string; pinyin: string },
+  locale: Locale,
+): { primary: string; secondary: string } {
+  if (locale === "en") {
+    return { primary: item.pinyin || item.name, secondary: item.name };
+  }
+  return { primary: item.name, secondary: item.pinyin };
+}
 
 type Section = "home" | "herbs" | "compare" | "study";
 type Detail = { type: "formula"; item: Formula } | { type: "herb"; item: Herb };
@@ -352,7 +365,7 @@ function HomePage({ formulas, query, onOpenFormula }: {
   query: string;
   onOpenFormula: (formula: Formula) => void;
 }) {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   const grouped = useGroupByCategory(formulas);
@@ -367,8 +380,8 @@ function HomePage({ formulas, query, onOpenFormula }: {
               items.map((formula) => (
                 <button className="navigator-formula-card" key={formula.id} onClick={() => onOpenFormula(formula)}>
                   <span className="navigator-path">{category} / {subcategory}</span>
-                  <strong>{formula.name}</strong>
-                  <span className="formula-pinyin">{formula.pinyin}</span>
+                  <strong>{displayNames(formula, locale).primary}</strong>
+                  <span className="formula-pinyin">{displayNames(formula, locale).secondary}</span>
                   <ArrowRight size={16} />
                 </button>
               ))
@@ -423,8 +436,8 @@ function HomePage({ formulas, query, onOpenFormula }: {
                               <div className="strip-formula-grid">
                                 {items.map((formula) => (
                                   <button className="strip-formula-card" key={formula.id} onClick={() => onOpenFormula(formula)}>
-                                    <strong>{formula.name}</strong>
-                                    <span className="formula-pinyin">{formula.pinyin}</span>
+                                    <strong>{displayNames(formula, locale).primary}</strong>
+                                    <span className="formula-pinyin">{displayNames(formula, locale).secondary}</span>
                                   </button>
                                 ))}
                               </div>
@@ -444,13 +457,14 @@ function HomePage({ formulas, query, onOpenFormula }: {
 }
 
 function HerbCard({ herb, onOpen }: { herb: Herb; onOpen: (herb: Herb) => void }) {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
+  const { primary, secondary } = displayNames(herb, locale);
   return (
     <button className="herb-card" key={herb.id} onClick={() => onOpen(herb)}>
       <div className={`herb-color thermal-${herb.thermalProperty}`}><Leaf size={19} /></div>
-      <h3>{herb.name}</h3>
+      <h3>{primary}</h3>
       <div className="herb-card-bottom">
-        <span>{herb.pinyin}</span>
+        <span>{secondary}</span>
       </div>
       <div><span>{t.herbs.formulaCount(herb.formulaIds.length)}</span><ArrowRight size={15} /></div>
     </button>
@@ -515,7 +529,7 @@ function HerbLibrary({ herbs, thermal, setThermal, onOpen }: {
 function CompareView({ formulas, compareIds, onRemove, onBrowse }: {
   formulas: Formula[]; compareIds: string[]; onRemove: (id: string) => void; onBrowse: () => void;
 }) {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const selected = compareIds.map((id) => formulas.find((formula) => formula.id === id)).filter(Boolean) as Formula[];
   return (
     <section>
@@ -527,7 +541,7 @@ function CompareView({ formulas, compareIds, onRemove, onBrowse }: {
           {selected.map((formula) => (
             <article className="comparison-card" key={formula.id}>
               <button className="comparison-remove" onClick={() => onRemove(formula.id)}><X size={16} /></button>
-              <h2>{formula.name}</h2><span className="formula-pinyin">{formula.pinyin}</span>
+              <h2>{displayNames(formula, locale).primary}</h2><span className="formula-pinyin">{displayNames(formula, locale).secondary}</span>
               <section className="compare-section">
                 <h4>{t.compare.composition}</h4>
                 <div className="compare-ingredients">{formula.ingredients.map((item) => <span className={`ingredient-${item.thermalProperty}`} key={item.position}>{item.name}<small>{item.dose ?? ""}</small></span>)}</div>
@@ -543,7 +557,7 @@ function CompareView({ formulas, compareIds, onRemove, onBrowse }: {
 }
 
 function StudyView({ formulas, bookmarks, onOpen }: { formulas: Formula[]; bookmarks: string[]; onOpen: (formula: Formula) => void }) {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const pool = bookmarks.length ? formulas.filter((formula) => bookmarks.includes(formula.id)) : formulas;
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
@@ -563,7 +577,7 @@ function StudyView({ formulas, bookmarks, onOpen }: { formulas: Formula[]; bookm
           <div className="study-card-label">{t.study.cardLabel}</div>
           <div className="study-clues">{formula.ingredients.slice(0, 6).map((item) => <span className={`ingredient-${item.thermalProperty}`} key={item.position}>{item.name}</span>)}</div>
           {!revealed ? <button className="primary-button" onClick={() => setRevealed(true)}>{t.study.reveal}</button> : (
-            <div className="study-answer"><Check size={23} /><div><strong>{formula.name}</strong><span>{formula.pinyin}</span><small>{formula.mainTreatment ?? ""}</small></div></div>
+            <div className="study-answer"><Check size={23} /><div><strong>{displayNames(formula, locale).primary}</strong><span>{displayNames(formula, locale).secondary}</span><small>{formula.mainTreatment ?? ""}</small></div></div>
           )}
         </div>
         <div className="study-controls">
@@ -632,8 +646,13 @@ function ProseBlock({ value }: { value: string | null }) {
 function IngredientTile({ ingredient, onOpenHerb, herbById }: { ingredient: IngredientChip; onOpenHerb: (herb: Herb) => void; herbById: Map<string, Herb> }) {
   const { locale } = useLocale();
   const herb = ingredient.herbId ? herbById.get(ingredient.herbId) : undefined;
-  // A localized name in Latin script must not use the vertical Chinese layout.
-  const latinName = /[A-Za-z]/.test(ingredient.name);
+  const pinyin = herb?.pinyin || "";
+  // English edition: lead with the romanized name, English name beneath.
+  const enLead = locale === "en" && Boolean(pinyin);
+  const primaryName = enLead ? pinyin : ingredient.name;
+  const secondaryName = enLead ? ingredient.name : pinyin;
+  // A Latin primary name must not use the vertical Chinese layout.
+  const latinName = /[A-Za-z]/.test(primaryName);
   const tileClass = `ingredient-tile ingredient-${ingredient.thermalProperty}${locale === "en" && latinName ? " ingredient-tile--latin" : ""}`;
   const content = (
     <>
@@ -641,9 +660,9 @@ function IngredientTile({ ingredient, onOpenHerb, herbById }: { ingredient: Ingr
         <div className="ingredient-identity">
           <div className="ingredient-western-names">
             {ingredient.processing && <span>{ingredient.processing}</span>}
-            {herb?.pinyin && <small>{herb.pinyin}</small>}
+            {secondaryName && <small>{secondaryName}</small>}
           </div>
-          <strong>{ingredient.name}</strong>
+          <strong>{primaryName}</strong>
         </div>
       </div>
       <div className="ingredient-dose">
@@ -666,8 +685,9 @@ function FormulaDetail({ formula, isCompared, onAddCompare, onOpenHerb, herbById
   formula: Formula; isCompared: boolean; onAddCompare: (id: string) => void;
   onOpenHerb: (herb: Herb) => void; herbById: Map<string, Herb>;
 }) {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const hasStructuredIngredients = formula.ingredients.length > 0;
+  const fname = displayNames(formula, locale);
   return (
     <div className="detail-content">
       <button className={`formula-detail-compare-button ${isCompared ? "is-selected" : ""}`} onClick={() => onAddCompare(formula.id)}>
@@ -677,8 +697,8 @@ function FormulaDetail({ formula, isCompared, onAddCompare, onOpenHerb, herbById
       <div className="detail-title formula-detail-title">
         <div>
           <span>{t.formula.breadcrumb} · {formula.category}{formula.subcategory ? ` · ${formula.subcategory}` : ""}</span>
-          <h1>{formula.name}</h1>
-          <p>{formula.pinyin}</p>
+          <h1>{fname.primary}</h1>
+          <p>{fname.secondary}{locale === "en" && formula.nameZh !== fname.secondary ? ` · ${formula.nameZh}` : ""}</p>
         </div>
       </div>
 
@@ -756,9 +776,9 @@ function HerbDetail({ herb, onOpenFormula, onOpenFormulaByName, formulaById }: {
       <div className={`detail-title herb-detail-title thermal-${herb.thermalProperty}`}>
         <div>
           <span>{t.herb.breadcrumb} · {herb.category}{herb.subcategory ? ` · ${herb.subcategory}` : ""}</span>
-          <h1>{herb.name}</h1>
-          <p>{herb.pinyin}{locale === "en" && herb.nameZh !== herb.name ? ` · ${herb.nameZh}` : ""}</p>
-          {herb.aliases.length > 0 && <small>{t.herb.aliases}：{herb.aliases.join(" / ")}</small>}
+          <h1>{displayNames(herb, locale).primary}</h1>
+          <p>{displayNames(herb, locale).secondary}{locale === "en" && herb.nameZh !== herb.name ? ` · ${herb.nameZh}` : ""}</p>
+          {herb.aliases.length > 0 && <small>{t.herb.aliases}{locale === "en" ? ": " : "："}{herb.aliases.join(" / ")}</small>}
         </div>
       </div>
 
@@ -832,7 +852,7 @@ function HerbDetail({ herb, onOpenFormula, onOpenFormulaByName, formulaById }: {
           <div className="related-list">
             {related.map((formula) => (
               <button key={formula.id} onClick={() => onOpenFormula(formula)}>
-                <div><strong>{formula.name}</strong><span>{formula.pinyin}</span></div>
+                <div><strong>{displayNames(formula, locale).primary}</strong><span>{displayNames(formula, locale).secondary}</span></div>
                 <ArrowRight size={16} />
               </button>
             ))}
