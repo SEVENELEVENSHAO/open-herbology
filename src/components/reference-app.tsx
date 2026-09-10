@@ -144,7 +144,10 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
         // ignore malformed storage
       }
     }
-    if (process.env.NODE_ENV === "production" && "serviceWorker" in navigator) {
+    // In the Capacitor build the assets are already local; a service worker there
+    // only risks pinning stale content across app updates.
+    const inCapacitor = typeof window !== "undefined" && "Capacitor" in window;
+    if (process.env.NODE_ENV === "production" && !inCapacitor && "serviceWorker" in navigator) {
       navigator.serviceWorker.register(`${basePath}/sw.js`);
     }
   }, []);
