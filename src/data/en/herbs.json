@@ -2,10 +2,22 @@
   "_meta": {
     "about": "English translations for herb prose, overlaid on raw-herbs.json by id in reference-data.ts. Keys under `entries` are herb ids (String(ID)).",
     "translatableFields": [
-      "name", "source", "tasteAndNature", "function", "keyPoint",
-      "appliedTo", "prescriptionForms", "usage", "classicalFormulas", "note"
+      "name",
+      "source",
+      "tasteAndNature",
+      "function",
+      "keyPoint",
+      "appliedTo",
+      "prescriptionForms",
+      "usage",
+      "classicalFormulas",
+      "note"
     ],
-    "keepChinese": ["pinyin", "aliases", "digest (古籍摘录)"],
+    "keepChinese": [
+      "pinyin",
+      "aliases",
+      "digest (古籍摘录)"
+    ],
     "rules": [
       "name: the standard English common name (e.g. 'Ephedra'); the Chinese name and pinyin still show alongside it.",
       "Any field left absent or set to null falls back to the Chinese source text.",
@@ -29,6 +41,1527 @@
       "usage": "Decoct, 3–10 g. Use unprepared to induce sweating and release the exterior; use honey-fried mostly to stop cough and calm wheezing.",
       "classicalFormulas": "{{麻黄汤}} (Discussion of Cold Damage): ephedra, cinnamon twig, apricot kernel, licorice. For wind-cold contracted externally with aversion to cold, absence of sweating, headache, and body aches — an exterior-excess pattern.\n\n{{三拗汤}} (Formulary of the Pharmacy Service): ephedra, apricot kernel, licorice. For wind-cold common cold with cough and wheezing.\n\n{{麻黄杏仁甘草石膏汤}} (Discussion of Cold Damage): ephedra, apricot kernel, licorice, gypsum. For interior heat pent up and blocked, with fever and thirst, wheezing and coughing with coarse breathing, and flaring of the nostrils.",
       "note": "This herb has a strong dispersing action; use it with caution in all cases of exterior deficiency with spontaneous sweating, yin deficiency with night sweats, and deficiency wheezing.\n1. Ephedra is first recorded in the Divine Farmer's Classic of the Materia Medica. After the Han-dynasty Discussion of Cold Damage recorded Ephedra Decoction, later physicians all regarded ephedra as an essential herb for inducing sweating to release the exterior and for stopping cough and calming wheezing.\n2. Its action centers on dispersing and on diffusing the Lungs: paired with cinnamon twig it induces sweating and releases the exterior; with apricot kernel it stops cough and calms wheezing; with dried ginger it diffuses the Lungs and scatters cold; with gypsum it diffuses the Lungs and drains heat; in Ephedra, Aconite Accessory Root, and Asarum Decoction, paired with aconite accessory root, it warms the channels and effuses the exterior; in Harmonious Yang Decoction, paired with cinnamon bark, it warmly scatters cold evil and frees the qi and blood.\n3. In sum, the clinical use of ephedra draws mainly on its two aspects: diffusing (the Lungs) and dispersing (the exterior)."
+    },
+    "2": {
+      "name": "Cinnamon Twig"
+    },
+    "3": {
+      "name": "Perilla Leaf"
+    },
+    "4": {
+      "name": "Fresh Ginger"
+    },
+    "5": {
+      "name": "Mosla"
+    },
+    "6": {
+      "name": "Schizonepeta"
+    },
+    "7": {
+      "name": "Saposhnikovia Root"
+    },
+    "8": {
+      "name": "Notopterygium Root"
+    },
+    "9": {
+      "name": "Dahurian Angelica Root"
+    },
+    "10": {
+      "name": "Asarum"
+    },
+    "11": {
+      "name": "Chinese Lovage Root"
+    },
+    "12": {
+      "name": "Xanthium (Cocklebur Fruit)"
+    },
+    "13": {
+      "name": "Magnolia Flower"
+    },
+    "14": {
+      "name": "Field Mint"
+    },
+    "15": {
+      "name": "Burdock Fruit"
+    },
+    "16": {
+      "name": "Cicada Molting"
+    },
+    "17": {
+      "name": "Mulberry Leaf"
+    },
+    "18": {
+      "name": "Chrysanthemum Flower"
+    },
+    "19": {
+      "name": "Vitex Fruit"
+    },
+    "20": {
+      "name": "Bupleurum Root"
+    },
+    "21": {
+      "name": "Cimicifuga Rhizome"
+    },
+    "22": {
+      "name": "Kudzu Root"
+    },
+    "23": {
+      "name": "Fermented Soybean"
+    },
+    "24": {
+      "name": "Duckweed"
+    },
+    "25": {
+      "name": "Gypsum"
+    },
+    "26": {
+      "name": "Anemarrhena Rhizome"
+    },
+    "27": {
+      "name": "Reed Rhizome"
+    },
+    "28": {
+      "name": "Trichosanthes Root"
+    },
+    "29": {
+      "name": "Fresh Bamboo Leaf"
+    },
+    "30": {
+      "name": "Lophatherum"
+    },
+    "31": {
+      "name": "Gardenia Fruit"
+    },
+    "32": {
+      "name": "Prunella (Self-Heal Spike)"
+    },
+    "33": {
+      "name": "Cassia Seed"
+    },
+    "34": {
+      "name": "Celosia Seed"
+    },
+    "35": {
+      "name": "Scutellaria Root"
+    },
+    "36": {
+      "name": "Coptis Rhizome"
+    },
+    "37": {
+      "name": "Phellodendron Bark"
+    },
+    "38": {
+      "name": "Gentian Root"
+    },
+    "39": {
+      "name": "Ash Bark"
+    },
+    "40": {
+      "name": "Flavescent Sophora Root"
+    },
+    "41": {
+      "name": "Dictamnus Bark"
+    },
+    "42": {
+      "name": "Honeysuckle Flower"
+    },
+    "43": {
+      "name": "Forsythia Fruit"
+    },
+    "44": {
+      "name": "Dandelion"
+    },
+    "45": {
+      "name": "Yedoensis Violet"
+    },
+    "46": {
+      "name": "Wild Chrysanthemum Flower"
+    },
+    "47": {
+      "name": "Isatis Leaf"
+    },
+    "48": {
+      "name": "Isatis Root"
+    },
+    "49": {
+      "name": "Natural Indigo"
+    },
+    "50": {
+      "name": "Houttuynia"
+    },
+    "51": {
+      "name": "Belamcanda Rhizome"
+    },
+    "52": {
+      "name": "Pulsatilla Root"
+    },
+    "53": {
+      "name": "Chinese Lobelia"
+    },
+    "54": {
+      "name": "Hedyotis (Oldenlandia)"
+    },
+    "55": {
+      "name": "Rehmannia Root (unprepared)"
+    },
+    "56": {
+      "name": "Scrophularia Root"
+    },
+    "57": {
+      "name": "Moutan (Tree Peony Bark)"
+    },
+    "58": {
+      "name": "Red Peony Root"
+    },
+    "59": {
+      "name": "Water Buffalo Horn"
+    },
+    "60": {
+      "name": "Sweet Wormwood"
+    },
+    "61": {
+      "name": "Lycium Bark"
+    },
+    "62": {
+      "name": "Lanceolate Stellaria Root"
+    },
+    "63": {
+      "name": "Picrorhiza Rhizome"
+    },
+    "64": {
+      "name": "Rhubarb"
+    },
+    "65": {
+      "name": "Mirabilite"
+    },
+    "66": {
+      "name": "Aloe"
+    },
+    "67": {
+      "name": "Hemp Seed"
+    },
+    "68": {
+      "name": "Bush Cherry Pit"
+    },
+    "69": {
+      "name": "Kansui Root"
+    },
+    "70": {
+      "name": "Peking Spurge Root"
+    },
+    "71": {
+      "name": "Genkwa Flower"
+    },
+    "72": {
+      "name": "Croton Seed"
+    },
+    "73": {
+      "name": "Pubescent Angelica Root"
+    },
+    "74": {
+      "name": "Clematis Root"
+    },
+    "75": {
+      "name": "Sichuan Aconite Main Root"
+    },
+    "76": {
+      "name": "Long-Noded Pit Viper"
+    },
+    "77": {
+      "name": "Chaenomeles Fruit"
+    },
+    "78": {
+      "name": "Futokadsura Stem"
+    },
+    "79": {
+      "name": "Sweetgum Fruit"
+    },
+    "80": {
+      "name": "Large-Leaf Gentian Root"
+    },
+    "81": {
+      "name": "Stephania Root"
+    },
+    "82": {
+      "name": "Mulberry Twig"
+    },
+    "83": {
+      "name": "Star Jasmine Stem"
+    },
+    "84": {
+      "name": "Acanthopanax Bark"
+    },
+    "85": {
+      "name": "Mulberry Mistletoe"
+    },
+    "87": {
+      "name": "Scallion White"
+    },
+    "88": {
+      "name": "Coriander"
+    },
+    "89": {
+      "name": "Platycodon Root"
+    },
+    "90": {
+      "name": "Sichuan Fritillaria Bulb"
+    },
+    "91": {
+      "name": "Zhejiang Fritillaria Bulb"
+    },
+    "92": {
+      "name": "Bamboo Shavings"
+    },
+    "93": {
+      "name": "Sargassum"
+    },
+    "94": {
+      "name": "Kelp (Laminaria)"
+    },
+    "95": {
+      "name": "Fortune Eupatorium"
+    },
+    "96": {
+      "name": "Atractylodes Rhizome (cangzhu)"
+    },
+    "97": {
+      "name": "Magnolia Bark"
+    },
+    "98": {
+      "name": "Amomum Fruit"
+    },
+    "99": {
+      "name": "Round Cardamom Fruit"
+    },
+    "100": {
+      "name": "Japanese Thistle"
+    },
+    "101": {
+      "name": "Sanguisorba Root"
+    },
+    "102": {
+      "name": "Biota Leaf"
+    },
+    "103": {
+      "name": "Imperata Rhizome"
+    },
+    "104": {
+      "name": "Notoginseng Root"
+    },
+    "105": {
+      "name": "Madder Root"
+    },
+    "106": {
+      "name": "Typha Pollen"
+    },
+    "107": {
+      "name": "Dalbergia Heartwood"
+    },
+    "108": {
+      "name": "Bletilla Rhizome"
+    },
+    "109": {
+      "name": "Charred Trachycarpus Petiole"
+    },
+    "110": {
+      "name": "Charred Human Hair"
+    },
+    "111": {
+      "name": "Lotus Rhizome Node"
+    },
+    "112": {
+      "name": "Blast-Fried Ginger"
+    },
+    "113": {
+      "name": "Mugwort Leaf"
+    },
+    "114": {
+      "name": "Cooking-Stove Earth"
+    },
+    "115": {
+      "name": "Chuanxiong (Sichuan Lovage Root)"
+    },
+    "116": {
+      "name": "Corydalis Rhizome"
+    },
+    "117": {
+      "name": "Curcuma Tuber"
+    },
+    "118": {
+      "name": "Frankincense"
+    },
+    "119": {
+      "name": "Myrrh"
+    },
+    "120": {
+      "name": "Flying Squirrel Feces"
+    },
+    "121": {
+      "name": "Salvia Root"
+    },
+    "122": {
+      "name": "Safflower"
+    },
+    "123": {
+      "name": "Peach Kernel"
+    },
+    "124": {
+      "name": "Chinese Motherwort"
+    },
+    "125": {
+      "name": "Achyranthes Root"
+    },
+    "126": {
+      "name": "Wingless Cockroach"
+    },
+    "127": {
+      "name": "Drynaria Rhizome"
+    },
+    "128": {
+      "name": "Nux Vomica"
+    },
+    "129": {
+      "name": "Zedoary Rhizome"
+    },
+    "130": {
+      "name": "Sparganium Rhizome"
+    },
+    "131": {
+      "name": "Leech"
+    },
+    "132": {
+      "name": "Horsefly"
+    },
+    "134": {
+      "name": "Field Thistle"
+    },
+    "138": {
+      "name": "Glauberite"
+    },
+    "139": {
+      "name": "Dayflower"
+    },
+    "140": {
+      "name": "Watermelon Rind"
+    },
+    "141": {
+      "name": "Lotus Leaf"
+    },
+    "142": {
+      "name": "Lotus Plumule"
+    },
+    "143": {
+      "name": "Pipewort Flower"
+    },
+    "144": {
+      "name": "Buddleia Flower"
+    },
+    "145": {
+      "name": "Bat Feces"
+    },
+    "147": {
+      "name": "Climbing Groundsel"
+    },
+    "148": {
+      "name": "Gromwell Root"
+    },
+    "149": {
+      "name": "Rhinoceros Horn"
+    },
+    "150": {
+      "name": "Cattle Gallstone"
+    },
+    "155": {
+      "name": "Imperata Rhizome"
+    },
+    "160": {
+      "name": "Cremastra Pseudobulb"
+    },
+    "161": {
+      "name": "Rhaponticum Root"
+    },
+    "162": {
+      "name": "Holly Leaf (Ilex chinensis)"
+    },
+    "163": {
+      "name": "Bushkiller Vine"
+    },
+    "164": {
+      "name": "Cottonrose Hibiscus Flower"
+    },
+    "165": {
+      "name": "Ampelopsis Root"
+    },
+    "167": {
+      "name": "Wild Buckwheat Root"
+    },
+    "168": {
+      "name": "Strawberry Saxifrage"
+    },
+    "169": {
+      "name": "Sargentgloryvine Stem"
+    },
+    "170": {
+      "name": "Patrinia"
+    },
+    "171": {
+      "name": "Spanish Needles (Bidens)"
+    },
+    "174": {
+      "name": "Glabrous Greenbrier Rhizome"
+    },
+    "175": {
+      "name": "Kalimeris Root"
+    },
+    "177": {
+      "name": "Vietnamese Sophora Root"
+    },
+    "178": {
+      "name": "Puffball"
+    },
+    "179": {
+      "name": "Chinese Olive"
+    },
+    "180": {
+      "name": "Decumbent Bugle"
+    },
+    "181": {
+      "name": "Rock Jasmine"
+    },
+    "182": {
+      "name": "Goldenrod"
+    },
+    "183": {
+      "name": "Creeping Rostellularia"
+    },
+    "184": {
+      "name": "Licorice-in-Feces Preparation"
+    },
+    "185": {
+      "name": "Calcined Urine Sediment"
+    },
+    "187": {
+      "name": "Purslane"
+    },
+    "188": {
+      "name": "Java Brucea Fruit"
+    },
+    "189": {
+      "name": "Fissistigma Root"
+    },
+    "190": {
+      "name": "Canada Fleabane"
+    },
+    "191": {
+      "name": "Japanese Clover"
+    },
+    "192": {
+      "name": "Common Leafflower Herb"
+    },
+    "193": {
+      "name": "Mung Bean"
+    },
+    "194": {
+      "name": "Paris Rhizome"
+    },
+    "195": {
+      "name": "Barbed Skullcap"
+    },
+    "196": {
+      "name": "Bittersweet Herb (Solanum lyratum)"
+    },
+    "197": {
+      "name": "Black Nightshade"
+    },
+    "198": {
+      "name": "Mock Strawberry"
+    },
+    "200": {
+      "name": "Chinese Brake Herb"
+    },
+    "201": {
+      "name": "Catchweed Bedstraw"
+    },
+    "202": {
+      "name": "Semiaquilegia Root"
+    },
+    "203": {
+      "name": "Hardy Kiwi Root"
+    },
+    "204": {
+      "name": "Pig Bile"
+    },
+    "206": {
+      "name": "Baiwei (Blackend Swallowwort Root)"
+    },
+    "207": {
+      "name": "Japanese Hop"
+    },
+    "208": {
+      "name": "Soybean Sprout"
+    },
+    "209": {
+      "name": "Chinese Tamarisk Twig"
+    },
+    "210": {
+      "name": "Shortleaf Kyllinga"
+    },
+    "211": {
+      "name": "Lawn Pennywort"
+    },
+    "212": {
+      "name": "Scouring Rush"
+    },
+    "213": {
+      "name": "Iris Rhizome (tectorum)"
+    },
+    "214": {
+      "name": "Senna Leaf"
+    },
+    "216": {
+      "name": "Flax Seed"
+    },
+    "217": {
+      "name": "Honey"
+    },
+    "218": {
+      "name": "Morning Glory Seed"
+    },
+    "219": {
+      "name": "Caper Spurge Seed"
+    },
+    "220": {
+      "name": "Pokeweed Root"
+    },
+    "221": {
+      "name": "Chinese Tallow Root Bark"
+    },
+    "222": {
+      "name": "Poria"
+    },
+    "223": {
+      "name": "Polyporus"
+    },
+    "224": {
+      "name": "Alisma Rhizome"
+    },
+    "225": {
+      "name": "Job's Tears Seed"
+    },
+    "226": {
+      "name": "Rush Pith"
+    },
+    "227": {
+      "name": "Tetrapanax Pith"
+    },
+    "228": {
+      "name": "Cluster Mallow Seed"
+    },
+    "229": {
+      "name": "Plantago Seed"
+    },
+    "230": {
+      "name": "Akebia Stem"
+    },
+    "231": {
+      "name": "Talc"
+    },
+    "232": {
+      "name": "Lysimachia (Christina Loosestrife)"
+    },
+    "233": {
+      "name": "Lygodium Spore"
+    },
+    "234": {
+      "name": "Pyrrosia Leaf"
+    },
+    "235": {
+      "name": "Knotgrass"
+    },
+    "236": {
+      "name": "Dianthus"
+    },
+    "237": {
+      "name": "Fish Poison Yam Rhizome"
+    },
+    "238": {
+      "name": "Aduki Bean"
+    },
+    "239": {
+      "name": "Corn Silk"
+    },
+    "240": {
+      "name": "Bottle Gourd Shell"
+    },
+    "241": {
+      "name": "Wax Gourd Peel"
+    },
+    "242": {
+      "name": "Sun Spurge"
+    },
+    "243": {
+      "name": "Mole Cricket"
+    },
+    "244": {
+      "name": "Capillaris (Yin Chen)"
+    },
+    "245": {
+      "name": "Japanese St. John's Wort"
+    },
+    "246": {
+      "name": "Stringstonecrop Herb"
+    },
+    "247": {
+      "name": "Agastache (Patchouli)"
+    },
+    "248": {
+      "name": "Katsumada's Galangal Seed"
+    },
+    "249": {
+      "name": "Tsaoko Fruit"
+    },
+    "250": {
+      "name": "Harlequin Glorybower Leaf"
+    },
+    "251": {
+      "name": "Cranesbill (Herba Erodii)"
+    },
+    "252": {
+      "name": "Bushy Knotweed Rhizome"
+    },
+    "253": {
+      "name": "Garden Balsam Stem"
+    },
+    "255": {
+      "name": "Wintergreen Herb (Pyrola)"
+    },
+    "256": {
+      "name": "Siegesbeckia"
+    },
+    "257": {
+      "name": "Obscured Homalomena Rhizome"
+    },
+    "258": {
+      "name": "Tiger Bone"
+    },
+    "259": {
+      "name": "Black-Banded Krait"
+    },
+    "260": {
+      "name": "Paniculate Swallowwort Root"
+    },
+    "261": {
+      "name": "Aristolochia Root (Xun Gu Feng)"
+    },
+    "262": {
+      "name": "Elder Twig"
+    },
+    "263": {
+      "name": "Silkworm Feces"
+    },
+    "264": {
+      "name": "Pine Knot"
+    },
+    "265": {
+      "name": "Coral Bean Bark (Erythrina)"
+    },
+    "266": {
+      "name": "Tangerine Peel"
+    },
+    "267": {
+      "name": "Immature Bitter Orange"
+    },
+    "268": {
+      "name": "Trichosanthes Peel"
+    },
+    "269": {
+      "name": "Costus Root"
+    },
+    "270": {
+      "name": "Lindera Root"
+    },
+    "271": {
+      "name": "Sandalwood"
+    },
+    "272": {
+      "name": "Nardostachys Root"
+    },
+    "273": {
+      "name": "Stink-Bug (Aspongopus)"
+    },
+    "274": {
+      "name": "Areca Husk"
+    },
+    "275": {
+      "name": "Green Tangerine Peel"
+    },
+    "276": {
+      "name": "Trifoliate Orange Fruit"
+    },
+    "277": {
+      "name": "Sichuan Chinaberry Fruit"
+    },
+    "278": {
+      "name": "Cyperus Rhizome"
+    },
+    "279": {
+      "name": "Finger Citron"
+    },
+    "280": {
+      "name": "Citron Fruit"
+    },
+    "281": {
+      "name": "Akebia Fruit"
+    },
+    "282": {
+      "name": "Horse Chestnut (Aesculus Seed)"
+    },
+    "283": {
+      "name": "Rose Flower"
+    },
+    "284": {
+      "name": "Plum Blossom"
+    },
+    "285": {
+      "name": "Lychee Pit"
+    },
+    "286": {
+      "name": "Inula Flower"
+    },
+    "288": {
+      "name": "Aquilaria (Aloeswood)"
+    },
+    "289": {
+      "name": "Clove"
+    },
+    "290": {
+      "name": "Persimmon Calyx"
+    },
+    "291": {
+      "name": "Jack Bean"
+    },
+    "292": {
+      "name": "Lycopus"
+    },
+    "293": {
+      "name": "Vervain"
+    },
+    "294": {
+      "name": "Turmeric Rhizome"
+    },
+    "296": {
+      "name": "Decumbent Corydalis Rhizome"
+    },
+    "297": {
+      "name": "Chinese Rose Flower"
+    },
+    "298": {
+      "name": "Spatholobus Stem (Millettia)"
+    },
+    "299": {
+      "name": "Pangolin Scales"
+    },
+    "300": {
+      "name": "Vaccaria Seed"
+    },
+    "302": {
+      "name": "Sappan Wood"
+    },
+    "303": {
+      "name": "Anomalous Artemisia (Liu Ji Nu)"
+    },
+    "304": {
+      "name": "Bur-Reed Rhizome"
+    },
+    "305": {
+      "name": "Zedoary Rhizome"
+    },
+    "306": {
+      "name": "Dried Lacquer"
+    },
+    "307": {
+      "name": "Trumpet Creeper Flower"
+    },
+    "308": {
+      "name": "Pyrite (Natural Copper)"
+    },
+    "309": {
+      "name": "Prince's-Feather Fruit"
+    },
+    "310": {
+      "name": "Agrimony"
+    },
+    "311": {
+      "name": "Beautyberry Leaf"
+    },
+    "312": {
+      "name": "Bletilla Rhizome"
+    },
+    "313": {
+      "name": "Broad Bean Flower"
+    },
+    "314": {
+      "name": "Shepherd's Purse Flower"
+    },
+    "315": {
+      "name": "Copperleaf Herb"
+    },
+    "316": {
+      "name": "Creeping Euphorbia"
+    },
+    "320": {
+      "name": "Camellia Flower"
+    },
+    "321": {
+      "name": "Japanese Dock Root"
+    },
+    "322": {
+      "name": "Nippon Lily Root"
+    },
+    "323": {
+      "name": "Pagoda Tree Flower"
+    },
+    "324": {
+      "name": "Stove Soot"
+    },
+    "325": {
+      "name": "Cattle Horn Marrow"
+    },
+    "326": {
+      "name": "Scabious Root (Patrinia heterophylla)"
+    },
+    "327": {
+      "name": "Notoginseng Root"
+    },
+    "328": {
+      "name": "Ophicalcite"
+    },
+    "329": {
+      "name": "Radish Seed"
+    },
+    "330": {
+      "name": "Chinese Hawthorn Fruit"
+    },
+    "331": {
+      "name": "Medicated Leaven"
+    },
+    "332": {
+      "name": "Chicken Gizzard Lining"
+    },
+    "333": {
+      "name": "Barley Sprout"
+    },
+    "334": {
+      "name": "Rice Sprout"
+    },
+    "335": {
+      "name": "Asafoetida"
+    },
+    "336": {
+      "name": "Chinaberry Root Bark"
+    },
+    "337": {
+      "name": "Quisqualis Fruit"
+    },
+    "338": {
+      "name": "Areca Seed (Betel Nut)"
+    },
+    "339": {
+      "name": "Pumpkin Seed"
+    },
+    "340": {
+      "name": "Omphalia (Thunder Ball)"
+    },
+    "341": {
+      "name": "Carpesium Fruit"
+    },
+    "342": {
+      "name": "Elm Cake"
+    },
+    "343": {
+      "name": "Torreya Seed"
+    },
+    "344": {
+      "name": "Dryopteris Rhizome"
+    },
+    "345": {
+      "name": "Garlic"
+    },
+    "346": {
+      "name": "Pinellia Rhizome"
+    },
+    "347": {
+      "name": "Arisaema Rhizome"
+    },
+    "348": {
+      "name": "Typhonium Rhizome"
+    },
+    "349": {
+      "name": "Gleditsia Pod"
+    },
+    "350": {
+      "name": "Perilla Fruit"
+    },
+    "351": {
+      "name": "White Mustard Seed"
+    },
+    "352": {
+      "name": "Cynanchum Stauntonii Rhizome"
+    },
+    "353": {
+      "name": "Swallowwort Pod (Tian Jiang Ke)"
+    },
+    "354": {
+      "name": "Centipeda Herb"
+    },
+    "355": {
+      "name": "Hogfennel Root (Peucedanum)"
+    },
+    "356": {
+      "name": "Trichosanthes Fruit"
+    },
+    "357": {
+      "name": "Bamboo Sugar (Tabasheer)"
+    },
+    "358": {
+      "name": "Monkey Bezoar"
+    },
+    "359": {
+      "name": "Chlorite Schist"
+    },
+    "360": {
+      "name": "Clam Shell"
+    },
+    "361": {
+      "name": "Pumice"
+    },
+    "362": {
+      "name": "Lepidium / Descurainia Seed"
+    },
+    "363": {
+      "name": "Air Potato Rhizome"
+    },
+    "364": {
+      "name": "Water Chestnut"
+    },
+    "365": {
+      "name": "Ark Shell"
+    },
+    "366": {
+      "name": "Boat Sterculia Seed"
+    },
+    "367": {
+      "name": "Oroxylum Seed"
+    },
+    "368": {
+      "name": "Apricot Kernel"
+    },
+    "369": {
+      "name": "Aristolochia Fruit"
+    },
+    "370": {
+      "name": "Loquat Leaf"
+    },
+    "371": {
+      "name": "Cudweed Herb"
+    },
+    "372": {
+      "name": "Yellowcress Herb (Rorippa)"
+    },
+    "373": {
+      "name": "Nandina Fruit"
+    },
+    "374": {
+      "name": "Coltsfoot Flower"
+    },
+    "375": {
+      "name": "Aster Root"
+    },
+    "376": {
+      "name": "Stemona Root"
+    },
+    "377": {
+      "name": "Mulberry Root Bark"
+    },
+    "378": {
+      "name": "Egg Membrane"
+    },
+    "379": {
+      "name": "Elaeagnus Leaf"
+    },
+    "380": {
+      "name": "Globe Amaranth Flower"
+    },
+    "381": {
+      "name": "Stalactite"
+    },
+    "382": {
+      "name": "Datura Flower"
+    },
+    "383": {
+      "name": "Aconite Accessory Root (prepared)"
+    },
+    "384": {
+      "name": "Cinnamon Bark"
+    },
+    "385": {
+      "name": "Dried Ginger"
+    },
+    "386": {
+      "name": "Evodia Fruit"
+    },
+    "387": {
+      "name": "Lesser Galangal Rhizome"
+    },
+    "388": {
+      "name": "Sichuan Pepper"
+    },
+    "389": {
+      "name": "Black Pepper"
+    },
+    "390": {
+      "name": "Long Pepper"
+    },
+    "391": {
+      "name": "Cubeb"
+    },
+    "393": {
+      "name": "Fennel Fruit"
+    },
+    "394": {
+      "name": "Musk"
+    },
+    "395": {
+      "name": "Borneol"
+    },
+    "396": {
+      "name": "Storax (Liquidambar Resin)"
+    },
+    "397": {
+      "name": "Acorus Rhizome (Grassleaf Sweetflag)"
+    },
+    "398": {
+      "name": "Antelope Horn"
+    },
+    "399": {
+      "name": "Goat Horn"
+    },
+    "400": {
+      "name": "Abalone Shell"
+    },
+    "401": {
+      "name": "Gastrodia Rhizome"
+    },
+    "402": {
+      "name": "Uncaria Stem with Hooks"
+    },
+    "403": {
+      "name": "Tribulus Fruit"
+    },
+    "404": {
+      "name": "Black Soybean Seed Coat"
+    },
+    "405": {
+      "name": "Hematite"
+    },
+    "406": {
+      "name": "Earthworm"
+    },
+    "407": {
+      "name": "Stiff Silkworm"
+    },
+    "408": {
+      "name": "Cowrie Shell"
+    },
+    "409": {
+      "name": "Hawksbill Turtle Shell"
+    },
+    "410": {
+      "name": "Horse Bezoar"
+    },
+    "411": {
+      "name": "Fluorite"
+    },
+    "412": {
+      "name": "Scorpion"
+    },
+    "413": {
+      "name": "Centipede"
+    },
+    "414": {
+      "name": "Gecko (Wall Lizard)"
+    },
+    "415": {
+      "name": "Cinnabar"
+    },
+    "416": {
+      "name": "Magnetite"
+    },
+    "417": {
+      "name": "Dragon Bone"
+    },
+    "418": {
+      "name": "Oyster Shell"
+    },
+    "419": {
+      "name": "Amber"
+    },
+    "420": {
+      "name": "Pearl"
+    },
+    "421": {
+      "name": "Sour Jujube Seed"
+    },
+    "422": {
+      "name": "Biota Seed"
+    },
+    "423": {
+      "name": "Polygala Root"
+    },
+    "424": {
+      "name": "Fleeceflower Stem (Ye Jiao Teng)"
+    },
+    "425": {
+      "name": "Silk Tree Bark"
+    },
+    "426": {
+      "name": "Wheat"
+    },
+    "427": {
+      "name": "Broomcorn Millet"
+    },
+    "428": {
+      "name": "Ginseng"
+    },
+    "429": {
+      "name": "Codonopsis Root"
+    },
+    "430": {
+      "name": "Pseudostellaria Root"
+    },
+    "431": {
+      "name": "Astragalus Root"
+    },
+    "432": {
+      "name": "White Atractylodes Rhizome"
+    },
+    "433": {
+      "name": "Chinese Yam"
+    },
+    "434": {
+      "name": "Hyacinth Bean"
+    },
+    "435": {
+      "name": "Jujube"
+    },
+    "436": {
+      "name": "Licorice Root"
+    },
+    "437": {
+      "name": "Malt Sugar"
+    },
+    "438": {
+      "name": "Placenta (Human)"
+    },
+    "439": {
+      "name": "Polygonatum Rhizome"
+    },
+    "440": {
+      "name": "Bur Beggarticks"
+    },
+    "441": {
+      "name": "Chinese Peashrub Root"
+    },
+    "442": {
+      "name": "Deer Antler Velvet"
+    },
+    "443": {
+      "name": "Deer Antler"
+    },
+    "444": {
+      "name": "Epimedium"
+    },
+    "445": {
+      "name": "Curculigo Rhizome"
+    },
+    "446": {
+      "name": "Morinda Root"
+    },
+    "447": {
+      "name": "Psoralea Fruit"
+    },
+    "448": {
+      "name": "Walnut"
+    },
+    "449": {
+      "name": "Cistanche"
+    },
+    "450": {
+      "name": "Black Cardamom (Alpinia oxyphylla)"
+    },
+    "451": {
+      "name": "Astragalus complanatus Seed"
+    },
+    "452": {
+      "name": "Cuscuta Seed"
+    },
+    "453": {
+      "name": "Gecko (Tokay)"
+    },
+    "454": {
+      "name": "Cordyceps"
+    },
+    "455": {
+      "name": "Cynomorium Stem"
+    },
+    "456": {
+      "name": "Fenugreek Seed"
+    },
+    "457": {
+      "name": "Cnidium Fruit"
+    },
+    "458": {
+      "name": "Chinese Leek Seed"
+    },
+    "459": {
+      "name": "Actinolite"
+    },
+    "461": {
+      "name": "Fur Seal Penis and Testes"
+    },
+    "462": {
+      "name": "Dipsacus Root"
+    },
+    "463": {
+      "name": "Eucommia Bark"
+    },
+    "464": {
+      "name": "Cibot Rhizome"
+    },
+    "465": {
+      "name": "Cotton Seed"
+    },
+    "466": {
+      "name": "Climbing Fig Fruit"
+    },
+    "467": {
+      "name": "Prepared Rehmannia Root"
+    },
+    "468": {
+      "name": "Fleeceflower Root (He Shou Wu)"
+    },
+    "469": {
+      "name": "Chinese Angelica Root (Dang Gui)"
+    },
+    "470": {
+      "name": "White Peony Root"
+    },
+    "471": {
+      "name": "Ass-Hide Gelatin"
+    },
+    "472": {
+      "name": "Mulberry Fruit"
+    },
+    "473": {
+      "name": "Longan Flesh"
+    },
+    "474": {
+      "name": "Adenophora / Glehnia Root"
+    },
+    "475": {
+      "name": "Asparagus Tuber"
+    },
+    "476": {
+      "name": "Ophiopogon Tuber"
+    },
+    "477": {
+      "name": "Dendrobium Stem"
+    },
+    "478": {
+      "name": "Polygonatum odoratum Rhizome"
+    },
+    "479": {
+      "name": "Lily Bulb"
+    },
+    "480": {
+      "name": "Bonnet Bellflower Root (Yang Ru)"
+    },
+    "481": {
+      "name": "Chinese Holly Leaf"
+    },
+    "482": {
+      "name": "Paper Mulberry Fruit"
+    },
+    "483": {
+      "name": "Lycium Fruit (Goji Berry)"
+    },
+    "484": {
+      "name": "Privet Fruit"
+    },
+    "485": {
+      "name": "Eclipta"
+    },
+    "486": {
+      "name": "Tortoise Plastron"
+    },
+    "487": {
+      "name": "Turtle Shell"
+    },
+    "489": {
+      "name": "Cornus Fruit (Asiatic Dogwood)"
+    },
+    "490": {
+      "name": "Schisandra Fruit"
+    },
+    "491": {
+      "name": "Mume Fruit (Smoked Plum)"
+    },
+    "492": {
+      "name": "Lotus Seed"
+    },
+    "493": {
+      "name": "Nutmeg"
+    },
+    "494": {
+      "name": "Chebula Fruit"
+    },
+    "495": {
+      "name": "Halloysite (Red)"
+    },
+    "496": {
+      "name": "Limonite"
+    },
+    "497": {
+      "name": "Sumac Gallnut"
+    },
+    "498": {
+      "name": "Poppy Husk"
+    },
+    "499": {
+      "name": "Pomegranate Rind"
+    },
+    "500": {
+      "name": "Alum"
+    },
+    "501": {
+      "name": "Ailanthus Bark"
+    },
+    "502": {
+      "name": "Euryale Seed"
+    },
+    "503": {
+      "name": "Mantis Egg Case"
+    },
+    "504": {
+      "name": "Rubus Fruit (Palmleaf Raspberry)"
+    },
+    "505": {
+      "name": "Cherokee Rose Hip"
+    },
+    "506": {
+      "name": "Cuttlefish Bone"
+    },
+    "507": {
+      "name": "Fumitory Herb"
+    },
+    "508": {
+      "name": "Cockscomb Flower"
+    },
+    "509": {
+      "name": "Light Wheat Grain"
+    },
+    "510": {
+      "name": "Glutinous Rice Root"
+    },
+    "511": {
+      "name": "Ephedra Root"
+    },
+    "512": {
+      "name": "Ginkgo Seed"
+    },
+    "513": {
+      "name": "Hedgehog Skin"
+    },
+    "514": {
+      "name": "Toad Venom"
+    },
+    "515": {
+      "name": "Realgar"
+    },
+    "516": {
+      "name": "Borax"
+    },
+    "517": {
+      "name": "Sal Ammoniac"
+    },
+    "518": {
+      "name": "Arsenolite"
+    },
+    "519": {
+      "name": "Blister Beetle"
+    },
+    "520": {
+      "name": "Lime"
+    },
+    "521": {
+      "name": "Calomel"
+    },
+    "522": {
+      "name": "Chaulmoogra Seed"
+    },
+    "523": {
+      "name": "Hornet Nest"
+    },
+    "524": {
+      "name": "Rose of Sharon Bark"
+    },
+    "525": {
+      "name": "Melanterite (Green Vitriol)"
+    },
+    "526": {
+      "name": "Camphor"
+    },
+    "527": {
+      "name": "Sulfur"
+    },
+    "528": {
+      "name": "Calamine"
+    },
+    "529": {
+      "name": "Catechu"
+    },
+    "530": {
+      "name": "Dragon's Blood"
+    },
+    "531": {
+      "name": "Elephant Hide"
+    },
+    "532": {
+      "name": "Rosin"
+    },
+    "533": {
+      "name": "Minium (Red Lead)"
+    },
+    "534": {
+      "name": "Buttercup Herb"
+    },
+    "536": {
+      "name": "Konjac"
+    },
+    "537": {
+      "name": "Dichroa Root"
+    },
+    "538": {
+      "name": "Melon Stem (Muskmelon Pedicel)"
+    },
+    "539": {
+      "name": "Veratrum"
+    },
+    "540": {
+      "name": "Marshpepper Smartweed"
+    },
+    "541": {
+      "name": "Chinese Chive Bulb (Xie Bai)"
     }
   }
 }

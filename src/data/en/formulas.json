@@ -2,7 +2,13 @@
   "_meta": {
     "about": "English translations for formula prose, overlaid on raw-formulas.json by id in reference-data.ts. Keys under `entries` are formula ids (String(ID)).",
     "translatableFields": [
-      "name", "usage", "mainTreatment", "function", "appliedTo", "notes", "ingredients"
+      "name",
+      "usage",
+      "mainTreatment",
+      "function",
+      "appliedTo",
+      "notes",
+      "ingredients"
     ],
     "keepChinese": [
       "pinyin",
@@ -30,10 +36,1911 @@
       "appliedTo": "1. This is the representative formula for treating wind-cold exterior-excess patterns from external contraction. Aversion to cold and fever, absence of sweating with wheezing, and a floating, tight pulse are the key diagnostic points. Because it is a vigorous acrid-warm sweat-inducing formula, the Discussion of Cold Damage prohibits it — even when a cold exterior pattern is present — in \"sore-afflicted\" people, \"dribbling-urination\" people, \"nosebleed\" people, and \"blood-loss\" people, as well as in exterior deficiency with spontaneous sweating, blood deficiency with a \"slow pulse at the cubit position,\" and cases of \"generalized heaviness and palpitations\" following mistaken purgation.\n2. The common cold, influenza, and also acute bronchitis and bronchial asthma that present as a wind-cold exterior-excess pattern may be treated with this formula.",
       "notes": "This formula is a vigorous agent for inducing sweating to expel the evil, designed for wind-cold exterior-excess patterns. Physicians through the ages have listed many contraindications for it; broadly summarized, they include:\n① Yang deficiency — sweating prohibited\n② Constitutional cold with spleen-stomach yang deficiency — sweating prohibited\n③ Habitual sweaters — sweating prohibited\n④ Sore-afflicted people — sweating prohibited\n⑤ Blood-loss people — sweating prohibited\n⑥ Nosebleed people — sweating prohibited\n⑦ Dribbling-urination people — sweating prohibited\n⑧ Yin deficiency — sweating prohibited\n⑨ Nutritive-blood deficiency — sweating prohibited",
       "ingredients": {
-        "麻黄": { "processing": "nodes removed" },
-        "甘草": { "processing": "dry-fried" },
-        "杏仁": { "processing": "skins and tips removed" }
+        "麻黄": {
+          "processing": "nodes removed"
+        },
+        "甘草": {
+          "processing": "dry-fried"
+        },
+        "杏仁": {
+          "processing": "skins and tips removed"
+        }
       }
+    },
+    "2": {
+      "name": "Ephedra Decoction plus Atractylodes",
+      "function": "Induces sweating and releases the exterior; disperses cold and dispels dampness.",
+      "mainTreatment": "Wind-cold-damp painful obstruction with vexing generalized body pain and absence of sweating."
+    },
+    "3": {
+      "name": "Ephedra, Apricot Kernel, Coix, and Licorice Decoction",
+      "function": "Releases the exterior and dispels dampness.",
+      "mainTreatment": "Wind-damp with pain throughout the body, fever, and aggravation in the late afternoon."
+    },
+    "4": {
+      "name": "Major Bluegreen Dragon Decoction",
+      "function": "Induces sweating and releases the exterior; clears heat and eliminates irritability.",
+      "mainTreatment": "Externally contracted wind-cold with absence of sweating, irritability and restlessness, body pain, and a floating, tight pulse."
+    },
+    "5": {
+      "name": "Three-Unbinding Decoction",
+      "function": "Diffuses the Lungs and releases the exterior.",
+      "mainTreatment": "Wind evil contracted as a common cold with nasal congestion, heavy muffled voice, loss of voice, cough, and chest oppression."
+    },
+    "6": {
+      "name": "Canopy Powder",
+      "function": "Diffuses the Lungs and releases the exterior; dispels phlegm and stops cough.",
+      "mainTreatment": "Lungs affected by wind-cold with cough and rebellious qi, inhibited phlegm-qi, wheezing with a rasping sound, and a floating, rapid pulse."
+    },
+    "7": {
+      "name": "Cinnamon Twig Decoction",
+      "function": "Releases the flesh and effuses the exterior; harmonizes the nutritive and protective qi.",
+      "mainTreatment": "Externally contracted wind-cold exterior-deficiency pattern. Headache and fever, sweating with aversion to wind, nasal congestion and dry heaves, a white uncoated tongue without thirst, and a floating, moderate or floating, weak pulse."
+    },
+    "8": {
+      "name": "Cinnamon Twig Decoction plus Cinnamon",
+      "function": "Warms and unblocks the Heart yang; calms surging and directs rebellious qi downward.",
+      "mainTreatment": "Running-piglet qi arising after mistaken use of a warm needle or excessive sweating in a greater yang disorder, with qi surging up from the lower abdomen to the Heart and chest, restlessness whether lying or sitting, and an intermittent pattern of attacks."
+    },
+    "9": {
+      "name": "Cinnamon Twig Decoction plus Peony",
+      "function": "Harmonizes the qi and blood; moderates urgency and relieves pain.",
+      "mainTreatment": "Greater yang disease mistakenly purged so that the evil sinks into the greater yin, with abdominal fullness and intermittent pain."
+    },
+    "10": {
+      "name": "Nine-Herb Decoction with Notopterygium",
+      "function": "Induces sweating and dispels dampness; also clears interior heat.",
+      "mainTreatment": "Externally contracted wind-cold-damp evils with interior heat. Aversion to cold and fever, absence of sweating on the exterior, headache and stiff neck, aching sore pain of the limbs and body, a bitter taste and mild thirst, a white or slightly yellow tongue coating, and a floating pulse."
+    },
+    "11": {
+      "name": "Notopterygium Decoction to Overcome Dampness",
+      "function": "Dispels wind, overcomes dampness, and relieves pain.",
+      "mainTreatment": "Wind-damp in the exterior with shoulder and back pain so severe the head cannot be turned, headache and generalized heaviness, or lumbar and spinal pain making it hard to turn from side to side, a white tongue coating and a floating pulse."
+    },
+    "12": {
+      "name": "Major Notopterygium Decoction"
+    },
+    "13": {
+      "name": "Minor Bluegreen Dragon Decoction",
+      "function": "Releases the exterior and disperses cold; warms the Lungs and transforms thin mucus.",
+      "mainTreatment": "Exterior cold with congested thin mucus. Aversion to cold and fever, absence of sweating, chest stuffiness with wheezing and cough, copious thin sputum; or thin-mucus wheezing and cough with inability to lie flat; or generalized heavy pain with puffy swelling of the head, face, and limbs; a white slippery tongue coating and a floating pulse."
+    },
+    "14": {
+      "name": "Belamcanda and Ephedra Decoction",
+      "function": "Diffuses the Lungs and dispels phlegm; directs qi downward and stops cough.",
+      "mainTreatment": "Cough with rebellious qi and a water-bubbling sound in the throat."
+    },
+    "15": {
+      "name": "Stop Coughing Powder",
+      "function": "Diffuses and disinhibits the Lung qi; dispels wind and stops cough.",
+      "mainTreatment": "Wind evil invading the Lungs. Cough with an itchy throat, difficulty expectorating phlegm, or mild aversion to wind and fever, a thin white tongue coating, and a floating, moderate pulse."
+    },
+    "16": {
+      "name": "Inula Powder",
+      "function": "Disperses wind-cold; directs qi downward and transforms phlegm.",
+      "mainTreatment": "Wind-damage cough with aversion to cold and fever, cough with copious phlegm, nasal congestion and runny nose, a white greasy tongue coating, and a floating pulse."
+    },
+    "17": {
+      "name": "Mosla Powder",
+      "function": "Dispels summerheat and releases the exterior; transforms dampness and harmonizes the middle.",
+      "mainTreatment": "Yin-type summerheat. Aversion to cold and fever, abdominal pain with vomiting and diarrhea, generalized heaviness and body pain, absence of sweating, chest oppression, a white greasy tongue coating, and a floating pulse."
+    },
+    "18": {
+      "name": "Newly Augmented Mosla Beverage",
+      "function": "Dispels summerheat and releases the exterior; clears heat and transforms dampness.",
+      "mainTreatment": "Summerheat-warmth. Fever and headache, aversion to cold with absence of sweating, thirst and a red face, chest oppression and discomfort, a white greasy tongue coating, and a floating, rapid pulse."
+    },
+    "19": {
+      "name": "Honeysuckle and Forsythia Powder",
+      "function": "Acrid-cool release of the exterior; clears heat and resolves toxicity.",
+      "mainTreatment": "Onset of a warm-disease. Fever without sweating, or sweating that does not flow freely, mild aversion to wind-cold, headache and thirst, cough and sore throat, a red tongue tip with a thin white or slightly yellow coating, and a floating, rapid pulse."
+    },
+    "20": {
+      "name": "Mulberry Leaf and Chrysanthemum Beverage",
+      "function": "Dispels wind and clears heat; diffuses the Lungs and stops cough. As the upper burner is like a feather, only the light will raise it.",
+      "mainTreatment": "Onset of wind-warmth. Only cough, with no great fever, mild thirst, and a floating, rapid pulse."
+    },
+    "21": {
+      "name": "Ephedra, Apricot Kernel, Licorice, and Gypsum Decoction",
+      "function": "Acrid-cool diffusing of the Lungs; clears heat and calms wheezing.",
+      "mainTreatment": "Exterior evil not yet resolved with Lung-heat cough and wheezing. Persistent fever, cough with rebellious qi and rapid breathing with flaring nostrils, thirst, with or without sweating, a thin white or yellow tongue coating, and a floating, rapid pulse."
+    },
+    "22": {
+      "name": "Bupleurum and Kudzu Decoction to Release the Muscle Layer",
+      "function": "Releases the muscle layer and clears heat. This pattern lies in the muscle layer of the exterior, a combined disease of all three yang channels — greater yang, yang brightness, and lesser yang.",
+      "mainTreatment": "Wind-cold common cold that has become constrained and transformed into heat. Aversion to cold gradually easing, mounting fever, absence of sweating and headache, painful eyes and a dry nose, vexation and sleeplessness, a dry throat and deafness, orbital pain, a thin yellow tongue coating, and a floating, slightly surging pulse."
+    },
+    "23": {
+      "name": "Bupleurum and Kudzu Decoction to Release the Muscle Layer (Cheng's)",
+      "function": "Releases the muscle layer and clears heat.",
+      "mainTreatment": "Externally contracted wind-heat. No aversion to cold but thirst, a yellow tongue coating, and a floating, rapid pulse."
+    },
+    "24": {
+      "name": "Cimicifuga and Kudzu Decoction",
+      "function": "Releases the muscle layer and vents rashes. \"Measles is a yang toxin,\" \"measles favors coolness,\" \"one never tires of venting rashes.\" The routine treatment of measles is summarized in three principles: diffusing and venting, clearing and resolving, and nourishing the yin.",
+      "mainTreatment": "Onset of measles. Rash that does not vent fully, fever and headache, cough, red eyes with tearing, thirst, a red tongue, and a rapid pulse. Originally for pox and rashes, this formula is now used mostly for the onset of measles."
+    },
+    "25": {
+      "name": "Toxin-Vanquishing Powder",
+      "function": "Disperses cold and dispels dampness; augments the qi and releases the exterior.",
+      "mainTreatment": "Qi-deficiency exterior contraction. Aversion to cold with high fever, stiff painful head and nape, aching sore limbs and body, absence of sweating, nasal congestion and heavy muffled voice, cough with phlegm, chest and diaphragm oppression, a pale tongue with white coating, and a floating pulse that is forceless on pressure."
+    },
+    "26": {
+      "name": "Schizonepeta and Saposhnikovia Toxin-Vanquishing Powder",
+      "function": "Induces sweating and releases the exterior; disperses wind and dispels cold.",
+      "mainTreatment": "Externally contracted wind-cold-damp evils, as well as seasonal epidemic malaria, dysentery, and sores presenting with a wind-cold-damp exterior pattern."
+    },
+    "27": {
+      "name": "Granary Powder",
+      "function": "Augments the qi and releases the exterior; vanquishes toxin and stops vomiting.",
+      "mainTreatment": "Clenched-mouth dysentery. Toxic qi surging up to the Heart, with heat and vomiting."
+    },
+    "28": {
+      "name": "Ginseng and Perilla Beverage",
+      "function": "Augments the qi and releases the exterior; regulates the qi and transforms phlegm.",
+      "mainTreatment": "Wind-cold contracted by a deficient person with internal thin mucus. Aversion to cold and fever, absence of sweating, headache, nasal congestion, cough with white phlegm, chest and diaphragm fullness and oppression, fatigue and lack of strength, shortness of breath and disinclination to speak, a white tongue coating, and a weak pulse."
+    },
+    "29": {
+      "name": "Renewal Powder",
+      "function": "Assists the yang and augments the qi; releases the exterior and disperses cold.",
+      "mainTreatment": "Yang-qi weakness with externally contracted wind-cold. Aversion to cold and fever with the cold heavy and the heat light, absence of sweating and cold limbs, fatigue and somnolence, a pale complexion, faint low speech, a pale tongue with white coating, and a sunken forceless pulse, or a floating, large, forceless pulse."
+    },
+    "30": {
+      "name": "Ephedra, Aconite Accessory Root, and Asarum Decoction",
+      "function": "Assists the yang and releases the exterior.",
+      "mainTreatment": "Lesser yin disease at its onset with, contrary to expectation, fever and a sunken pulse."
+    },
+    "31": {
+      "name": "Ephedra, Aconite Accessory Root, and Licorice Decoction",
+      "mainTreatment": "Lesser yin disease. Aversion to cold and body pain, absence of sweating with mild fever, and a sunken faint pulse; or a water disorder with puffy swelling of the face and body, shortness of breath, inhibited urination, and a sunken, small pulse."
+    },
+    "34": {
+      "name": "Major Order-the-Qi Decoction",
+      "function": "Urgent purgation to preserve the yin; drastic purgation of heat accumulation.",
+      "mainTreatment": "1. Yang brightness organ-excess pattern. Constipation with frequent passing of flatus, epigastric and abdominal focal distention and fullness, abdominal pain that refuses pressure and feels hard on palpation, possibly with tidal fever and delirious speech, sweating from the extremities, a dry yellow tongue coating with prickles or a parched black cracked coating, and a sunken, replete pulse.\n2. Heat accumulation with watery discharge. Diarrhea of clear water, pure green in color, with a foul odor, periumbilical pain, hard palpable masses on palpation, a dry mouth and tongue, and a slippery, replete pulse.\n3. Interior heat-excess patterns such as heat collapse, spasm disorder, or mania."
+    },
+    "35": {
+      "name": "Rhubarb and Moutan Decoction",
+      "function": "Drains heat and breaks up stasis; dissipates clumps and reduces swelling.",
+      "mainTreatment": "Onset of intestinal abscess with damp-heat and stasis stagnation. Pain in the right lower abdomen that refuses pressure, pain like strangury on palpation, or local swelling and clumping, or the right leg flexed and unable to straighten (straightening intensifies the pain), normal urination, intermittent fever, spontaneous sweating and aversion to cold, a thin greasy yellow tongue coating, and a slippery, rapid pulse."
+    },
+    "36": {
+      "name": "Warm the Spleen Decoction",
+      "function": "Purges cold accumulation; warms and tonifies the Spleen yang.",
+      "mainTreatment": "Yang-deficiency cold-accumulation pattern. Abdominal pain and constipation, gripping bind below the navel with unrelenting periumbilical pain, cold extremities, a white uncoated tongue without thirst, and a sunken, wiry, slow pulse."
+    },
+    "37": {
+      "name": "Hemp Seed Pill",
+      "function": "Moistens the intestines and drains heat; moves the qi and unblocks the stool.",
+      "mainTreatment": "Stomach-intestine dryness-heat with spleen-fettered constipation. Dry, bound stool and frequent urination."
+    },
+    "38": {
+      "name": "Benefit the River [Flow] Decoction",
+      "function": "Warms the Kidneys and augments the essence; moistens the intestines and unblocks the stool. In this formula bitter orange directs qi downward and relaxes the intestines while cimicifuga raises the clear yang — combined, they join descent with ascent, embodying the idea of first raising in order to descend. Alisma enters the Kidneys to drain turbidity, not to drip out water for strangury.",
+      "mainTreatment": "Kidney-yang weakness with insufficiency of essence and fluids. Constipation, clear profuse urine, sore weak lower back and knees, dizzy head and eyes, a pale tongue with white coating, and a sunken, slow pulse."
+    },
+    "39": {
+      "name": "Ten-Jujube Decoction",
+      "function": "Drives out water and thin mucus by drastic purgation.",
+      "mainTreatment": "1. Suspended thin mucus. Cough and expectoration with pain radiating to the chest and rib-sides, hard distended fullness below the Heart, dry heaves and shortness of breath, headache and dizziness, or pulling pain in the chest and back with inability to catch the breath, a slippery tongue coating, and a sunken, wiry pulse.\n2. Edema. Swelling of the whole body, worse below the waist, abdominal distention with wheezing and fullness, and inhibited urination and defecation."
+    },
+    "40": {
+      "name": "Yellow Dragon Decoction",
+      "function": "Purges to unblock the stool; tonifies the qi and nourishes the blood.",
+      "mainTreatment": "Yang brightness organ-excess with qi and blood insufficiency. Diarrhea of clear water pure green in color, or constipation, epigastric and abdominal distention and fullness, abdominal pain that refuses pressure, fever and thirst, spiritual fatigue and scant qi, delirious speech, in severe cases picking at bedclothes and grasping at the air, clouded spirit and cold limbs, a parched yellow or parched black tongue coating, and a deficient pulse."
+    },
+    "41": {
+      "name": "Minor Bupleurum Decoction",
+      "function": "Harmonizes and resolves the lesser yang.",
+      "mainTreatment": "1. Cold-damage lesser yang pattern. Alternating chills and fever, fullness and discomfort in the chest and rib-sides, a taciturn disinclination to eat or drink, vexation with a tendency to vomit, a bitter taste, a dry throat, dizzy vision, a thin white tongue coating, and a wiry pulse.\n2. Heat entering the blood chamber. In a woman with cold damage whose menses have just stopped, chills and fever occurring at set times.\n3. Jaundice, malaria, and miscellaneous internal-damage disorders presenting with a lesser yang pattern."
+    },
+    "42": {
+      "name": "Major Bupleurum Decoction",
+      "function": "Harmonizes and resolves the lesser yang; drains interior heat accumulation.",
+      "mainTreatment": "Combined lesser yang and yang brightness disease. Alternating chills and fever, fullness and discomfort in the chest and rib-sides, incessant vomiting, a stifled mild vexation, hard focal distention below the Heart, or fullness and pain below the Heart, constipation or hot diarrhea, a yellow tongue coating, and a wiry, rapid, forceful pulse."
+    },
+    "43": {
+      "name": "Sweet Wormwood and Scutellaria Decoction to Clear the Gallbladder",
+      "function": "Clears the Gallbladder and disinhibits dampness; harmonizes the Stomach and transforms phlegm.",
+      "mainTreatment": "Lesser yang damp-heat pattern. Malaria-like chills and fever with the cold light and the heat heavy, a bitter taste and diaphragm oppression, vomiting of sour bitter fluid or of sticky yellow drool, in severe cases dry heaves and hiccup, distending pain of the chest and rib-sides, scant dark urine, a red tongue with a white greasy coating showing patches of other colors, and a rapid pulse slippery on the right and wiry on the left."
+    },
+    "44": {
+      "name": "Frigid Extremities Powder",
+      "function": "Vents the evil and resolves constraint; courses the Liver and regulates the Spleen.",
+      "mainTreatment": "1. Yang-constraint reversal-counterflow pattern. Cool extremities, or abdominal pain, or diarrhea with a heavy sensation, and a wiry pulse.\n2. Liver-Spleen qi constraint pattern. Distending oppression of the rib-sides, epigastric and abdominal pain, and a wiry pulse."
+    },
+    "45": {
+      "name": "Important Formula for Painful Diarrhea",
+      "function": "Tonifies the Spleen and softens the Liver; dispels dampness and stops diarrhea.",
+      "mainTreatment": "Painful diarrhea from Spleen deficiency with Liver overactivity. Borborygmus and abdominal pain, loose stool, pain that always precedes the diarrhea and eases afterward, a thin white tongue coating, and a pulse discordant at both bar positions — wiry on the left and moderate on the right."
+    },
+    "46": {
+      "name": "Modified Polygonatum Odoratum Decoction",
+      "function": "Enriches the yin and clears heat; induces sweating and releases the exterior.",
+      "mainTreatment": "Yin-deficiency wind-heat exterior contraction. Headache and fever, mild aversion to wind-cold, absence of sweating or scant sweating, cough, vexation, thirst, a dry throat, a red tongue, and a rapid pulse."
+    },
+    "47": {
+      "name": "Polygonatum Odoratum Decoction",
+      "function": "Courses wind and releases the exterior; clears heat and nourishes the yin.",
+      "mainTreatment": "Wind-warmth disease with a floating pulse at both the yin and yang positions. Sweating and generalized heaviness, labored breathing that must become wheezing, numbness, a taciturn disinclination to sleep; purging causes difficult urination, sweating causes delirious speech, adding fire-needling causes deafness and difficulty speaking, and purging alone causes fecal and urinary incontinence."
+    },
+    "48": {
+      "name": "Scallion and Seven-Ingredient Beverage",
+      "function": "Nourishes the blood and releases the exterior. When a blood-deficient person also has an exterior pattern, failing to sweat leaves the evil unresolved, yet sweating risks either no sweat or a sweat that further injures the yin-blood and gives rise to other patterns — so one nourishes the blood to supply the source of sweat, and effuses the exterior to resolve the outside evil.",
+      "mainTreatment": "Yin-blood depletion after illness, or exterior evil contracted after blood loss (hematemesis, blood in the stool, coughing of blood, nosebleed), with poor self-care. Headache and fever, mild chills without sweating, a tender tongue with a thin or absent coating, and a floating, thin pulse or a floating, hollow pulse."
+    },
+    "49": {
+      "name": "Minor Order-the-Qi Decoction",
+      "function": "Light purgation of heat accumulation.",
+      "mainTreatment": "Yang brightness organ-excess pattern. Delirious speech, tidal fever, constipation, chest and abdominal focal distention and fullness, an old yellow tongue coating, and a slippery, hurried pulse."
+    },
+    "50": {
+      "name": "Regulate the Stomach and Order-the-Qi Decoction",
+      "function": "Moderate purgation of heat accumulation.",
+      "mainTreatment": "Yang brightness disease with Stomach-intestine dryness-heat. Constipation, thirst and vexation, steaming fever, or abdominal distention and fullness, or delirious speech, a proper yellow tongue coating, and a slippery, rapid pulse."
+    },
+    "51": {
+      "name": "Compound Major Order-the-Qi Decoction",
+      "function": "Unblocks the interior by purgation; moves the qi and invigorates the blood.",
+      "mainTreatment": "Simple intestinal obstruction of the yang brightness organ-excess type with pronounced qi distention."
+    },
+    "52": {
+      "name": "Major Sinking-into-the-Chest Decoction",
+      "function": "Drains heat, expels water, and breaks up clumping.",
+      "mainTreatment": "Chest-bind pattern. Hard fullness and pain from below the Heart to the lower abdomen so severe it cannot be approached, constipation, mild tidal fever in the late afternoon, or shortness of breath with agitation and vexation, a dry tongue with thirst, and a sunken, tight pulse that is forceful on pressure."
+    },
+    "53": {
+      "name": "Major Sinking-into-the-Chest Pill",
+      "function": "Drains heat and expels water."
+    },
+    "55": {
+      "name": "Appendix Stasis-Transforming Decoction",
+      "function": "Transforms stagnation and unblocks binds; clears heat and resolves toxicity.",
+      "mainTreatment": "Acute appendicitis of the stasis-stagnation type. Low fever, epigastric and abdominal distention and oppression, belching with reduced appetite, nausea and acid regurgitation, abdominal pain — periumbilical or fixed in location — that refuses pressure, possibly with a palpable mass, constipation, dark urine, a white greasy tongue coating, and a wiry-tight, choppy, or thin pulse."
+    },
+    "56": {
+      "name": "Appendix Heat-Clearing and Transforming Decoction",
+      "function": "Clears heat and resolves toxicity; moves the qi and invigorates the blood.",
+      "mainTreatment": "Acute appendicitis in the heat-accumulation stage. Fever worse in the afternoon, a dry thirsty mouth, severe abdominal pain, poor appetite, constipation, and dark reddish urine."
+    },
+    "57": {
+      "name": "Appendix Heat-Resolving Decoction",
+      "function": "Clears heat and resolves toxicity; reduces swelling and unblocks binds.",
+      "mainTreatment": "Acute appendicitis in the heat-toxin stage. Fever with or without aversion to cold, a dry thirsty mouth, a red face and eyes, dry lips and tongue, nausea and inability to eat, abdominal distention and pain that refuses pressure, constipation, dark astringent urine or painful urination, a crimson tongue with a yellow greasy or yellow rough coating, and a surging, large, slippery, rapid or wiry, rapid pulse."
+    },
+    "58": {
+      "name": "Rhubarb and Aconite Accessory Root Decoction",
+      "function": "Warms the yang and disperses cold; drains binds and moves stagnation. Because cold-excess binds internally, the yang qi does not flow through — so warm the yang and disperse cold; because cold accumulation blocks the intestinal tract and conveyance fails — so drain binds and move stagnation.",
+      "mainTreatment": "Cold-accumulation abdominal pain. Constipation and abdominal pain, one-sided pain below the rib-side, fever, cool extremities, a white greasy tongue coating, and a wiry, tight pulse."
+    },
+    "59": {
+      "name": "Three-Substance Decoction for Emergencies",
+      "function": "Drives out cold accumulation by purgation.",
+      "mainTreatment": "Cold-excess abdominal pain. Sudden distending pain of the Heart and abdomen, pain like an awl piercing, hurried breathing and a clenched mouth, and constipation."
+    },
+    "60": {
+      "name": "Moisten the Intestines Pill",
+      "function": "Moistens the intestines and unblocks the stool; invigorates the blood and dispels wind.",
+      "mainTreatment": "Constipation from improper diet and taxation fatigue, or dry bound stool that will not pass, complete loss of appetite, and wind-bind or blood-bind patterns."
+    },
+    "61": {
+      "name": "Five-Seed Pill",
+      "function": "Moistens the intestines and unblocks the stool.",
+      "mainTreatment": "Fluid-desiccation constipation. Dry stool that is difficult and rough to pass, as well as constipation from blood deficiency in the elderly or after childbirth."
+    },
+    "62": {
+      "name": "Control Mucus Special Pill",
+      "function": "Dispels phlegm and drives out thin mucus.",
+      "mainTreatment": "Phlegm-drool lodged above and below the Heart and diaphragm; or sudden unbearable hidden pain of the chest, back, limbs, neck, lower back, or hips, with pulling, hooking pain of the sinews and bones that shifts about; or unbearable headache; or clouded lethargy with excessive sleep; or tastelessness of food, thick sticky drool, a sawing sound in the throat at night, and copious drooling."
+    },
+    "63": {
+      "name": "Boats and Carts Pill",
+      "function": "Moves the qi and drives out water.",
+      "mainTreatment": "Edema and water distention. Thirst, coarse breathing, a firm abdomen, constipation and inhibited urination, and a sunken, rapid, forceful pulse."
+    },
+    "64": {
+      "name": "Yu's Merit Powder",
+      "function": "Drives out water to unblock the stool; moves the qi and reduces swelling.",
+      "mainTreatment": "Yang-type water. Generalized edema, abdominal distention with wheezing and fullness, constipation, inhibited urination, and a sunken, forceful pulse."
+    },
+    "65": {
+      "name": "Guide Out Water Pill",
+      "function": "Drains heat and drives out water.",
+      "mainTreatment": "Edema. Generalized puffy swelling, inhibited urination and defecation, thirst, dark urine, a yellow tongue coating, and a rapid pulse; or damp-heat lumbar pain, or phlegm-damp flowing about with body pain."
+    },
+    "66": {
+      "name": "Increase the Fluids and Order-the-Qi Decoction",
+      "function": "Enriches the yin and increases the fluids; drains heat and unblocks the stool.",
+      "mainTreatment": "Heat accumulation with yin depletion. Dry stool that will not pass and does not respond to purgation, epigastric and abdominal distention and fullness, a dry mouth and parched lips, a red tongue with yellow coating, and a thin, rapid pulse."
+    },
+    "67": {
+      "name": "Order-the-Qi and Nourish the Nutritive Decoction",
+      "function": "Drains heat and unblocks the stool; enriches the yin and moistens dryness.",
+      "mainTreatment": "Yin collapse from repeated purgation. Parched lips and cracked mouth, a dry throat with thirst and desire to drink, persistent fever, a hard, full, painful abdomen, and constipation."
+    },
+    "68": {
+      "name": "Immature Bitter Orange and Peony Powder",
+      "function": "Moves the qi and harmonizes the blood.",
+      "mainTreatment": "Postpartum abdominal pain with vexing fullness and inability to lie down; also governs abscesses and swellings, to be taken with barley gruel."
+    },
+    "69": {
+      "name": "Rambling Powder",
+      "function": "Courses the Liver and resolves constraint; nourishes the blood and fortifies the Spleen.",
+      "mainTreatment": "Liver-constraint, blood-deficiency, Spleen-weakness pattern. Pain in both rib-sides, headache and dizzy vision, a dry mouth and throat, spiritual fatigue with reduced appetite, or alternating chills and fever, or irregular menses and distending breast pain, and a wiry, deficient pulse."
+    },
+    "70": {
+      "name": "Augmented Rambling Powder",
+      "function": "Nourishes the blood and fortifies the Spleen; courses the Liver and clears heat.",
+      "mainTreatment": "Liver-constraint and blood-deficiency generating heat. Vexation and irritability, spontaneous or night sweats, headache and dry eyes, red cheeks and dry mouth, irregular menses, distending pain of the lower abdomen, or astringent painful urination, a red tongue with a thin yellow coating, and a wiry, deficient, rapid pulse."
+    },
+    "71": {
+      "name": "Black Rambling Powder",
+      "function": "Courses the Liver, fortifies the Spleen, nourishes the blood, and regulates menstruation.",
+      "mainTreatment": "Liver-Spleen blood deficiency. Abdominal pain around the menses and a wiry, deficient pulse."
+    },
+    "72": {
+      "name": "Pinellia Decoction to Drain the Epigastrium",
+      "function": "Balances cold and heat; dissipates clumping and eliminates focal distention.",
+      "mainTreatment": "Focal distention from cold and heat mutually binding. Focal distention below the Heart that is full but not painful, or vomiting, borborygmus and diarrhea, and a greasy, slightly yellow tongue coating."
+    },
+    "73": {
+      "name": "Fresh Ginger Decoction to Drain the Epigastrium",
+      "function": "Harmonizes the Stomach and reduces focal distention; disperses and scatters water-qi.",
+      "mainTreatment": "Focal distention from water and heat mutually binding. Hard focal distention below the Heart, dry belching with a foul food odor, borborygmus and diarrhea."
+    },
+    "74": {
+      "name": "Licorice Decoction to Drain the Epigastrium",
+      "function": "Harmonizes the Stomach and supplements the middle; directs rebellious qi downward and reduces focal distention.",
+      "mainTreatment": "Focal distention from Stomach-qi weakness. Diarrhea dozens of times a day with undigested food, borborygmus, hard full focal distention below the Heart, dry heaves, and vexation with inability to rest."
+    },
+    "75": {
+      "name": "Coptis Decoction",
+      "function": "Regulates cold and heat together; harmonizes the Stomach and directs rebellious qi downward.",
+      "mainTreatment": "Heat above and cold below. Heat in the chest and evil qi in the Stomach, abdominal pain, and a desire to vomit."
+    },
+    "76": {
+      "name": "Compound Major Bupleurum Decoction",
+      "function": "Harmonizes and resolves the lesser yang; regulates the qi and drains heat.",
+      "mainTreatment": "Abdominal-cavity infection following the relief of an acute ulcer perforation. Tenderness in the upper abdomen and right lower abdomen, borborygmus, dry stool, fever, a yellow tongue coating, and a rapid pulse."
+    },
+    "77": {
+      "name": "Surging Wind and Vanquish Toxin Powder",
+      "function": "Courses wind and releases the exterior; clears heat and unblocks the stool.",
+      "mainTreatment": "Wind-heat congestion and exuberance with both the exterior and interior replete. Aversion to cold with high fever and absence of sweating, dizzy head and eyes, red painful eyes, a bitter taste and dry tongue, throat discomfort, thick sticky nasal mucus and drool, constipation, dark astringent urine, a yellow greasy tongue coating, and a forceful, rapid pulse. Also treats sores and toxic swellings, intestinal-wind hemorrhoidal fistula, and red nose with hidden rashes."
+    },
+    "78": {
+      "name": "Kudzu, Scutellaria, and Coptis Decoction",
+      "function": "Releases the exterior and clears the interior.",
+      "mainTreatment": "Hot diarrhea. Fever with diarrhea, vexing heat in the chest and epigastrium, a parched mouth with thirst, wheezing with sweating, a red tongue with yellow coating, and a rapid or hurried pulse."
+    },
+    "79": {
+      "name": "Dredging and Cutting Beverage",
+      "function": "Drives out water by purgation; courses wind and effuses the exterior.",
+      "mainTreatment": "Yang-type water excess pattern. Generalized edema, wheezing, thirst, and inhibited urination and defecation."
+    },
+    "80": {
+      "name": "White Tiger Decoction",
+      "function": "Clears heat and generates fluids.",
+      "mainTreatment": "Yang brightness qi-level heat exuberance. Vigorous fever with a red face, vexing thirst with a desire to drink, sweating with aversion to heat, and a surging, large, forceful pulse."
+    },
+    "81": {
+      "name": "White Tiger plus Ginseng Decoction",
+      "function": "Clears heat, augments the qi, and generates fluids.",
+      "mainTreatment": "After sweating, vomiting, or purging, interior heat blazing with the four great signs; or a White Tiger Decoction pattern with slight aversion to cold on the back, or thirst not relieved by drinking, or a floating, large, hollow pulse; and summerheat disorders with high fever from dual injury of qi and fluids."
+    },
+    "82": {
+      "name": "White Tiger plus Cinnamon Twig Decoction",
+      "function": "Clears heat, unblocks the collaterals, and harmonizes the nutritive and protective qi.",
+      "mainTreatment": "Warm-malaria with a pulse that seems normal, no chills but only fever, vexing joint pain, and periodic vomiting; also wind-damp-heat painful obstruction with vigorous fever, coarse breathing and agitation, swollen painful joints, thirst, and a white tongue coating with a wiry, rapid pulse."
+    },
+    "83": {
+      "name": "White Tiger plus Atractylodes Decoction",
+      "function": "Clears heat and dispels dampness.",
+      "mainTreatment": "Damp-warmth disease. Fever with chest focal distention, profuse sweating, a red tongue with a white greasy coating; also wind-damp-heat painful obstruction with vigorous fever and swollen painful joints."
+    },
+    "84": {
+      "name": "Lophatherum and Gypsum Decoction",
+      "function": "Clears heat and generates fluids; augments the qi and harmonizes the Stomach.",
+      "mainTreatment": "Lingering heat after cold-damage, warm-disease, or summerheat disease, with dual injury of qi and fluids. Fever with profuse sweating, vexation and oppression of the Heart and chest, rebellious qi with a desire to vomit, a dry mouth with a desire to drink, or deficiency-vexation and sleeplessness, a red tongue with scant coating, and a deficient, rapid pulse."
+    },
+    "85": {
+      "name": "Clear the Nutritive Level Decoction",
+      "function": "Clears the nutritive level and resolves toxicity; vents heat and nourishes the yin. As the evil heat has just entered the nutritive level while qi-level signs are not fully resolved, the guiding principle is: \"once in the nutritive level, one may still vent the heat back out to the qi level.\"",
+      "mainTreatment": "Heat entering the nutritive and blood levels. Fever worse at night, spiritual vexation and reduced sleep, intermittent delirious speech, eyes that tend to stay open or shut, thirst or no thirst, faint hidden macules, a rapid pulse, and a dry crimson tongue."
+    },
+    "86": {
+      "name": "Rhinoceros Horn and Rehmannia Decoction",
+      "function": "Clears heat and resolves toxicity; cools the blood and disperses stasis.",
+      "mainTreatment": "1. Heat entering the blood level. Fever and delirious speech, purple-black macules, a crimson tongue with prickles, a thin, rapid pulse, or forgetfulness and mania, rinsing the mouth without a desire to swallow, and easily passed black stool.\n2. Heat injuring the blood collaterals. Hematemesis, nosebleed, blood in the stool, blood in the urine, a red crimson tongue, and a rapid pulse."
+    },
+    "87": {
+      "name": "Clear Epidemics and Vanquish Toxin Beverage",
+      "function": "Clears heat and resolves toxicity; cools the blood and drains fire.",
+      "mainTreatment": "Warm-epidemic heat-toxin with blazing of both the qi and blood levels. High fever with thirst and drinking, splitting headache, dry heaves and mania, delirious speech and clouded spirit, or macular eruptions, or hematemesis and nosebleed, spasms of the limbs, or reversal counterflow, a sunken, thin, rapid or sunken, rapid or floating, large, rapid pulse, a crimson tongue, and parched lips."
+    },
+    "88": {
+      "name": "Spirit-Like Rhinoceros Special Pill",
+      "function": "Clears heat and opens the orifices; cools the blood and resolves toxicity.",
+      "mainTreatment": "Warm-heat summerheat-epidemic with the evil entering the nutritive and blood levels. High fever with clouded delirium, purple macular rashes, ulceration of the mouth and throat, red eyes and agitation, and a purple crimson tongue."
+    },
+    "89": {
+      "name": "Coptis Decoction to Resolve Toxicity",
+      "function": "Drains fire and resolves toxicity.",
+      "mainTreatment": "Fire-toxin heat exuberance in all three burners. Vigorous heat with vexation and agitation, a parched mouth and dry throat, wrong speech and sleeplessness; or heat-disease hematemesis and nosebleed; or severe heat with macular eruptions, fever with diarrhea, damp-heat jaundice; external abscesses and sores, dark reddish urine, a red tongue with yellow coating, and a forceful, rapid pulse."
+    },
+    "90": {
+      "name": "Universal Benefit Beverage to Eliminate Toxin",
+      "function": "Clears heat and resolves toxicity; courses wind and disperses the evil.",
+      "mainTreatment": "Big-head epidemic. Aversion to cold and fever, hot scorching pain of the head and face, eyes that cannot open, throat discomfort, a dry tongue and thirst, a red tongue with a white and yellow coating, and a floating, rapid, forceful pulse."
+    },
+    "91": {
+      "name": "Cool the Diaphragm Powder",
+      "function": "Drains fire to unblock the stool; clears above and drains below.",
+      "mainTreatment": "Fire-heat pattern of the upper and middle burners. Vexation, agitation, and thirst, a red face and parched lips, vexing heat of the chest and diaphragm, mouth and tongue sores, or sore throat with hematemesis and nosebleed, constipation and dark urine, or difficult defecation, a red tongue with yellow coating, and a slippery, rapid pulse."
+    },
+    "92": {
+      "name": "Sublime Formula for Sustaining Life",
+      "function": "Clears heat and resolves toxicity; reduces swelling and dissipates hardness; invigorates the blood and relieves pain.",
+      "mainTreatment": "Onset of a toxic abscess or sore. Red swelling with hot scorching pain, or fever and shivering chills, a thin white or yellow tongue coating, and a forceful, rapid pulse."
+    },
+    "93": {
+      "name": "Five-Ingredient Beverage to Eliminate Toxin",
+      "function": "Clears heat and resolves toxicity; disperses and scatters deep-rooted toxin sores.",
+      "mainTreatment": "Onset of a deep-rooted toxin sore. Fever and aversion to cold, a sore shaped like a grain, hard with a deep root like an iron nail; also abscesses, sores, and boils with red swelling and hot pain, a red tongue with yellow coating, and a rapid pulse."
+    },
+    "94": {
+      "name": "Four-Wonders Decoction for Well-Being",
+      "function": "Clears heat and resolves toxicity; invigorates the blood and relieves pain.",
+      "mainTreatment": "Sloughing flesh disorder with blazing heat-toxin. The affected limb dark red and slightly swollen, hot to the touch, ulcerating and rotting with a foul odor, severe pain, possibly with fever and thirst, a red tongue, and a rapid pulse."
+    },
+    "95": {
+      "name": "Guide Out the Red Powder",
+      "function": "Clears the Heart, promotes urination, and nourishes the yin.",
+      "mainTreatment": "Heart-channel fire-heat pattern. Vexing heat of the Heart and chest, thirst with a red face and a wish for cold drinks, mouth and tongue sores; or Heart-heat shifting to the Small Intestine with dark, astringent, painful urination, a red tongue, and a rapid pulse."
+    },
+    "96": {
+      "name": "Clear the Heart Beverage with Lotus Seed",
+      "function": "Clears Heart fire; augments the qi and yin; stops strangury and turbidity.",
+      "mainTreatment": "Heart fire overactive with dual deficiency of qi and yin and damp-heat pouring downward. Seminal emission and turbid strangury, flooding and vaginal discharge, brought on by exertion; or Kidney-yin insufficiency with a dry mouth and tongue, vexation and fever."
+    },
+    "97": {
+      "name": "Gentian Decoction to Drain the Liver",
+      "function": "Clears Liver-Gallbladder excess fire; drains lower-burner damp-heat.",
+      "mainTreatment": "1. Liver-Gallbladder excess fire flaring upward. Headache and red eyes, rib-side pain, a bitter taste, deafness, ear swelling, a red tongue with yellow coating, and a wiry, rapid, forceful pulse.\n2. Liver-Gallbladder damp-heat pouring downward. Genital swelling and itching, sweating of the genitals, turbid strangury, or foul yellow vaginal discharge, a red tongue with a yellow greasy coating, and a wiry, rapid, forceful pulse."
+    },
+    "98": {
+      "name": "Drain the Green Pill",
+      "function": "Clears the Liver and drains fire.",
+      "mainTreatment": "Constrained fire of the Liver channel. Red swollen painful eyes, vexation and irritability, inability to lie quietly, dark urine and constipation, a surging, replete pulse; also childhood acute fright wind with heat exuberance and convulsions."
+    },
+    "99": {
+      "name": "Tangkuei, Gentian, and Aloe Pill",
+      "function": "Clears and drains Liver-Gallbladder excess fire.",
+      "mainTreatment": "Liver-Gallbladder excess fire. Dizzy head and vision, a restless spirit, delirious speech and mania, or constipation and dark astringent urine."
+    },
+    "100": {
+      "name": "Left Metal Pill",
+      "function": "Clears and drains Liver fire; directs rebellious qi downward and stops vomiting.",
+      "mainTreatment": "Liver fire invading the Stomach. Rib-side pain, gnawing hunger with acid swallowing, vomiting with a bitter taste, a red tongue with yellow coating, and a wiry, rapid pulse."
+    },
+    "101": {
+      "name": "Fifth and Sixth Heavenly Stem Pill",
+      "function": "Courses the Liver and regulates the Spleen; clears heat and harmonizes the Stomach.",
+      "mainTreatment": "Stomach pain with acid swallowing, and abdominal pain with diarrhea, due to Liver-Spleen disharmony."
+    },
+    "102": {
+      "name": "Drain the White Powder",
+      "function": "Clears and drains Lung heat; calms wheezing and stops cough.",
+      "mainTreatment": "Lung-heat wheezing and cough. Wheezing and cough, skin that feels steaming hot especially in the late afternoon, a red tongue with yellow coating, and a thin, rapid pulse."
+    },
+    "103": {
+      "name": "Descurainia and Jujube Decoction to Drain the Lungs",
+      "function": "Drains the Lungs and moves water; directs qi downward and calms wheezing.",
+      "mainTreatment": "Congestion and exuberance of phlegm-drool with cough, wheezing, and chest fullness."
+    },
+    "104": {
+      "name": "Reed Decoction",
+      "function": "Clears the Lungs and transforms phlegm; drives out stasis and expels pus.",
+      "mainTreatment": "Lung abscess. Mild fever, cough with copious phlegm, in severe cases coughing up fishy-smelling pus and blood, hidden pain in the chest, a red tongue with a yellow greasy coating, and a slippery, rapid pulse."
+    },
+    "105": {
+      "name": "Clear the Stomach Powder",
+      "function": "Clears the Stomach and cools the blood.",
+      "mainTreatment": "Stomach-fire toothache. Toothache radiating to the head, hot cheeks, teeth that prefer cold and are averse to heat; or spontaneous gum bleeding; or red swollen ulcerated gums; or swollen painful lips, tongue, cheeks, and jaw; hot foul breath, a dry mouth and tongue, a red tongue with yellow coating, and a slippery, rapid pulse."
+    },
+    "106": {
+      "name": "Drain the Yellow Powder",
+      "function": "Drains latent fire from the Spleen and Stomach.",
+      "mainTreatment": "Latent fire in the Spleen and Stomach. Mouth sores and foul breath, vexing thirst with easy hunger, a parched mouth and dry lips, a red tongue and a rapid pulse, and childhood tongue-thrusting from Spleen heat."
+    },
+    "107": {
+      "name": "Jade Woman Decoction",
+      "function": "Clears Stomach heat; enriches the Kidney yin.",
+      "mainTreatment": "Stomach-heat with yin-deficiency pattern. Headache, toothache, loose teeth and gum bleeding, vexing heat and dry thirst, a red tongue with a dry yellow coating. Also treats wasting-thirst and rapid digestion with easy hunger."
+    },
+    "108": {
+      "name": "Peony Decoction",
+      "function": "Clears heat and dries dampness; regulates the qi and harmonizes the blood.",
+      "mainTreatment": "Damp-heat dysentery. Abdominal pain, stool with pus and blood mixed red and white, tenesmus, hot scorching of the anus, scant dark urine, a yellow greasy tongue coating, and a wiry, rapid pulse."
+    },
+    "109": {
+      "name": "Scutellaria Decoction",
+      "function": "Clears heat and stops diarrhea; harmonizes the middle and relieves pain.",
+      "mainTreatment": "Heat diarrhea and heat dysentery. Fever with a bitter taste, abdominal pain and diarrhea, a red tongue with yellow coating, and a rapid pulse."
+    },
+    "110": {
+      "name": "Costus and Coptis Pill",
+      "function": "Clears heat and dries dampness; moves the qi and transforms stagnation.",
+      "mainTreatment": "Damp-heat dysentery with pus and blood mixed, abdominal pain, and tenesmus."
+    },
+    "111": {
+      "name": "Pulsatilla Decoction",
+      "function": "Clears heat and resolves toxicity; cools the blood and stops dysentery.",
+      "mainTreatment": "Heat-toxin dysentery. Abdominal pain, tenesmus, hot scorching of the anus, dysenteric stool with pus and blood — more red than white, thirst with a desire to drink, a red tongue with yellow coating, and a wiry, rapid pulse."
+    },
+    "112": {
+      "name": "Pulsatilla plus Licorice and Ass-Hide Gelatin Decoction",
+      "function": "Clears heat and resolves toxicity; dries dampness, cools the blood, and stops dysentery; nourishes the blood and enriches the yin.",
+      "mainTreatment": "Postpartum heat dysentery."
+    },
+    "113": {
+      "name": "Six-to-One Powder",
+      "function": "Clears summerheat and disinhibits dampness.",
+      "mainTreatment": "Summerheat-damp pattern. Fever with vexing thirst, inhibited urination, or diarrhea."
+    },
+    "114": {
+      "name": "Boost the Primal Powder",
+      "function": "Clears the Heart and dispels summerheat; also calms the spirit.",
+      "mainTreatment": "Summerheat-damp pattern with palpitations and fearful throbbing, insomnia, and profuse dreaming."
+    },
+    "115": {
+      "name": "Jasper Powder",
+      "function": "Clears and resolves summerheat.",
+      "mainTreatment": "Summerheat-damp pattern with concurrent Liver-Gallbladder constrained heat."
+    },
+    "116": {
+      "name": "Chicken Perilla Powder",
+      "function": "Courses wind and dispels summerheat.",
+      "mainTreatment": "Summerheat-damp pattern with mild aversion to wind-cold, headache and head distention, and an unproductive cough."
+    },
+    "117": {
+      "name": "Cinnamon Twig, Poria, and Sweet Dew Beverage",
+      "function": "Clears summerheat and heat; transforms qi and disinhibits dampness.",
+      "mainTreatment": "Summerheat-damp pattern. Fever and headache, vexing thirst with drinking, inhibited urination, and sudden turmoil with vomiting and diarrhea."
+    },
+    "118": {
+      "name": "Clear Summerheat and Augment the Qi Decoction",
+      "function": "Clears summerheat and augments the qi; nourishes the yin and generates fluids.",
+      "mainTreatment": "Summerheat-heat with dual injury of qi and fluids. Fever with profuse sweating, thirst and vexation, scant dark urine, bodily fatigue and scant qi, listlessness, and a deficient, rapid pulse."
+    },
+    "119": {
+      "name": "Clear Summerheat and Augment the Qi Decoction (Li Dongyuan's)",
+      "function": "Clears summerheat and augments the qi; eliminates dampness and fortifies the Spleen.",
+      "mainTreatment": "Constitutional qi deficiency further affected by summerheat-damp. Fever and headache, thirst and spontaneous sweating, fatigue of the four limbs, no thought of food, chest fullness and generalized heaviness, loose stool, scant dark urine, a greasy tongue coating, and a deficient pulse."
+    },
+    "120": {
+      "name": "Sweet Wormwood and Turtle Shell Decoction",
+      "function": "Nourishes the yin and vents heat.",
+      "mainTreatment": "Late stage of a warm disease with the evil hidden in the yin aspect. Fever at night that cools by morning, heat receding without sweating, a red tongue with scant coating, and a thin, rapid pulse."
+    },
+    "121": {
+      "name": "Clear the Bones Powder",
+      "function": "Clears deficiency heat; abates steaming-bone fever.",
+      "mainTreatment": "Taxation-deficiency fever. Steaming-bone tidal fever, or persistent low-grade fever, emaciation, red lips and cheeks, drowsiness and night sweats, or thirst and vexation, a red tongue with scant coating, and a thin, rapid pulse."
+    },
+    "122": {
+      "name": "Notopterygium and Turtle Shell Powder",
+      "function": "Enriches the yin and nourishes the blood; clears heat and abates steaming fever.",
+      "mainTreatment": "Wind-taxation disorder. Steaming-bone night sweats, emaciation of the flesh, red lips and cheeks, afternoon tidal fever, cough and fatigue, and a faint, rapid pulse."
+    },
+    "123": {
+      "name": "Tangkuei and Six-Yellow Decoction",
+      "function": "Enriches the yin and drains fire; stabilizes the exterior and stops sweating.",
+      "mainTreatment": "Night sweats from yin deficiency with fire effulgence. Fever and night sweats, a red face and Heart vexation, a dry mouth and parched lips, dry bound stool, dark reddish urine, a red tongue with yellow coating, and a rapid pulse."
+    },
+    "124": {
+      "name": "Regulate the Middle Pill",
+      "function": "Warms the middle and disperses cold; supplements the qi and fortifies the Spleen.",
+      "mainTreatment": "Spleen-Stomach deficiency-cold pattern. Cold epigastric and abdominal pain that likes warmth and pressure, spontaneous diarrhea without thirst, aversion to cold and cold limbs, vomiting, no thought of food, a pale tongue with white coating, and a sunken, thin pulse; or yang-deficiency bleeding; or childhood chronic fright wind; or drooling of saliva after illness, or sudden turmoil with vomiting and diarrhea, and chest painful obstruction, all arising from middle-burner deficiency-cold."
+    },
+    "125": {
+      "name": "Aconite Accessory Root and Regulate the Middle Pill",
+      "function": "Warms the yang and dispels cold; augments the qi and fortifies the Spleen.",
+      "mainTreatment": "Spleen-Stomach deficiency-cold overwhelmed by wind and cold, with epigastric and abdominal pain, and sudden turmoil with vomiting, diarrhea, and cramping."
+    },
+    "126": {
+      "name": "Cinnamon Twig and Ginseng Decoction",
+      "function": "Warms the interior and releases the exterior; augments the qi and fortifies the Spleen.",
+      "mainTreatment": "Greater yang disease repeatedly purged while the exterior signs remained, leading to unremitting hot diarrhea, hard focal distention below the Heart, and both exterior and interior unresolved."
+    },
+    "127": {
+      "name": "Regulate the Middle and Transform Phlegm Pill",
+      "function": "Augments the qi and fortifies the Spleen; warms and transforms phlegm-drool.",
+      "mainTreatment": "Spleen-Stomach deficiency-cold with internal phlegm-drool retention. Vomiting with reduced appetite, or loose stool, difficult digestion, and cough with phlegm-drool."
+    },
+    "128": {
+      "name": "Minor Construct the Middle Decoction",
+      "function": "Warms the middle and supplements deficiency; harmonizes the interior and moderates urgency.",
+      "mainTreatment": "Taxation-deficiency with interior urgency. Intermittent abdominal pain that likes warmth and pressure, a pale tongue with white coating, and a thin, wiry pulse; or taxation-deficiency with Heart palpitations, deficiency-vexation and unrest, a lusterless complexion, or vexing heat of the palms and soles, and a dry throat and mouth."
+    },
+    "129": {
+      "name": "Astragalus Construct the Middle Decoction",
+      "function": "Warms the middle and supplements the qi; harmonizes the interior and moderates urgency.",
+      "mainTreatment": "Taxation-deficiency with interior urgency and multiple insufficiencies."
+    },
+    "130": {
+      "name": "Tangkuei Construct the Middle Decoction",
+      "function": "Warmly tonifies the qi and blood; moderates urgency and relieves pain.",
+      "mainTreatment": "Postpartum abdominal pain. Postpartum weakness and emaciation, unremitting abdominal pain, faint shortness of breath, or lower abdominal cramping with pain radiating to the abdomen, and inability to eat."
+    },
+    "131": {
+      "name": "Major Construct the Middle Decoction",
+      "function": "Warms the middle and supplements deficiency; directs rebellious qi downward and relieves pain.",
+      "mainTreatment": "Deficiency-cold abdominal pain. Severe cold pain of the Heart and chest, vomiting with inability to eat, cold in the abdomen surging up so the skin rises with visible head-and-foot shapes, pain above and below that will not tolerate touch, a white slippery tongue coating, and a thin, tight pulse; in severe cases cold limbs and a hidden pulse, or gurgling sounds in the abdomen."
+    },
+    "132": {
+      "name": "Evodia Decoction",
+      "function": "Warms the middle and supplements deficiency; directs rebellious qi downward and stops vomiting.",
+      "mainTreatment": "Deficiency-cold vomiting. A desire to vomit after eating grain, aversion to cold and a preference for heat; or epigastric pain with acid swallowing and gnawing discomfort; or reverting yin headache with dry heaves and spitting of drool; or lesser yin vomiting and diarrhea with cold extremities and vexing agitation to the point of feeling near death."
+    },
+    "133": {
+      "name": "Minor Pinellia Decoction",
+      "function": "Harmonizes the Stomach and stops vomiting; disperses thin mucus and directs rebellious qi downward.",
+      "mainTreatment": "Vomiting without thirst in a person with propping thin mucus below the Heart, and all cases of vomiting where grain will not go down."
+    },
+    "134": {
+      "name": "Frigid Extremities Decoction",
+      "function": "Rescues devastated yang and stems counterflow.",
+      "mainTreatment": "Lesser yin disease. Reversal counterflow of the four limbs, aversion to cold with curled-up lying, vomiting without thirst, abdominal pain and diarrhea, spiritual debility with a desire only to sleep, a white slippery tongue coating, and a faint pulse; or yang collapse from mistaken sweating in a greater yang disease."
+    },
+    "135": {
+      "name": "Unblock the Pulse Decoction for Frigid Extremities",
+      "function": "Rescues devastated yang and unblocks the pulse.",
+      "mainTreatment": "Lesser yin disease with diarrhea of undigested food, cold within and heat without, reversal counterflow of the extremities, a faint pulse verging on expiry, no aversion to cold contrary to expectation, and a red face; or the diarrhea stops but the pulse does not return."
+    },
+    "136": {
+      "name": "Frigid Extremities plus Ginseng Decoction",
+      "function": "Rescues devastated yang and augments the qi; stems counterflow and secures against collapse.",
+      "mainTreatment": "Internal exuberance of yin-cold with reversal counterflow of the four limbs, aversion to cold with curled-up lying, a faint pulse, and recurrent spontaneous diarrhea that has stopped while the remaining signs persist."
+    },
+    "137": {
+      "name": "White Unblock Decoction",
+      "function": "Unblocks the yang and breaks up the yin.",
+      "mainTreatment": "Lesser yin disease with diarrhea and a faint pulse."
+    },
+    "138": {
+      "name": "Ginseng and Aconite Accessory Root Decoction",
+      "function": "Augments the qi and rescues devastated yang.",
+      "mainTreatment": "Sudden collapse of the yang qi. Cold extremities, dizziness and shortness of breath, sweating, and a faint pulse."
+    },
+    "139": {
+      "name": "Restore and Revive the Yang Decoction for Emergencies",
+      "function": "Rescues and revives the yang for emergencies; augments the qi and restores the pulse.",
+      "mainTreatment": "Cold evil striking directly into the three yin channels with severe decline of the true yang. Aversion to cold with curled-up lying, reversal cold of the four limbs, vomiting and diarrhea with abdominal pain, absence of thirst, spiritual debility with a desire only to sleep, or shivering chills, or blue-purple nails and lips, or spitting of drool, a pale tongue with white coating, and a sunken, faint pulse, or even no pulse at all."
+    },
+    "141": {
+      "name": "Tangkuei Decoction for Frigid Extremities",
+      "function": "Warms the channels and disperses cold; nourishes the blood and unblocks the vessels.",
+      "mainTreatment": "Blood-deficiency cold reversal pattern. Reversal cold of the hands and feet, absence of thirst, or pain of the lower back, thighs, legs, and feet, a pale tongue with white coating, and a sunken, thin pulse or a thin pulse verging on expiry."
+    },
+    "142": {
+      "name": "Astragalus and Cinnamon Twig Five-Substance Decoction",
+      "function": "Augments the qi and warms the channels; harmonizes the blood and unblocks painful obstruction.",
+      "mainTreatment": "Blood painful obstruction. Numbness and lack of sensation of the skin and flesh, and a faint, choppy, tight pulse."
+    },
+    "143": {
+      "name": "Harmonize the Yang Decoction",
+      "function": "Warms the yang and supplements the blood; disperses cold and unblocks stagnation.",
+      "mainTreatment": "Yin-type flat-abscess. Diffuse swelling without a head, unchanged skin color, aching pain without heat, no thirst, a pale tongue with white coating, and a sunken, thin or slow, thin pulse; also bone abscess, sloughing flesh, streaming sores, phlegm nodules, and crane's-knee wind that belong to yin-cold patterns."
+    },
+    "144": {
+      "name": "Minor Golden Special Pill",
+      "function": "Transforms phlegm and eliminates dampness; dispels stasis and unblocks the collaterals.",
+      "mainTreatment": "Streaming sores, phlegm nodules, scrofula, breast rock, groin lumps, bone abscess, and rat-fistula from cold-damp phlegm-stasis. At onset, unchanged skin color with hard swelling and pain."
+    },
+    "145": {
+      "name": "Cattle Bezoar Pill for the Downcast",
+      "function": "Resolves toxicity and disperses abscesses; transforms phlegm and dissipates clumps; invigorates the blood and dispels stasis.",
+      "mainTreatment": "Breast rock, groin lumps, scrofula, phlegm nodules, streaming sores, Lung abscess, Small Intestine abscess, and the like."
+    },
+    "146": {
+      "name": "Four-Gentlemen Decoction",
+      "function": "Augments the qi and fortifies the Spleen.",
+      "mainTreatment": "Spleen-Stomach qi deficiency. A pale white complexion, faint low speech, shortness of breath and lack of strength, reduced appetite with loose stool, a pale tongue with white coating, and a deficient, weak pulse."
+    },
+    "147": {
+      "name": "Special Achievement Powder",
+      "function": "Augments the qi and fortifies the Spleen; moves the qi and transforms stagnation.",
+      "mainTreatment": "Spleen-Stomach qi deficiency with qi stagnation. Reduced appetite, loose stool, chest and epigastric focal distention and discomfort, or vomiting and diarrhea. Now used for childhood indigestion with Spleen deficiency and qi stagnation."
+    },
+    "148": {
+      "name": "Six-Gentlemen Decoction",
+      "function": "Augments the qi and fortifies the Spleen; dries dampness and transforms phlegm.",
+      "mainTreatment": "Spleen-Stomach qi deficiency with phlegm-damp. Reduced appetite and loose stool, chest and epigastric focal distention and oppression, and rebellious retching."
+    },
+    "149": {
+      "name": "Saussurea and Amomum Six-Gentlemen Decoction",
+      "function": "Augments the qi and transforms phlegm; moves the qi and warms the middle.",
+      "mainTreatment": "Spleen-Stomach qi deficiency with phlegm obstruction and qi stagnation. Vomiting and focal oppression, no thought of food, epigastric and abdominal distending pain, emaciation and fatigue, or qi-deficiency swelling and fullness."
+    },
+    "150": {
+      "name": "Preserve the Origin Decoction",
+      "function": "Augments the qi and warms the yang.",
+      "mainTreatment": "Taxation-deficiency and timidity with insufficient primal qi. Fatigue and lack of strength, scant qi and aversion to cold; also childhood pox with yang deficiency and sunken tops that fail to fill and suppurate."
+    },
+    "151": {
+      "name": "Ginseng, Poria, and Atractylodes Powder",
+      "function": "Augments the qi and fortifies the Spleen; percolates dampness and stops diarrhea.",
+      "mainTreatment": "Spleen deficiency with dampness. Failure to digest food, chest and epigastric focal distention and oppression, borborygmus and diarrhea, fatigue of the four limbs, emaciation, a sallow yellow complexion, a pale tongue with a white greasy coating, and a deficient, moderate pulse."
+    },
+    "152": {
+      "name": "Aid the Living Pill",
+      "function": "Augments the qi and fortifies the Spleen; harmonizes the Stomach and percolates dampness; disperses food and regulates the qi.",
+      "mainTreatment": "In the third month of pregnancy, when the yang brightness pulse is weak, to secure the fetus. Also treats Spleen-Stomach weakness with reduced appetite and loose stool, epigastric and abdominal distention, nausea and vomiting, emaciation, and lack of strength."
+    },
+    "153": {
+      "name": "Tonify the Middle and Augment the Qi Decoction",
+      "function": "Tonifies the middle and augments the qi; raises the yang and lifts the sunken. As the Treatise on the Spleen and Stomach says: internal damage to the Spleen and Stomach injures the qi; external contraction of wind-cold injures the form. What injures the outside is surplus, and surplus is drained; what injures the inside is insufficiency, and insufficiency is tonified. If an internal-damage disorder of insufficiency is mistaken for an external-contraction disorder of surplus and drained, one deepens the deficiency of a deficient patient. Only a sweet, warm formula tonifies the middle and raises its yang.",
+      "mainTreatment": "1. Spleen-Stomach qi deficiency. Reduced appetite, bodily fatigue and weak limbs, scant qi and disinclination to speak, a pale white complexion, loose stool, and a large but deficient and soft pulse.\n2. Qi deficiency with sinking. Rectal prolapse, uterine prolapse, chronic diarrhea, chronic dysentery, flooding and spotting, shortness of breath and lack of strength, a pale tongue, and a deficient pulse.\n3. Qi-deficiency fever. Fever with spontaneous sweating, thirst with a preference for hot drinks, shortness of breath and lack of strength, a pale tongue, and a deficient, large, forceless pulse."
+    },
+    "154": {
+      "name": "Raise the Sunken Decoction",
+      "function": "Augments the qi and raises the sunken.",
+      "mainTreatment": "Sinking of the gathering qi. Shortness of breath insufficient for respiration, or forced labored breathing resembling wheezing, or breathing seeming about to stop with imminent danger, and a sunken, slow, faint, weak or irregular pulse."
+    },
+    "155": {
+      "name": "Raise the Yang and Boost the Stomach Decoction",
+      "function": "Augments the qi and raises the yang; clears heat and eliminates dampness.",
+      "mainTreatment": "Spleen-Stomach weakness with damp-heat lingering in the middle burner. Sluggishness and somnolence, slack limbs, generalized heaviness with joint swelling, a bitter taste and dry tongue, tasteless eating with poor digestion, and irregular stools."
+    },
+    "156": {
+      "name": "Jade Windscreen Powder",
+      "function": "Augments the qi, stabilizes the exterior, and stops sweating.",
+      "mainTreatment": "Exterior-deficiency spontaneous sweating. Sweating with aversion to wind, a pale white complexion, a pale tongue with a thin white coating, and a floating, deficient pulse; also for deficient people with an unsecured interstice-and-pore who catch cold easily."
+    },
+    "157": {
+      "name": "Ginseng and Gecko Powder",
+      "function": "Tonifies the Lungs and augments the Kidneys; stops cough and settles wheezing.",
+      "mainTreatment": "Lung-Kidney qi deficiency wheezing and cough. Thick yellow phlegm, or coughing up pus and blood, vexing heat in the chest, bodily emaciation, or generalized puffy swelling, and a floating, deficient pulse."
+    },
+    "158": {
+      "name": "Ginseng and Walnut Decoction",
+      "function": "Tonifies the Lungs and Kidneys; settles wheezing and counterflow.",
+      "mainTreatment": "Dual deficiency of the Lungs and Kidneys with hurried breathing and phlegmy wheezing."
+    },
+    "159": {
+      "name": "Generate the Pulse Powder",
+      "function": "Augments the qi and generates fluids; astringes the yin and stops sweating.",
+      "mainTreatment": "1. Warm-heat or summerheat-heat consuming the qi and injuring the yin. Profuse sweating with spiritual fatigue, bodily fatigue and lack of strength, shortness of breath and disinclination to speak, a dry throat and thirst, a dry red tongue with scant coating, and a deficient, rapid pulse.\n2. Chronic cough with Lung deficiency and dual deficiency of qi and yin. Dry cough with scant phlegm, shortness of breath and spontaneous sweating, a dry mouth and tongue, and a deficient, thin pulse."
+    },
+    "160": {
+      "name": "Four-Substance Decoction",
+      "function": "Tonifies the blood and harmonizes the blood.",
+      "mainTreatment": "Nutritive-blood deficiency with stagnation. Palpitations and insomnia, dizzy head and vision, a lusterless complexion; in women, irregular menses with scant flow or amenorrhea, and periumbilical pain; a pale tongue, and a thin, wiry or thin, choppy pulse."
+    },
+    "161": {
+      "name": "Ass-Hide Gelatin and Mugwort Decoction",
+      "function": "Nourishes the blood and stops bleeding; regulates menstruation and calms the fetus.",
+      "mainTreatment": "Deficiency-detriment of the penetrating and conception vessels in women, with flooding and spotting, excessive menstruation, or dripping that will not stop; unremitting bleeding after childbirth or miscarriage; or fetal obstruction in pregnancy with vaginal spotting and abdominal pain. Now used for dysfunctional uterine bleeding, threatened miscarriage, incomplete miscarriage, and incomplete postpartum uterine involution due to penetrating and conception vessel deficiency-detriment."
+    },
+    "162": {
+      "name": "Peach Pit and Safflower Four-Substance Decoction",
+      "function": "Nourishes the blood and invigorates the blood.",
+      "mainTreatment": "Menses arriving early with heavy flow, clots, purple thick sticky blood, and abdominal pain."
+    },
+    "163": {
+      "name": "Tangkuei Decoction to Tonify the Blood",
+      "function": "Tonifies the qi to generate blood.",
+      "mainTreatment": "Blood-deficiency fever. Muscle heat with a red face, vexing thirst with a desire to drink, and a surging, large but deficient pulse that is forceless on firm pressure; also blood-deficiency fever and headache in women around the menses or after childbirth, and sores that have ulcerated and long fail to heal."
+    },
+    "164": {
+      "name": "Restore the Spleen Decoction",
+      "function": "Augments the qi and tonifies the blood; fortifies the Spleen and nourishes the Heart.",
+      "mainTreatment": "1. Heart-Spleen dual deficiency of qi and blood. Palpitations and fearful throbbing, forgetfulness and insomnia, night sweats and deficiency heat, bodily fatigue and reduced appetite, a sallow yellow complexion, a pale tongue with a thin white coating, and a thin, weak pulse.\n2. Spleen failing to contain the blood. Blood in the stool, subcutaneous purpura, in women flooding and spotting, menses arriving early with heavy pale-colored flow, or dripping that will not stop, a pale tongue, and a thin pulse."
+    },
+    "165": {
+      "name": "Eight-Treasure Decoction",
+      "function": "Augments the qi and tonifies the blood.",
+      "mainTreatment": "Dual deficiency of qi and blood. A pale or sallow complexion, dizzy head and vision, fatigue of the four limbs, shortness of breath and disinclination to speak, palpitations and fearful throbbing, reduced appetite, a pale tongue with a thin white coating, and a thin, weak or deficient, large, forceless pulse."
+    },
+    "166": {
+      "name": "All-Inclusive Great Tonifying Decoction",
+      "function": "Warmly tonifies the qi and blood.",
+      "mainTreatment": "Insufficiency of qi and blood with reduced appetite, chronic illness and bodily deficiency, weak legs and knees, a sallow complexion, spiritual fatigue and listlessness, as well as sores that fail to close and, in women, flooding and spotting."
+    },
+    "167": {
+      "name": "Ginseng Decoction to Nourish the Nutritive Qi",
+      "function": "Augments the qi and tonifies the blood; nourishes the Heart and calms the spirit.",
+      "mainTreatment": "Deficiency-detriment from accumulated taxation with insufficiency of qi and blood. Heaviness and sluggishness of the four limbs, aching bones and flesh, wheezing and cough on exertion, urinary cramping, stiff painful lower back and back, Heart deficiency with fright palpitations, a dry throat and parched lips, tasteless eating, and bodily emaciation."
+    },
+    "168": {
+      "name": "Powder [as stable as] Mount Tai",
+      "function": "Augments the qi and fortifies the Spleen; nourishes the blood and calms the fetus.",
+      "mainTreatment": "Habitual miscarriage. Restless fetus, or a chronic history of repeated miscarriage, a pale white complexion, fatigue and lack of strength, no thought of food, a pale tongue with a thin white coating, and a slippery, forceless pulse."
+    },
+    "169": {
+      "name": "Powder for a Worry-Free Delivery",
+      "function": "Augments the qi and nourishes the blood; regulates the qi, calms the fetus, and eases delivery.",
+      "mainTreatment": "Restless fetus in pregnancy with lumbar pain and abdominal pain and an impending miscarriage; or, at delivery, the pubic bones failing to open, transverse or breech presentation, or fetal death in utero."
+    },
+    "170": {
+      "name": "Six-Ingredient Rehmannia Pill",
+      "function": "Enriches the yin and tonifies the Kidneys. This is Wang Bing's \"strengthen the ruler of water to control the radiance of yang.\"",
+      "mainTreatment": "Kidney-yin deficiency. Sore weak lower back and knees, dizzy head and vision, tinnitus and deafness, night sweats, seminal emission, wasting-thirst, steaming-bone tidal fever, vexing heat of the palms and soles, a dry tongue and sore throat, loose teeth, heel pain, dribbling urination, as well as an unclosed fontanelle in infants, a red tongue with scant coating, and a sunken, thin, rapid pulse."
+    },
+    "171": {
+      "name": "Anemarrhena, Phellodendron, and Rehmannia Pill",
+      "function": "Enriches the yin and directs fire downward.",
+      "mainTreatment": "Yin deficiency with fire effulgence. Steaming-bone tidal fever, deficiency-vexation and night sweats, sore aching lower back and spine, and seminal emission."
+    },
+    "172": {
+      "name": "Lycium Fruit, Chrysanthemum, and Rehmannia Pill",
+      "function": "Enriches the Kidneys, nourishes the Liver, and brightens the eyes.",
+      "mainTreatment": "Liver-Kidney yin deficiency. Blurred vision and dim eyesight, or dryness of the eyes, and tearing on exposure to wind."
+    },
+    "173": {
+      "name": "All-Qi Pill",
+      "function": "Enriches the Kidneys and grasps the qi.",
+      "mainTreatment": "Kidney-deficiency wheezing, or hiccup patterns."
+    },
+    "174": {
+      "name": "Ophiopogon and Schisandra Rehmannia Pill",
+      "function": "Enriches and tonifies the Lungs and Kidneys.",
+      "mainTreatment": "Lung-Kidney yin deficiency with wheezing or cough."
+    },
+    "175": {
+      "name": "Restore the Left [Kidney] Pill",
+      "function": "Enriches the yin and tonifies the Kidneys; fills the essence and boosts the marrow.",
+      "mainTreatment": "True-yin insufficiency. Dizzy head and vision, sore aching lower back and legs, seminal emission and spontaneous leakage, spontaneous and night sweats, a parched mouth and dry tongue, a red tongue with scant coating, and a thin pulse."
+    },
+    "176": {
+      "name": "Restore the Left [Kidney] Beverage",
+      "function": "Tonifies and boosts the Kidney yin.",
+      "mainTreatment": "True-yin insufficiency. Sore aching lower back with seminal leakage, night sweats, a parched mouth and dry throat, thirst with a desire to drink, a red tongue tip, and a thin, rapid pulse."
+    },
+    "177": {
+      "name": "Great Tonify the Yin Pill",
+      "function": "Enriches the yin and directs fire downward.",
+      "mainTreatment": "Yin deficiency with fire effulgence. Steaming-bone tidal fever, night sweats and seminal emission, cough and coughing of blood, vexation and irritability, hot painful feet and knees, a red tongue with scant coating, and a forceful, rapid pulse at the cubit position."
+    },
+    "178": {
+      "name": "Lily Bulb Decoction to Preserve the Metal",
+      "function": "Enriches the Kidneys and protects the Lungs; stops cough and transforms phlegm.",
+      "mainTreatment": "Lung-Kidney yin depletion with deficiency fire flaring upward. Cough and wheezing, blood-streaked phlegm, a dry sore throat, dizzy head and vision, afternoon tidal fever, a red tongue with scant coating, and a thin, rapid pulse."
+    },
+    "179": {
+      "name": "Tonify the Lungs Decoction with Ass-Hide Gelatin",
+      "function": "Nourishes the yin and tonifies the Lungs; clears heat and stops bleeding.",
+      "mainTreatment": "Childhood Lung deficiency with heat. Cough and wheezing, a dry throat, scant phlegm, or blood-streaked phlegm, a red tongue with scant coating, and a thin, rapid pulse."
+    },
+    "180": {
+      "name": "Linking Decoction",
+      "function": "Enriches the yin and courses the Liver.",
+      "mainTreatment": "Liver-Kidney yin deficiency with Liver qi not coursing freely. Chest, epigastric, and rib-side pain, acid swallowing and spitting of bitter fluid, a dry throat and parched mouth, a red tongue with scant fluids, and a thin, weak or deficient, wiry pulse; also treats mounting qi and abdominal masses."
+    },
+    "181": {
+      "name": "Honey-Fried Licorice Decoction",
+      "function": "Enriches the yin and nourishes the blood; augments the qi and warms the yang; restores the pulse and stops palpitations.",
+      "mainTreatment": "1. Yin-blood insufficiency with yang-qi weakness. A bound or intermittent pulse, throbbing of the Heart, deficiency and emaciation with scant qi, a smooth tongue with scant coating, or a dry, thin tongue.\n2. Taxation-deficiency Lung atrophy. Cough with copious drool and saliva, emaciation and shortness of breath, deficiency-vexation and sleeplessness, spontaneous and night sweats, a dry throat and tongue, constipation, and a deficient, rapid pulse."
+    },
+    "182": {
+      "name": "Modified Restore the Pulse Decoction",
+      "function": "Enriches the yin and nourishes the blood; generates fluids and moistens dryness.",
+      "mainTreatment": "Late stage of a warm-heat disease with the evil heat long detained and depletion of yin fluids. Fever with a red face, a parched mouth and dry tongue, a deficient, large pulse, and heat in the palms and soles greater than on the backs of the hands and feet."
+    },
+    "183": {
+      "name": "Benefit the Stomach Decoction",
+      "function": "Nourishes the yin and benefits the Stomach.",
+      "mainTreatment": "Yang brightness warm disease with injury to the Stomach yin. Inability to eat, a dry mouth and throat, a red tongue with scant coating, and a thin, rapid pulse."
+    },
+    "184": {
+      "name": "Kidney Qi Pill",
+      "function": "Tonifies the Kidneys and assists the yang. This is Wang Bing's \"boost the source of fire to dispel the shadow of yin.\" The Complete Compendium says: one who is skilled at tonifying the yang must seek the yang within the yin, so that yang has the aid of yin and generation and transformation are inexhaustible.",
+      "mainTreatment": "Kidney-yang insufficiency. Lumbar pain and weak legs, a constant cold sensation from the waist down, cramping of the lower abdomen, inhibited urination or, conversely, copious urination especially at night, impotence and premature ejaculation, a pale swollen tongue, and a deficient, weak pulse sunken and thin at the cubit position; also phlegm-rheum, edema, wasting-thirst, leg qi, and bladder-shift."
+    },
+    "185": {
+      "name": "Augmented Kidney Qi Pill",
+      "function": "Warms and tonifies the Kidney yang; promotes urination and reduces swelling.",
+      "mainTreatment": "Kidney-(yang-)deficiency edema, with heaviness of the lower back, swollen feet, and inhibited urination."
+    },
+    "186": {
+      "name": "Ten-Tonic Pill",
+      "function": "Tonifies the Kidney yang; boosts the essence and blood.",
+      "mainTreatment": "Kidney-yang deficiency-detriment with insufficiency of essence and blood. A dark sallow complexion, cold swollen feet, tinnitus and deafness, emaciation of the body, weak legs and knees, inhibited urination, and lumbar and spinal pain."
+    },
+    "187": {
+      "name": "Restore the Right [Kidney] Pill",
+      "function": "Warms and tonifies the Kidney yang; fills the essence and boosts the marrow.",
+      "mainTreatment": "Kidney-yang insufficiency with debilitation of the life-gate fire. In the aged or chronically ill, qi debility and spiritual fatigue, aversion to cold and cold limbs, sore weak lower back and knees, impotence and seminal emission, or yang debility with infertility, or reduced appetite and loose stool, or urinary incontinence, a pale tongue with white coating, and a sunken, slow pulse."
+    },
+    "188": {
+      "name": "Restore the Right [Kidney] Beverage",
+      "function": "Warms and tonifies the Kidney yang; fills the essence and tonifies the blood.",
+      "mainTreatment": "Kidney-yang insufficiency. Timid qi and spiritual fatigue, abdominal pain and sore lower back, cold limbs and a thin pulse, a pale tongue with white coating; or yin exuberance repelling the yang, a true-cold false-heat pattern."
+    },
+    "189": {
+      "name": "Rehmannia Beverage",
+      "function": "Enriches the Kidney yin, tonifies the Kidney yang, opens the orifices, and transforms phlegm.",
+      "mainTreatment": "Wind-stroke aphasia with wilting. A stiff tongue unable to speak, feet too withered to use, a dry mouth without a desire to drink, cold feet and a red face, and a sunken, thin, weak pulse."
+    },
+    "190": {
+      "name": "Tortoise and Deer Two-Immortal Syrup",
+      "function": "Enriches the yin and fills the essence; augments the qi and invigorates the yang.",
+      "mainTreatment": "True-origin deficiency-detriment with insufficiency of essence and blood. Whole-body emaciation, impotence and seminal emission, blurred vision, sore weak lower back and knees, and long-standing infertility."
+    },
+    "191": {
+      "name": "Seven-Treasure Special Pill for Beautiful Whiskers",
+      "function": "Tonifies and boosts the Liver and Kidneys; darkens the hair and strengthens the bones.",
+      "mainTreatment": "Liver-Kidney insufficiency. Premature graying of the hair and beard, hair loss, loose teeth, sore weak lower back and knees, seminal emission in dreams and spontaneous leakage, and infertility from Kidney deficiency."
+    },
+    "192": {
+      "name": "Oyster Shell Powder",
+      "function": "Augments the qi and stabilizes the exterior; astringes the yin and stops sweating.",
+      "mainTreatment": "Spontaneous sweating and night sweats. Constant spontaneous sweating worse at night, palpitations with fright and apprehension, shortness of breath with vexation and fatigue, a pale red tongue, and a thin, weak pulse."
+    },
+    "193": {
+      "name": "Nine-Immortal Powder",
+      "function": "Astringes the Lungs and stops cough; augments the qi and nourishes the yin.",
+      "mainTreatment": "Chronic cough with Lung deficiency. Unremitting chronic cough, wheezing and spontaneous sweating on severe coughing, scant sticky phlegm, and a deficient, rapid pulse."
+    },
+    "194": {
+      "name": "True Person's Decoction to Nourish the Organs",
+      "function": "Astringes the intestines and stops diarrhea; warms the middle and supplements deficiency.",
+      "mainTreatment": "Chronic diarrhea and chronic dysentery. Diarrhea or dysentery without restraint, uncontrollable slippage, even to rectal prolapse and downward sinking, periumbilical pain, no thought of food, a pale tongue with white coating, and a slow, thin pulse."
+    },
+    "195": {
+      "name": "Four-Miracle Pill",
+      "function": "Warms the Kidneys and the Spleen; secures the intestines and stops diarrhea.",
+      "mainTreatment": "Kidney diarrhea. Daybreak diarrhea, no thought of food, poor digestion of food, or abdominal pain and cold limbs, spiritual fatigue and lack of strength, a pale tongue with a thin white coating, and a sunken, slow, forceless pulse."
+    },
+    "196": {
+      "name": "Peach Blossom Decoction",
+      "function": "Warms the middle, astringes the intestines, and stops dysentery.",
+      "mainTreatment": "Deficiency-cold dysentery. Unremitting dysentery with pus and blood, dark rather than fresh in color, long unhealed, abdominal pain that likes warmth and pressure, a pale tongue with white coating, and a slow, weak or faint, thin pulse."
+    },
+    "197": {
+      "name": "Metal Lock Pill to Stabilize the Essence",
+      "function": "Tonifies the Kidneys and astringes the essence.",
+      "mainTreatment": "Seminal emission. Seminal emission and spontaneous leakage, spiritual fatigue and lack of strength, lumbar pain and tinnitus, a pale tongue with white coating, and a thin, weak pulse."
+    },
+    "198": {
+      "name": "Water and Earth Two-Immortal Special Pill",
+      "function": "Tonifies the Kidneys and astringes the essence.",
+      "mainTreatment": "Seminal emission and turbid discharge in men, frequent urination, and vaginal discharge in women, purely from Kidney deficiency with failure to contain."
+    },
+    "199": {
+      "name": "Mantis Egg Case Powder",
+      "function": "Regulates and tonifies the Heart and Kidneys; astringes the essence and stops leakage.",
+      "mainTreatment": "Heart-Kidney dual deficiency. Frequent urination, or urine cloudy like rice-water, or enuresis and seminal emission, an absent-minded spirit, forgetfulness, a pale tongue with white coating, and a thin, weak pulse."
+    },
+    "200": {
+      "name": "Shrink the Stream Pill",
+      "function": "Warms the Kidneys and dispels cold; reduces urination and stops leakage.",
+      "mainTreatment": "Bladder deficiency-cold pattern. Frequent urination, or unremitting enuresis, a pale tongue, and a sunken, weak pulse."
+    },
+    "201": {
+      "name": "Stabilize Flooding Decoction",
+      "function": "Augments the qi and fortifies the Spleen; secures the penetrating vessel and contains the blood.",
+      "mainTreatment": "Spleen-qi weakness with the penetrating vessel unsecured. Flooding or excessive menstruation, pale thin blood, palpitations and shortness of breath, sore weak lower back and knees, a pale tongue, and a faint, weak pulse."
+    },
+    "202": {
+      "name": "Stabilize the Menses Pill",
+      "function": "Enriches the yin and clears heat; secures the menses and stops bleeding.",
+      "mainTreatment": "Flooding and spotting. Menstrual flow overdue and unremitting, or heavy bleeding, deep red or purple-black thick sticky blood, heat in the palms and soles, sore weak lower back and knees, a red tongue, and a wiry, rapid pulse."
+    },
+    "203": {
+      "name": "Change Yellow [Discharge] Decoction",
+      "function": "Tonifies the Kidneys and clears heat; dispels dampness and stops vaginal discharge.",
+      "mainTreatment": "Damp-heat vaginal discharge. Yellow discharge with a fishy foul odor, a red tongue, and a yellow greasy coating."
+    },
+    "204": {
+      "name": "Clear the Discharge Decoction",
+      "function": "Enriches the yin and astringes; transforms stasis and stops discharge.",
+      "mainTreatment": "Persistent, unremitting red and white vaginal discharge in women."
+    },
+    "205": {
+      "name": "Cinnabar Pill to Calm the Spirit",
+      "function": "Settles and calms the spirit; clears the Heart and drains fire.",
+      "mainTreatment": "Heart-fire hyperactivity with yin-blood insufficiency. Insomnia with profuse dreaming, fright palpitations and fearful throbbing, Heart vexation and a chaotic spirit, a red tongue, and a thin, rapid pulse."
+    },
+    "206": {
+      "name": "Iron Filings Beverage",
+      "function": "Settles the Heart and calms the spirit; clears heat and flushes phlegm.",
+      "mainTreatment": "Withdrawal-mania pattern from phlegm-fire harassing upward."
+    },
+    "207": {
+      "name": "Magnetite and Cinnabar Pill",
+      "function": "Boosts the yin and brightens the eyes; settles and calms the spirit.",
+      "mainTreatment": "Non-interaction of the Heart and Kidneys. Blurred vision, tinnitus and deafness, palpitations and insomnia; also treats epilepsy."
+    },
+    "208": {
+      "name": "Emperor of Heaven's Special Pill to Tonify the Heart",
+      "function": "Enriches the yin and nourishes the blood; tonifies the Heart and calms the spirit.",
+      "mainTreatment": "Yin deficiency with blood scanty and the spirit unsettled. Palpitations and insomnia, deficiency-vexation and spiritual fatigue, seminal emission in dreams and forgetfulness, heat in the palms and soles, mouth and tongue sores, a red tongue with scant coating, and a thin, rapid pulse."
+    },
+    "209": {
+      "name": "Biota Seed Pill to Nourish the Heart",
+      "function": "Nourishes the Heart and calms the spirit; enriches the yin and tonifies the Kidneys.",
+      "mainTreatment": "Yin-blood depletion with disharmony of the Heart and Kidneys. Spiritual disorientation, fright palpitations and fearful throbbing, profuse dreaming at night, forgetfulness and night sweats, a red tongue with scant coating, and a thin, rapid pulse."
+    },
+    "210": {
+      "name": "Confucius' Special Pill to Restore the Pillow",
+      "function": "Tonifies the Kidneys and quiets the Heart; boosts the wit and calms the spirit.",
+      "mainTreatment": "Heart-Kidney insufficiency with forgetfulness, insomnia, and an unquiet spirit."
+    },
+    "211": {
+      "name": "Sour Jujube Decoction",
+      "function": "Nourishes the blood and calms the spirit; clears heat and eliminates vexation.",
+      "mainTreatment": "Deficiency-vexation and sleeplessness. Insomnia with palpitations, deficiency-vexation and unrest, dizzy head and vision, a dry throat and parched mouth, a red tongue, and a wiry, thin pulse."
+    },
+    "212": {
+      "name": "Licorice, Wheat, and Jujube Decoction",
+      "function": "Nourishes the Heart and calms the spirit; harmonizes the middle and moderates urgency.",
+      "mainTreatment": "Visceral agitation. Spiritual disorientation, frequent grief with a wish to weep that cannot be controlled, Heart vexation and turmoil, restless sleep, in severe cases disordered speech and behavior, and frequent yawning; a pale red tongue with scant coating, and a thin, slightly rapid pulse."
+    },
+    "213": {
+      "name": "Calm the Palace Pill with Cattle Bezoar",
+      "function": "Clears heat and opens the orifices; sweeps phlegm and resolves toxicity.",
+      "mainTreatment": "Evil heat sinking into the pericardium. High fever with agitation, clouded spirit and delirious speech, a parched mouth and dry tongue, congested phlegm-drool, a red or crimson tongue, and a rapid pulse; also wind-stroke coma and childhood convulsions from internal blockage by evil heat."
+    },
+    "214": {
+      "name": "Cattle Bezoar Pill to Clear the Heart",
+      "function": "Clears heat and resolves toxicity; opens the orifices and calms the spirit.",
+      "mainTreatment": "Warm-heat evil sinking into the pericardium. Body heat, clouded spirit and delirious speech, vexing agitation and unrest, as well as childhood high fever with convulsions and wind-stroke with orifice-blockage."
+    },
+    "215": {
+      "name": "Purple Snow Special Pill",
+      "function": "Clears heat and opens the orifices; extinguishes wind and stops spasms.",
+      "mainTreatment": "Evil heat sinking into the pericardium with heat exuberance stirring wind. High fever with agitation, clouded spirit and delirious speech, convulsions and reversal, macular rashes with hematemesis and nosebleed, thirst with drinking, parched lips and dry teeth, dark urine and constipation, a red-crimson tongue with a dry yellow coating, and a forceful, rapid or wiry, rapid pulse; also childhood convulsions from heat exuberance."
+    },
+    "216": {
+      "name": "Greatest Treasure Special Pill",
+      "function": "Clears heat and opens the orifices; transforms turbidity and resolves toxicity.",
+      "mainTreatment": "Phlegm-heat blocking the pericardium internally. Clouded spirit and delirious speech, body heat with agitation, exuberant phlegm and coarse breathing, a red tongue with a filthy yellow greasy coating, and a slippery, rapid pulse; also wind-stroke, summerheat-stroke, and childhood convulsions from internal blockage by phlegm-heat."
+    },
+    "217": {
+      "name": "Marching Powder",
+      "function": "Clears heat and opens the orifices; dispels foulness and resolves toxicity.",
+      "mainTreatment": "Summerheat-foulness. Vomiting and diarrhea with abdominal pain, vexing oppression to the point of collapse, dizzy head and vision, and loss of consciousness; also treats mouth sores and sore throat. Applied to the eyes it removes wind-heat screens; blown into the nose it wards off seasonal-epidemic qi."
+    },
+    "218": {
+      "name": "Liquid Styrax Pill",
+      "function": "Aromatically opens the orifices; moves the qi and warms the middle.",
+      "mainTreatment": "Cold-blockage pattern. Sudden collapse, clenched jaw, loss of consciousness, a white tongue coating, and a slow pulse; sudden pain of the Heart and abdomen, in severe cases collapse with reversal. Also treats wind-stroke, qi-stroke, and contraction of seasonal miasmic-epidemic qi that belong to cold-blockage patterns."
+    },
+    "219": {
+      "name": "Coronary Heart Styrax Pill",
+      "function": "Aromatically opens the orifices; moves the qi, invigorates the blood, and relieves chest pain.",
+      "mainTreatment": "Angina with chest oppression and a suffocating sense of blocked breath, due to phlegm-turbidity, qi stagnation, and blood stasis."
+    },
+    "220": {
+      "name": "Purple Gold Ingot",
+      "function": "Transforms phlegm and opens the orifices; dispels foulness and resolves toxicity; reduces swelling and relieves pain.",
+      "mainTreatment": "1. Summerheat-stroke and seasonal epidemic. Epigastric and abdominal distention, oppression, and pain, nausea and vomiting, diarrhea, and childhood phlegm reversal.\n2. Applied externally to deep-rooted sores and boils, insect and animal bites, injuries, unnamed toxic swellings, mumps, erysipelas, and throat-wind."
+    },
+    "221": {
+      "name": "Escape Restraint Pill",
+      "function": "Moves the qi and resolves constraint.",
+      "mainTreatment": "Constraint patterns. Focal oppression of the chest and diaphragm, epigastric and abdominal distention and fullness, belching with a rotten smell and acid swallowing, nausea and vomiting, and indigestion."
+    },
+    "222": {
+      "name": "Warm the Liver Decoction",
+      "function": "Warmly tonifies the Liver and Kidneys; moves the qi and relieves pain.",
+      "mainTreatment": "Liver-Kidney deficiency-cold pattern. Cold painful testicles, or lower abdominal pain, aversion to cold with a preference for warmth, a pale tongue with white coating, and a wiry, sunken, slow pulse."
+    },
+    "223": {
+      "name": "Pinellia and Magnolia Bark Decoction",
+      "function": "Moves the qi and dissipates clumps; directs rebellious qi downward and transforms phlegm.",
+      "mainTreatment": "Plum-pit qi. A sensation of something lodged in the throat that can be neither coughed up nor swallowed down, fullness and oppression of the chest and diaphragm, or cough, or vomiting, a white moist or white greasy tongue coating, and a wiry, moderate or wiry, slippery pulse."
+    },
+    "224": {
+      "name": "Magnolia Bark Decoction to Warm the Middle",
+      "function": "Moves the qi and warms the middle; dries dampness and eliminates fullness.",
+      "mainTreatment": "Cold-damp qi stagnation. Epigastric and abdominal distention and fullness or pain, no thought of food, a white greasy tongue coating, and a sunken, wiry pulse."
+    },
+    "225": {
+      "name": "Immature Bitter Orange Pill to Reduce Focal Distention",
+      "function": "Moves the qi and reduces focal distention; fortifies the Spleen and harmonizes the Stomach.",
+      "mainTreatment": "Spleen deficiency with qi stagnation and cold-heat mutual binding. Focal distention and fullness below the Heart, no desire to eat, fatigue and lack of strength, and irregular stools."
+    },
+    "226": {
+      "name": "Immature Bitter Orange and Atractylodes Decoction",
+      "function": "Moves the qi and reduces focal distention.",
+      "mainTreatment": "Qi stagnation with water retention. A firm mass below the Heart, as large as a plate, with an edge like a spinning disk."
+    },
+    "227": {
+      "name": "Immature Bitter Orange and Atractylodes Pill",
+      "function": "Fortifies the Spleen and reduces focal distention.",
+      "mainTreatment": "Spleen deficiency with qi stagnation and accumulated food. Focal distention and fullness of the chest and epigastrium, and no thought of food."
+    },
+    "228": {
+      "name": "Tangerine Pip Pill",
+      "function": "Moves the qi and relieves pain; softens hardness and dissipates clumps.",
+      "mainTreatment": "Mounting disorder. Swollen distended testicles with one-sided sagging, or hardness like stone, or pain radiating to the navel and abdomen."
+    },
+    "229": {
+      "name": "Four-Milled-Herb Decoction",
+      "function": "Moves the qi and directs counterflow downward; loosens the chest and dissipates clumps.",
+      "mainTreatment": "Liver-qi constraint and binding. Distending oppression of the chest and diaphragm, rebellious qi with hurried wheezing, focal distention and fullness below the Heart, and no thought of food."
+    },
+    "230": {
+      "name": "Top-Quality Lindera Powder",
+      "function": "Moves the qi and courses the Liver; disperses cold and relieves pain. As Zhang Zihe said, \"treating mounting disorders always comes back to the Liver channel.\"",
+      "mainTreatment": "Small Intestine mounting qi with the lower abdomen pulling on and controlling the testicles with pain, one-sided sagging and swelling; or lower abdominal pain, a white tongue coating, and a wiry pulse."
+    },
+    "231": {
+      "name": "Bupleurum Powder to Spread the Liver",
+      "function": "Courses the Liver and resolves constraint; moves the qi and relieves pain.",
+      "mainTreatment": "Liver-qi stagnation and stasis. Rib-side pain, or alternating chills and fever, belching and sighing, epigastric and abdominal distention and fullness, and a wiry pulse."
+    },
+    "232": {
+      "name": "Augmented Lindera Decoction",
+      "function": "Moves the qi and invigorates the blood; regulates menstruation and relieves pain.",
+      "mainTreatment": "Menstrual pain. Before the menses or at the start of the flow, distending pain of the lower abdomen with the distention exceeding the pain, or extending to distending pain of the chest, rib-sides, and breasts, a pale tongue with a thin white coating, and a wiry, tight pulse."
+    },
+    "233": {
+      "name": "Support the Upright Qi and Heavenly Fragrance Powder",
+      "function": "Moves the qi and warms the middle; regulates menstruation and relieves pain.",
+      "mainTreatment": "Pain from the various qi disorders in women, whether surging up to the Heart and chest, or assailing the rib-sides, with a stabbing knotted mass in the abdomen, irregular menses, or dizziness and vomiting, and alternating chills and fever."
+    },
+    "234": {
+      "name": "Lesser Galangal and Cyperus Pill",
+      "function": "Moves the qi and courses the Liver; dispels cold and relieves pain.",
+      "mainTreatment": "Qi stagnation with cold congelation. Epigastric pain, chest oppression and rib-side pain, aversion to cold with a preference for warmth, as well as menstrual pain in women."
+    },
+    "235": {
+      "name": "Melia Toosendan Powder",
+      "function": "Courses the Liver and drains heat; invigorates the blood and relieves pain.",
+      "mainTreatment": "Liver constraint transforming into fire. Pain anywhere in the Heart, chest, and rib-sides that comes and goes, a bitter taste, a red tongue with yellow coating, and a wiry, rapid pulse."
+    },
+    "236": {
+      "name": "Trichosanthes, Chinese Chive, and Wine Decoction",
+      "function": "Unblocks the yang and dissipates clumps; moves the qi and dispels phlegm.",
+      "mainTreatment": "Chest painful obstruction. Oppressive pain in the chest, even pain in the chest radiating through to the back, wheezing with cough and expectoration, shortness of breath, a white greasy tongue coating, and a sunken, wiry or tight pulse."
+    },
+    "237": {
+      "name": "Arrest Wheezing Decoction",
+      "function": "Diffuses the Lungs and directs qi downward; clears heat and transforms phlegm.",
+      "mainTreatment": "Wheezing. Cough with copious phlegm and hurried qi, thick yellow phlegm, mild aversion to wind-cold, a yellow greasy tongue coating, and a slippery, rapid pulse."
+    },
+    "238": {
+      "name": "Perilla Fruit Decoction to Direct Qi Downward",
+      "function": "Directs qi downward and calms wheezing; dispels phlegm and stops cough.",
+      "mainTreatment": "Excess wheezing. Congested exuberant phlegm-drool, wheezing and cough with shortness of breath, fullness and oppression of the chest and diaphragm, or lumbar pain and weak legs, or puffy swelling of the limbs, a white slippery or white greasy tongue coating, and a wiry, slippery pulse."
+    },
+    "239": {
+      "name": "Three-Seed Decoction to Nourish One's Parents",
+      "function": "Directs qi downward and loosens the diaphragm; transforms phlegm and disperses food.",
+      "mainTreatment": "Phlegm congestion with qi stagnation. Cough with rebellious wheezing, copious phlegm with chest focal distention, reduced appetite with difficult digestion, a white greasy tongue coating, and a slippery pulse."
+    },
+    "240": {
+      "name": "Inula and Hematite Decoction",
+      "function": "Directs rebellious qi downward and transforms phlegm; augments the qi and harmonizes the Stomach.",
+      "mainTreatment": "Stomach-qi weakness with internal obstruction by phlegm-turbidity. Hard focal distention below the Heart, or stomach reflux with retching and counterflow, spitting of drool and foam, incessant belching, a white slippery tongue coating, and a wiry, deficient pulse."
+    },
+    "241": {
+      "name": "Tangerine Peel and Bamboo Shavings Decoction",
+      "function": "Directs rebellious qi downward and stops hiccup; augments the qi and clears heat.",
+      "mainTreatment": "Hiccup from Stomach deficiency with heat. Hiccup or dry heaves, a tender red tongue, and a deficient, rapid pulse."
+    },
+    "242": {
+      "name": "Clove and Persimmon Calyx Decoction",
+      "function": "Warms the middle and augments the qi; directs rebellious qi downward and stops hiccup.",
+      "mainTreatment": "Deficiency-cold hiccup. Unremitting hiccup, focal oppression of the chest and epigastrium, a pale tongue with white coating, and a sunken, slow pulse."
+    },
+    "243": {
+      "name": "Peach Pit Decoction to Order the Qi",
+      "function": "Breaks up the blood and purges stasis.",
+      "mainTreatment": "Lower-burner blood-amassment pattern. Gripping bind of the lower abdomen, normal urination, in severe cases delirious speech and vexing agitation with manic-like behavior, and fever at night; also blood-stasis amenorrhea, menstrual pain, and a sunken, replete, choppy pulse."
+    },
+    "244": {
+      "name": "Drive Out Stasis Below Decoction",
+      "function": "Breaks up the blood and purges stasis.",
+      "mainTreatment": "Postpartum abdominal pain from dried blood binding internally and lodging below the navel; also blood stasis causing inhibited menstruation."
+    },
+    "245": {
+      "name": "Drive Out Stasis from the Mansion of Blood Decoction",
+      "function": "Invigorates the blood and dispels stasis; moves the qi and relieves pain.",
+      "mainTreatment": "Blood stasis in the chest. Chest pain, chronic headache with fixed stabbing pain, or chronic unremitting hiccup, or internal heat with vexing oppression, or palpitations and insomnia, irritability and quick temper, tidal fever toward dusk, dark lips or dark circles around the eyes, a dark red tongue or a tongue with stasis macules, and a choppy or wiry, tight pulse."
+    },
+    "246": {
+      "name": "Unblock the Orifices and Invigorate the Blood Decoction",
+      "function": "Invigorates the blood and unblocks the orifices.",
+      "mainTreatment": "Stasis blocking the head and face with headache and dizziness, or chronic deafness, or hair loss, a blue-purple complexion, or brandy-nose, or vitiligo, as well as women's dried-blood taxation and childhood nutritional impairment with wasting flesh, distended abdomen with blue veins, and tidal fever."
+    },
+    "247": {
+      "name": "Drive Out Stasis Below the Diaphragm Decoction",
+      "function": "Invigorates the blood and dispels stasis; moves the qi and relieves pain.",
+      "mainTreatment": "Blood stasis below the diaphragm forming a hard accumulation; or a childhood lump; or abdominal pain fixed in location, or a downward sagging of the abdomen when lying down."
+    },
+    "248": {
+      "name": "Drive Out Stasis from the Lower Abdomen Decoction",
+      "function": "Invigorates the blood and dispels stasis; warms the channels and relieves pain.",
+      "mainTreatment": "Stasis accumulation in the lower abdomen with or without pain, or pain without a mass, or lower abdominal distention and fullness; or lumbar and lower abdominal distention around the menses, or menses coming three to five times a month, on and off without pause, purple or black in color, possibly with clots, or flooding with lower abdominal pain, or blood-stasis obstruction with long-standing infertility."
+    },
+    "249": {
+      "name": "Drive Out Stasis from a Painful Body Decoction",
+      "function": "Invigorates the blood and moves the qi; dispels stasis and unblocks the collaterals; frees painful obstruction and relieves pain.",
+      "mainTreatment": "Long-unhealed shoulder, arm, lumbar, leg, or generalized pain from qi and blood blocked and obstructed in the channels and collaterals."
+    },
+    "250": {
+      "name": "Tonify the Yang to Restore Five-Tenths Decoction",
+      "function": "Tonifies the qi, invigorates the blood, and unblocks the collaterals.",
+      "mainTreatment": "Wind-stroke sequelae. Hemiplegia, deviation of the eyes and mouth, slurred speech, drooling from the corner of the mouth, frequent urination or incontinence, a dark pale tongue with white coating, and a moderate pulse."
+    },
+    "251": {
+      "name": "Restore the Origin and Invigorate the Blood Decoction",
+      "function": "Invigorates the blood and dispels stasis; courses the Liver and unblocks the collaterals.",
+      "mainTreatment": "Traumatic injury with blood stasis lodged below the rib-sides and unbearable pain."
+    },
+    "252": {
+      "name": "Seven-Thousandths-of-a-Tael Powder",
+      "function": "Invigorates the blood and disperses stasis, relieving pain and stopping bleeding; applied externally, stops bleeding and generates flesh.",
+      "mainTreatment": "Traumatic injury with severed sinews and fractured bones, stasis swelling and pain, or bleeding from an incised wound; also all unnamed toxic swellings and burns and scalds."
+    },
+    "253": {
+      "name": "Warm the Menses Decoction (1)",
+      "function": "Warms the channels and disperses cold; dispels stasis and nourishes the blood.",
+      "mainTreatment": "Deficiency-cold of the penetrating and conception vessels with blood stasis obstruction. Unremitting spotting, irregular menses arriving early or late, or twice in one month, or amenorrhea, with fever toward dusk, vexing heat of the palms, and dry lips and mouth; also long-standing infertility."
+    },
+    "254": {
+      "name": "Warm the Menses Decoction (2)",
+      "function": "Warms the channels and supplements deficiency; transforms stasis and relieves pain.",
+      "mainTreatment": "Deficiency-cold of the sea of blood with irregular menses, congelation and stagnation of the blood and qi, periumbilical pain, and a sunken, tight pulse."
+    },
+    "255": {
+      "name": "Mugwort and Cyperus Pill to Warm the Womb",
+      "function": "Warms the womb and warms the channels; nourishes the blood and invigorates the blood.",
+      "mainTreatment": "Womb-cold in women. Vaginal discharge and white seepage, a sallow yellow complexion, aching pain of the four limbs, fatigue and lack of strength, reduced appetite, irregular menses, intermittent abdominal pain, and long-standing childlessness."
+    },
+    "256": {
+      "name": "Generation and Transformation Decoction",
+      "function": "Transforms stasis and generates the new; warms the channels and relieves pain.",
+      "mainTreatment": "Postpartum blood-stasis abdominal pain. Lochia that fails to discharge, and cold pain of the lower abdomen."
+    },
+    "257": {
+      "name": "Cinnamon Twig and Poria Pill",
+      "function": "Invigorates the blood and transforms stasis; moderately dissolves masses and clumps.",
+      "mainTreatment": "Blood stasis obstructing the uterus. Abdominal pain that refuses pressure, or unremitting spotting with dark, dull purple-black blood, or a restless fetus at the onset of pregnancy."
+    },
+    "258": {
+      "name": "Sudden Smile Powder",
+      "function": "Invigorates the blood and dispels stasis; dissipates clumps and relieves pain.",
+      "mainTreatment": "Blood stasis and stagnation. Stabbing pain of the Heart and chest, epigastric and abdominal pain, or postpartum failure of the lochia to discharge, or irregular menses, and gripping pain of the lower abdomen."
+    },
+    "259": {
+      "name": "Fantastically Effective Special Pill to Invigorate the Collaterals",
+      "function": "Invigorates the blood and dispels stasis; unblocks the collaterals and relieves pain.",
+      "mainTreatment": "Qi and blood constrained and stagnant. Pain of the Heart and abdomen, leg pain and arm pain, stasis swelling from traumatic injury, sores inside and out, as well as abdominal masses and accumulations."
+    },
+    "260": {
+      "name": "Ectopic Pregnancy Formula",
+      "function": "Invigorates the blood and dispels stasis; dissolves masses and relieves pain.",
+      "mainTreatment": "Ruptured ectopic pregnancy with sudden severe abdominal pain, usually beginning in the lower abdomen and sometimes spreading to the whole abdomen, along with excessive menstruation or sluggish spotting of dark red blood. Abdominal examination reveals tenderness, rebound tenderness, and guarding, sometimes with shifting dullness or a mass of variable consistency."
+    },
+    "261": {
+      "name": "Salvia Beverage",
+      "function": "Invigorates the blood and dispels stasis; moves the qi and relieves pain.",
+      "mainTreatment": "Blood stasis with qi stagnation causing pain of the Heart and Stomach."
+    },
+    "262": {
+      "name": "Turtle Shell Decocted Pill",
+      "function": "Moves the qi and invigorates the blood; dispels dampness and transforms phlegm; softens hardness and dissolves masses.",
+      "mainTreatment": "Malarial mother. Long-unhealed malaria with a lump below the rib-side, as well as abdominal masses and accumulations, abdominal pain, wasting of the flesh, reduced appetite, intermittent chills and fever, or amenorrhea in women."
+    },
+    "263": {
+      "name": "Rhubarb and Ground Beetle Pill",
+      "function": "Dispels stasis and generates the new.",
+      "mainTreatment": "Extreme deficiency from the five taxations. Bodily emaciation, abdominal fullness with inability to eat, scaly dry skin, and darkening around both eyes."
+    },
+    "264": {
+      "name": "Ten Partially-Charred Substances Powder",
+      "function": "Cools the blood and stops bleeding.",
+      "mainTreatment": "Reckless movement of hot blood. Hematemesis, coughing of blood, expectoration of blood, and nosebleed."
+    },
+    "265": {
+      "name": "Four Fresh Substances Pill",
+      "function": "Cools the blood and stops bleeding.",
+      "mainTreatment": "Reckless movement of hot blood. Hematemesis and nosebleed, bright red blood, a dry mouth and parched throat, a red or crimson tongue, and a wiry, rapid pulse."
+    },
+    "266": {
+      "name": "Cough of Blood Formula",
+      "function": "Clears the Liver and quiets the Lungs; cools the blood and stops bleeding.",
+      "mainTreatment": "Coughing of blood from Liver fire invading the Lungs. Cough with thick blood-streaked phlegm hard to expectorate, Heart vexation and quick temper, chest and rib-side pain, a dry throat and bitter taste, red cheeks and constipation, a red tongue with yellow coating, and a wiry, rapid pulse."
+    },
+    "267": {
+      "name": "Cephalanoplos Beverage",
+      "function": "Cools the blood and stops bleeding; disinhibits water and unblocks strangury.",
+      "mainTreatment": "Blood strangury and blood in the urine. Blood in the urine, frequent urination, dark, astringent, hot painful urination, a red tongue, and a rapid pulse."
+    },
+    "268": {
+      "name": "Sophora Japonica Flower Powder",
+      "function": "Cools the intestines and cools the blood; courses wind and moves the qi.",
+      "mainTreatment": "Intestinal-wind and visceral-toxin bleeding. Bleeding before or after the stool, or blood in the stool, as well as hemorrhoidal bleeding, the blood fresh red or dull and dark."
+    },
+    "269": {
+      "name": "Yellow Earth Decoction",
+      "function": "Warms the yang and fortifies the Spleen; nourishes the blood and stops bleeding.",
+      "mainTreatment": "Yang-deficiency bleeding. Blood in the stool, blood following the stool, or hematemesis and nosebleed, and in women flooding and spotting, the blood dull and pale, cold limbs, a sallow yellow complexion, a pale tongue with white coating, and a sunken, thin, forceless pulse."
+    },
+    "270": {
+      "name": "Major Gentiana Macrophylla Decoction",
+      "function": "Dispels wind and clears heat; nourishes the blood and invigorates the blood.",
+      "mainTreatment": "Wind evil newly striking the channels and collaterals. Deviation of the eyes and mouth, a stiff tongue unable to speak, hands and feet unable to move, with the wind evil scattered about and not confined to one channel."
+    },
+    "271": {
+      "name": "Eliminate Wind Powder",
+      "function": "Dispels wind and nourishes the blood; clears heat and eliminates dampness. Itching comes from wind, so to stop itching one must first dispel wind.",
+      "mainTreatment": "Wind rash and eczema. Red skin eruptions, or cloud-patch blotches over the whole body, itching, oozing of fluid after scratching, a white or yellow tongue coating, and a floating, rapid pulse."
+    },
+    "272": {
+      "name": "Chuanxiong Powder to be Taken with Green Tea",
+      "function": "Dispels wind and relieves pain.",
+      "mainTreatment": "Wind-evil headache. One-sided or generalized headache, or vertex pain, aversion to cold and fever, dizzy vision and nasal congestion, a thin white tongue coating, and a floating pulse."
+    },
+    "273": {
+      "name": "Chrysanthemum Powder to be Taken with Green Tea",
+      "function": "Dispels wind and relieves pain; clears and benefits the head and eyes.",
+      "mainTreatment": "Wind-heat harassing the head and eyes. One-sided or generalized headache, or vertex pain, and dizzy head and vision."
+    },
+    "274": {
+      "name": "Lead to Symmetry Powder",
+      "function": "Dispels wind, transforms phlegm, and stops spasms.",
+      "mainTreatment": "Wind striking the channels and collaterals with deviation of the eyes and mouth."
+    },
+    "275": {
+      "name": "Stop Spasms Powder",
+      "function": "Dispels wind and stops spasms.",
+      "mainTreatment": "Spasms and reversal with convulsions of the four limbs; it also relieves pain well in intractable headache and joint pain."
+    },
+    "276": {
+      "name": "Minor Invigorate the Collaterals Special Pill",
+      "function": "Dispels wind and eliminates dampness; transforms phlegm and unblocks the collaterals; invigorates the blood and relieves pain.",
+      "mainTreatment": "Wind-cold-damp painful obstruction. Pain of the sinews and vessels of the limbs, numbness and cramping, inhibited flexion and extension of the joints, and roving pain of no fixed location; also wind-stroke with numbness of the hands and feet, long unhealed, from phlegm-damp and blood stasis in the channels and collaterals, with heaviness of the lower back and legs, or pain between the legs and arms."
+    },
+    "277": {
+      "name": "Major Invigorate the Collaterals Special Pill",
+      "function": "Dispels wind and supports the upright qi; frees the collaterals and relieves pain.",
+      "mainTreatment": "Wind-stroke paralysis, wilting and painful obstruction, phlegm reversal, yin-type flat-abscess, streaming sores, and traumatic injury."
+    },
+    "278": {
+      "name": "True Jade Powder",
+      "function": "Dispels wind and transforms phlegm; settles convulsions and stops spasms.",
+      "mainTreatment": "Lockjaw. Clenched jaw, a pursed mouth with tight lips, a rigid body, opisthotonos, and in severe cases clenched teeth and a retracted tongue."
+    },
+    "279": {
+      "name": "Angelica Pubescens and Taxillus Decoction",
+      "function": "Dispels wind-damp and stops painful obstruction; boosts the Liver and Kidneys and tonifies the qi and blood.",
+      "mainTreatment": "Chronic painful obstruction with dual deficiency of the Liver and Kidneys and insufficiency of qi and blood. Lumbar and knee pain, inhibited flexion and extension of the joints, or numbness and lack of sensation, aversion to cold with a preference for warmth, palpitations and shortness of breath, a pale tongue with white coating, and a thin, weak pulse."
+    },
+    "280": {
+      "name": "Aconite Main Tuber Decoction",
+      "function": "Warms the channels and dispels dampness; disperses cold and relieves pain.",
+      "mainTreatment": "Cold-damp painful obstruction. Severe joint pain that cannot be flexed or extended, aversion to cold with a preference for warmth, a thin white tongue coating, and a sunken, wiry pulse."
+    },
+    "281": {
+      "name": "Antelope Horn and Uncaria Decoction",
+      "function": "Cools the Liver and extinguishes wind; increases the fluids and relaxes the sinews.",
+      "mainTreatment": "Liver heat generating wind. Persistent high fever, vexing oppression and agitation, twitching of the hands and feet developing into spasms and reversal, in severe cases clouded spirit, a crimson dry tongue, or a parched tongue with prickles, and a wiry, rapid pulse."
+    },
+    "282": {
+      "name": "Sedate the Liver and Extinguish Wind Decoction",
+      "function": "Sedates the Liver and extinguishes wind; enriches the yin and subdues the yang.",
+      "mainTreatment": "Wind-stroke-like disorder. Dizzy head and eyes, distended eyes and tinnitus, hot painful sensation in the head, vexing heat of the Heart, a complexion as if drunk, or frequent belching, or gradual loss of function of the limbs and gradual deviation of the mouth; in severe cases sudden collapse with dizziness, unconsciousness that lifts after a time; or after waking, inability to recover; and a wiry, long, forceful pulse."
+    },
+    "283": {
+      "name": "Establish the Ridge-Beam Decoction",
+      "function": "Sedates the Liver and extinguishes wind; enriches the yin and subdues the yang.",
+      "mainTreatment": "Ascendant Liver yang. Dizzy head and eyes, distended eyes and tinnitus, palpitations, profuse dreaming and insomnia, and a wiry, hard, long pulse."
+    },
+    "284": {
+      "name": "Gastrodia and Uncaria Beverage",
+      "function": "Calms the Liver and extinguishes wind; clears heat, invigorates the blood, and tonifies the Liver and Kidneys.",
+      "mainTreatment": "Ascendant Liver yang with Liver wind harassing upward. Headache, dizziness, insomnia, a red tongue with yellow coating, and a wiry pulse."
+    },
+    "285": {
+      "name": "Major Arrest Wind Pearl",
+      "function": "Enriches the yin and extinguishes wind.",
+      "mainTreatment": "Yin-deficiency stirring wind. In the late stage of a warm disease, spiritual lassitude with squirming spasms, a weak pulse-qi, a crimson tongue with scant coating, and a tendency toward imminent collapse."
+    },
+    "286": {
+      "name": "Ass-Hide Gelatin and Egg Yolk Decoction",
+      "function": "Enriches the yin and nourishes the blood; softens the Liver and extinguishes wind.",
+      "mainTreatment": "A warm disease with the evil heat long lodged in the lower burner, deep heat with severe reversal, a thin, hurried pulse, violent throbbing of the Heart, and in severe cases pain in the Heart."
+    },
+    "287": {
+      "name": "Apricot Kernel and Perilla Leaf Powder",
+      "function": "Lightly disperses cool dryness; regulates the Lungs and transforms phlegm.",
+      "mainTreatment": "Externally contracted cool-dryness pattern. Headache, aversion to cold without sweating, cough with thin phlegm, nasal congestion, a dry throat, a white tongue coating, and a wiry pulse."
+    },
+    "288": {
+      "name": "Mulberry Leaf and Apricot Kernel Decoction",
+      "function": "Clears and disperses warm-dryness.",
+      "mainTreatment": "Externally contracted warm-dryness pattern. Headache, mild fever, thirst with a dry throat and nose, dry cough without phlegm or with scant sticky phlegm, a red tongue with a thin white dry coating, and a floating, rapid pulse that is large on the right."
+    },
+    "289": {
+      "name": "Eliminate Dryness and Rescue the Lungs Decoction",
+      "function": "Clears dryness and moistens the Lungs.",
+      "mainTreatment": "Warm-dryness injuring the Lungs with dual injury of qi and yin. Headache and body heat, dry cough without phlegm, rebellious qi with wheezing, a dry throat, thirst and a dry nose, chest and diaphragm fullness and oppression, a dry tongue with scant coating, and a deficient, large, rapid pulse."
+    },
+    "290": {
+      "name": "Glehnia and Ophiopogon Decoction",
+      "function": "Clears and nourishes the Lungs and Stomach; generates fluids and moistens dryness.",
+      "mainTreatment": "Dryness injuring the yin aspect of the Lungs and Stomach. A dry throat and parched mouth, or body heat, or dry cough, a red tongue with scant coating, and a thin, rapid pulse."
+    },
+    "291": {
+      "name": "Nourish the Yin and Clear the Lungs Decoction",
+      "function": "Nourishes the yin and clears the Lungs.",
+      "mainTreatment": "Diphtheria. A white rotten membrane in the throat that is tough and hard to wipe away, red swollen painful throat, fever or no fever at onset, a dry nose and parched lips, cough or no cough, noisy breathing, a wheeze-like sound that is not wheezing, and a rapid, forceless or thin, rapid pulse."
+    },
+    "292": {
+      "name": "Ophiopogon Decoction",
+      "function": "Moistens the Lungs and benefits the Stomach; directs rebellious qi downward.",
+      "mainTreatment": "Lung atrophy. Cough and expectoration of drool and foam, shortness of breath and hurried wheezing, a dry throat, a dry red tongue with scant coating, and a deficient, rapid pulse."
+    },
+    "293": {
+      "name": "Jade Nectar Syrup",
+      "function": "Enriches the yin and moistens the Lungs; augments the qi and tonifies the Spleen.",
+      "mainTreatment": "Lung consumption. Dry cough with scant phlegm, a dry throat with expectoration of blood, wasting of the flesh, shortness of breath and lack of strength, a red tongue with scant coating, and a thin, rapid pulse."
+    },
+    "294": {
+      "name": "Jade Fluid Decoction",
+      "function": "Augments the qi and enriches the yin; secures the Kidneys and stops thirst.",
+      "mainTreatment": "Wasting-thirst. A constantly parched, thirsty mouth not relieved by drinking, frequent copious urination, fatigue and shortness of breath, and a deficient, thin, forceless pulse."
+    },
+    "295": {
+      "name": "Increase the Fluids Decoction",
+      "function": "Increases the fluids and moistens dryness.",
+      "mainTreatment": "Yang brightness warm disease with fluid depletion and constipation. Dry bound stool, thirst, a dry red tongue, and a thin, rapid or sunken, forceless pulse."
+    },
+    "296": {
+      "name": "Calm the Stomach Powder",
+      "function": "Dries dampness and moves the Spleen; moves the qi and harmonizes the Stomach.",
+      "mainTreatment": "Dampness lodged in the Spleen and Stomach. Epigastric and abdominal distention and fullness, sluggishness and somnolence, no thought of food, vomiting and nausea, belching and acid swallowing, heaviness of the limbs, frequent spontaneous diarrhea, and a thick white greasy tongue coating with a moderate pulse."
+    },
+    "297": {
+      "name": "Bupleurum and Calm the Stomach Decoction",
+      "function": "Harmonizes and resolves the lesser yang; dispels dampness and harmonizes the Stomach.",
+      "mainTreatment": "Damp-malaria. Pain throughout the body, heaviness of the hands and feet, more cold than heat, and a soggy pulse."
+    },
+    "298": {
+      "name": "Agastache Powder to Rectify the Qi",
+      "function": "Releases the exterior and transforms dampness; regulates the qi and harmonizes the middle.",
+      "mainTreatment": "Externally contracted wind-cold with internal damage from damp stagnation. Headache, aversion to cold, and fever, chest and epigastric fullness and oppression, epigastric and abdominal pain, sudden turmoil with vomiting and diarrhea, and a white greasy tongue coating; also miasmic malaria in mountainous regions."
+    },
+    "299": {
+      "name": "Six-Harmony Decoction",
+      "function": "Dispels summerheat and transforms dampness; fortifies the Spleen and harmonizes the Stomach.",
+      "mainTreatment": "Dampness injuring the Spleen and Stomach with summerheat-damp assailing from without. Sudden turmoil with vomiting and diarrhea, fatigue and somnolence, focal distention and fullness of the chest and diaphragm, and a white slippery tongue coating."
+    },
+    "300": {
+      "name": "Two-Aged [Herb] Decoction",
+      "function": "Dries dampness and transforms phlegm; regulates the qi and harmonizes the middle.",
+      "mainTreatment": "Damp-phlegm pattern. Cough with copious phlegm that is white and easily expectorated, chest and diaphragm focal fullness and oppression, or nausea and vomiting, dizzy head and palpitations, a white slippery or greasy tongue coating, and a slippery pulse."
+    },
+    "301": {
+      "name": "Guide Out Phlegm Decoction",
+      "function": "Dries dampness and dispels phlegm; moves the qi and opens constraint.",
+      "mainTreatment": "Phlegm reversal with headache, dizzy head and vision, hurried wheezing and cough, thick sticky nasal mucus and drool, no thought of food, chest and diaphragm focal fullness, rib-side distention, and phlegm-rheum accumulated and undispersed with restlessness whether sitting or lying."
+    },
+    "302": {
+      "name": "Flush Phlegm Decoction",
+      "function": "Flushes phlegm and opens the orifices.",
+      "mainTreatment": "Wind-stroke with phlegm clouding the orifices of the Heart and a stiff tongue unable to speak."
+    },
+    "303": {
+      "name": "Poria Pill",
+      "function": "Dries dampness and moves the qi; softens hardness and transforms phlegm.",
+      "mainTreatment": "Phlegm lodged in the middle epigastrium. Pain of both arms with inability to raise the hands, or shifting pain from side to side, or feebleness of both hands, or puffy swelling of the limbs, a white greasy tongue coating, and a sunken, thin or wiry, slippery pulse."
+    },
+    "304": {
+      "name": "Warm the Gallbladder Decoction",
+      "function": "Regulates the qi and transforms phlegm; clears the Gallbladder and harmonizes the Stomach.",
+      "mainTreatment": "Gallbladder-Stomach disharmony with phlegm-heat harassing internally. Timidity with a tendency to fright, deficiency-vexation and unrest, insomnia with profuse dreaming, vomiting and hiccup, and epilepsy."
+    },
+    "305": {
+      "name": "Ten-Ingredient Warm the Gallbladder Decoction",
+      "function": "Transforms phlegm and quiets the Heart.",
+      "mainTreatment": "Timidity of the Heart and Gallbladder with a tendency to fright at any occurrence, puffy swelling of the four limbs, tasteless eating, palpitations with vexing oppression, and restlessness whether sitting or lying."
+    },
+    "306": {
+      "name": "Clear the Qi and Transform Phlegm Pill",
+      "function": "Clears heat and transforms phlegm; regulates the qi and stops cough.",
+      "mainTreatment": "Phlegm-heat cough. Thick yellow phlegm hard to expectorate, chest and diaphragm focal oppression, in severe cases hurried qi with retching and nausea, a red tongue with a yellow greasy coating, and a slippery, rapid pulse."
+    },
+    "307": {
+      "name": "Clear the Metal and Descend Fire Decoction",
+      "mainTreatment": "Lung-Stomach phlegm-fire. Cough with a red face, or Lung distention with hurried wheezing, a yellow tongue coating, and a slippery, rapid pulse."
+    },
+    "308": {
+      "name": "Minor Sinking-into-the-Chest Decoction",
+      "function": "Clears heat and transforms phlegm; loosens the chest and dissipates clumps.",
+      "mainTreatment": "Phlegm-heat mutually binding. Focal oppression of the chest and epigastrium, painful on pressure, cough with thick yellow phlegm, a yellow greasy tongue coating, and a floating, slippery or slippery, rapid pulse."
+    },
+    "309": {
+      "name": "Bupleurum Decoction to Sink into the Chest",
+      "mainTreatment": "Clears heat and transforms phlegm; regulates the qi and loosens the chest; harmonizes and resolves the lesser yang. A full lesser yang pattern with focal distention and fullness of the chest and diaphragm, painful on pressure, a bitter taste and yellow tongue coating, and a wiry, rapid pulse."
+    },
+    "310": {
+      "name": "Roll the Phlegm Decoction",
+      "function": "Drains fire and drives out phlegm.",
+      "mainTreatment": "Excess-heat old-phlegm pattern. Withdrawal-mania with fright palpitations, or fearful throbbing and clouded stupor, or wheezing and cough with thick phlegm, or focal oppression of the chest and epigastrium, or dizziness and tinnitus, or scrofula around the neck, or squirming of the mouth and eyes, or insomnia, or bizarre dreams, or sudden unnameable joint pain, or a choking, vexed oppression, constipation, a yellow greasy tongue coating, and a forceful, slippery, rapid pulse."
+    },
+    "311": {
+      "name": "Cold Wheezing Pill",
+      "mainTreatment": "Warms the Lungs and disperses cold; flushes phlegm and transforms thin mucus. Cold evil settled in the back so that cold triggers wheezing and cough, focal fullness of the chest and diaphragm, and reclining breathlessness with inability to lie flat."
+    },
+    "312": {
+      "name": "Fritillaria and Trichosanthes Powder",
+      "function": "Moistens the Lungs and clears heat; regulates the qi and transforms phlegm.",
+      "mainTreatment": "Dry-phlegm cough. Phlegm difficult to expectorate, rough and hard to bring up, a dry throat, and a white dry tongue coating."
+    },
+    "313": {
+      "name": "Three-Seed Decoction to Nourish One's Parents",
+      "function": "Directs qi downward and disperses food; warms and transforms phlegm-rheum.",
+      "mainTreatment": "Cough with rebellious wheezing, copious phlegm and chest oppression, reduced appetite with difficult digestion, a white greasy tongue coating, and a slippery pulse."
+    },
+    "314": {
+      "name": "Poria, Licorice, Schisandra, Ginger, and Asarum Decoction",
+      "function": "Warms the Lungs and transforms thin mucus.",
+      "mainTreatment": "Cold-rheum cough. Copious sputum that is clear, thin, and white, discomfort of the chest and diaphragm, a white slippery tongue coating, and a wiry, slippery pulse."
+    },
+    "315": {
+      "name": "Pinellia, Atractylodes, and Gastrodia Decoction",
+      "function": "Dries dampness and transforms phlegm; calms the Liver and extinguishes wind.",
+      "mainTreatment": "Wind-phlegm harassing upward. Dizziness and headache, chest oppression with retching and nausea, a white greasy tongue coating, and a wiry, slippery pulse."
+    },
+    "316": {
+      "name": "Stabilize Epilepsy Pill",
+      "function": "Flushes phlegm and extinguishes wind.",
+      "mainTreatment": "Phlegm-heat epilepsy. Sudden onset with dizziness and collapse, loss of consciousness, in severe cases convulsions, deviated eyes and mouth, and drooling; also used for withdrawal-mania."
+    },
+    "317": {
+      "name": "Preserve Harmony Pill",
+      "function": "Disperses food and harmonizes the Stomach.",
+      "mainTreatment": "Food accumulation. Epigastric and abdominal focal distention with distending pain, belching with a rotten smell and acid swallowing, aversion to food with vomiting, or diarrhea, a thick greasy tongue coating, and a slippery pulse."
+    },
+    "318": {
+      "name": "Great Tranquility Pill",
+      "function": "Disperses food while also augmenting the qi and fortifying the Spleen.",
+      "mainTreatment": "Food accumulation with concurrent Spleen deficiency."
+    },
+    "319": {
+      "name": "Immature Bitter Orange Pill to Guide Out Stagnation",
+      "function": "Disperses food and guides out stagnation; clears heat and dispels dampness.",
+      "mainTreatment": "Damp-heat food accumulation. Epigastric and abdominal focal distention with distending pain, constipation, or dysenteric stool of pus and blood with tenesmus, dark scant urine, a yellow greasy tongue coating, and a sunken, replete pulse."
+    },
+    "320": {
+      "name": "Costus and Areca Pill",
+      "function": "Moves the qi and guides out stagnation; drives out accumulation and drains heat.",
+      "mainTreatment": "Dysentery and food accumulation. Dysenteric stool of red and white with tenesmus, or accumulated food lodged internally with epigastric and abdominal distention and fullness, constipation, a yellow greasy tongue coating, and a sunken, replete pulse."
+    },
+    "321": {
+      "name": "Immature Bitter Orange and Atractylodes Pill",
+      "function": "Fortifies the Spleen and reduces focal distention.",
+      "mainTreatment": "Spleen deficiency with qi stagnation and food congestion. Focal fullness of the chest and epigastrium, and no thought of food."
+    },
+    "322": {
+      "name": "Fortify the Spleen Pill",
+      "function": "Fortifies the Spleen and harmonizes the Stomach; disperses food and stops diarrhea.",
+      "mainTreatment": "Spleen-Stomach weakness with internal food stagnation. Epigastric and abdominal focal oppression, reduced appetite with difficult digestion, loose stool, a slightly yellow greasy tongue coating, and a deficient, weak pulse."
+    },
+    "323": {
+      "name": "Sudden Smile Pill",
+      "function": "Disperses focal distention and eliminates fullness; fortifies the Spleen and harmonizes the Stomach.",
+      "mainTreatment": "Spleen deficiency with qi stagnation and cold-heat mutual binding. Focal distention and fullness below the Heart, no desire to eat, fatigue and lack of strength, and irregular stools."
+    },
+    "324": {
+      "name": "Turtle Shell Decocted Pill (2)",
+      "function": "Disperses focal distention and transforms accumulation.",
+      "mainTreatment": "Long-unhealed malaria with a hard palpable lump below the rib-side, forming a malarial mother."
+    },
+    "325": {
+      "name": "Rhubarb and Ground Beetle Pill",
+      "function": "Dispels stasis and generates the new.",
+      "mainTreatment": "Extreme deficiency from the five taxations. Bodily emaciation, abdominal fullness with inability to eat, scaly dry skin, and darkening around both eyes."
+    },
+    "326": {
+      "name": "Mume Pill",
+      "function": "Warms the organs, quiets roundworm, and supplements deficiency.",
+      "mainTreatment": "Roundworm reversal. Intermittent abdominal pain, Heart vexation with vomiting, coming and going, with the patient often vomiting up roundworms; cold hands and feet. Also treats chronic dysentery and chronic diarrhea."
+    },
+    "327": {
+      "name": "Coptis and Mume Decoction to Quiet Roundworm",
+      "function": "Clears heat and quiets roundworm.",
+      "mainTreatment": "Liver-Stomach heat exuberance. Worm-accumulation abdominal pain, no desire to eat, vomiting of roundworms after eating, a red face and Heart vexation, in severe cases agitation and reversal counterflow, a parched mouth and red tongue, a rapid pulse, and body heat."
+    },
+    "328": {
+      "name": "Regulate the Middle and Quiet Roundworm Decoction",
+      "function": "Warms the middle and quiets roundworm.",
+      "mainTreatment": "Insufficiency of the middle yang with Spleen-Stomach deficiency-cold. Roundworms coming out through the mouth or in the stool, cold hands and feet, abdominal pain with borborygmus, loose stool and clear urine, a white tongue, and a deficient pulse."
+    },
+    "329": {
+      "name": "Fat Baby Pill",
+      "function": "Kills worms and disperses accumulation; fortifies the Spleen and clears heat.",
+      "mainTreatment": "Childhood nutritional impairment with accumulation. Indigestion, a yellow complexion and wasted body, a distended full abdomen, fever and foul breath, loose stool, and worm-accumulation abdominal pain."
+    },
+    "330": {
+      "name": "Cloth Bag Pill",
+      "function": "Tonifies and nourishes the Spleen and Stomach; disperses nutritional impairment and expels roundworm.",
+      "mainTreatment": "Childhood worm-related nutritional impairment. Body heat and a yellow complexion, thin limbs with a large abdomen, scorched hair, and dim eyes."
+    },
+    "331": {
+      "name": "Transform Worms Pill",
+      "function": "Expels and kills the various intestinal worms.",
+      "mainTreatment": "Worm accumulation. During an attack, abdominal pain moving up and down, extremely severe, vomiting of clear fluid, or vomiting of roundworms."
+    },
+    "332": {
+      "name": "Fell the Wood Pill",
+      "function": "Disperses accumulation, dries dampness, drains the Liver, and expels worms.",
+      "mainTreatment": "Puffy swelling of the face and eyes and a sallow yellow complexion from food accumulation with the Spleen failing to move dampness, along with palpitations, hurried breathing, fatigue, and lack of strength."
+    },
+    "333": {
+      "name": "Melon Pedicle Powder",
+      "function": "Induces vomiting of phlegm-drool and retained food.",
+      "mainTreatment": "Phlegm-drool and retained food congesting and lodging in the chest and epigastrium. Hard focal distention in the chest, agitation and unrest, a desire to vomit that will not come, qi surging up to the throat with inability to catch the breath, and a faintly floating pulse at the inch position."
+    },
+    "334": {
+      "name": "Three-Sage Powder",
+      "function": "Induces vomiting of wind-phlegm.",
+      "mainTreatment": "Wind-stroke blockage pattern with loss of voice, oppressive turmoil, deviation of the eyes and mouth, unconsciousness, a clenched jaw, and a floating, slippery, replete pulse; also useful for epilepsy with turbid phlegm congesting the chest and periodic upward counterflow, and for accidental ingestion of poison lodged in the upper epigastrium."
+    },
+    "335": {
+      "name": "Rescue the Acutely Ill Thin-Drool Powder",
+      "function": "Opens the barrier and induces vomiting.",
+      "mainTreatment": "Wind-stroke blockage pattern. Exuberant phlegm-drool with a gurgling phlegm rattle in the throat, blocked qi that will not flow, a benighted oppressed spirit, slack limbs, or collapse and unconsciousness, or a slight deviation of the mouth, and a slippery, replete, forceful pulse; also treats throat blockage."
+    },
+    "336": {
+      "name": "Salt-Water Vomiting Formula",
+      "function": "Induces vomiting of retained food.",
+      "mainTreatment": "Retained food. Food lodged in the Stomach with epigastric and abdominal distention and pain; or dry sudden turmoil with a wish to vomit that will not come and a wish to purge that will not come."
+    },
+    "337": {
+      "name": "Newly Augmented Yellow Dragon Decoction",
+      "function": "Drains heat to unblock the stool; enriches the yin and augments the qi.",
+      "mainTreatment": "Heat accumulation with interior excess and insufficiency of qi and yin. Constipation, spiritual fatigue with scant qi, a dry mouth and parched throat, cracked lips and a parched tongue, and a parched yellow or parched black cracked coating."
+    },
+    "338": {
+      "name": "Artemisia Yinchenhao Decoction",
+      "function": "Clears heat, disinhibits dampness, and abates jaundice.",
+      "mainTreatment": "Damp-heat jaundice. The whole body and the eyes uniformly yellow, the yellow color bright, sweating from the head only, scant dark urine, mild abdominal fullness, thirst, a yellow greasy tongue coating, and a sunken, rapid pulse."
+    },
+    "339": {
+      "name": "Gardenia and Phellodendron Decoction",
+      "function": "Clears heat and disinhibits dampness.",
+      "mainTreatment": "Cold-damage with body heat and jaundice."
+    },
+    "340": {
+      "name": "Artemisia Yinchenhao and Frigid Extremities Decoction",
+      "function": "Warms the interior and assists the yang; disinhibits dampness and abates jaundice.",
+      "mainTreatment": "Yin-type jaundice. A dull, dark yellow color, cold skin, aversion to cold on the back, cool hands and feet, generalized heaviness, spiritual fatigue with reduced appetite, and a tight, thin or sunken, thin, forceless pulse."
+    },
+    "341": {
+      "name": "Three-Kernel Decoction",
+      "function": "Frees and disinhibits the qi dynamic; clears and drains damp-heat.",
+      "mainTreatment": "Onset of damp-warmth and summerheat-warmth with dampness. Headache with aversion to cold, generalized heaviness and pain, a sallow yellow complexion, chest oppression without hunger, afternoon body heat, a white tongue coating without thirst, and a wiry, thin, soggy pulse."
+    },
+    "342": {
+      "name": "Agastache, Magnolia Bark, Pinellia, and Poria Decoction",
+      "function": "Releases the exterior and transforms dampness.",
+      "mainTreatment": "Onset of a damp-warmth disease. Body heat with aversion to cold, fatigue of the limbs and body, chest oppression and a greasy taste in the mouth, a thin white tongue coating, and a soggy, moderate pulse."
+    },
+    "343": {
+      "name": "Scutellaria and Talc Decoction",
+      "function": "Clears heat and disinhibits dampness.",
+      "mainTreatment": "Damp-warmth with the evil in the middle burner. Fever and body pain, sweating that resolves the heat only for the heat to return, thirst with little drinking or no thirst at all, a pale yellow slippery tongue coating, and a moderate pulse."
+    },
+    "344": {
+      "name": "Sweet Dew Special Pill to Eliminate Toxin",
+      "function": "Disinhibits dampness and transforms turbidity; clears heat and resolves toxicity.",
+      "mainTreatment": "Damp-warmth seasonal epidemic. Fever and fatigue, chest oppression and abdominal distention, aching limbs and swollen throat, yellowing of the body and eyes, swollen jaw and thirst, scant dark urine, diarrhea and turbid strangury, and a pale white or thick greasy or dry yellow tongue coating; also treats intolerance of a new climate or water."
+    },
+    "345": {
+      "name": "Coptis and Magnolia Bark Beverage",
+      "function": "Clears heat and transforms dampness; regulates the qi and harmonizes the middle.",
+      "mainTreatment": "Damp-heat sudden turmoil. Vomiting above and diarrhea below, focal oppression of the chest and epigastrium, Heart vexation and agitation, scant dark urine, a yellow greasy tongue coating, and a slippery pulse."
+    },
+    "346": {
+      "name": "Silkworm Droppings Decoction",
+      "function": "Clears heat and disinhibits dampness; upbears the clear and downbears the turbid.",
+      "mainTreatment": "Damp-heat sudden turmoil with vomiting, diarrhea, and cramping, thirst and vexing agitation, a thick, dry yellow tongue coating, and a soggy, rapid pulse."
+    },
+    "347": {
+      "name": "Eight-Herb Powder for Rectification",
+      "function": "Clears heat and drains fire; disinhibits water and unblocks strangury.",
+      "mainTreatment": "Damp-heat strangury. Frequent urgent urination, astringent painful urination, dribbling and inhibited urination, cloudy dark urine, in severe cases urinary blockage, gripping fullness of the lower abdomen, a parched mouth and dry throat, a yellow greasy tongue coating, and a slippery, rapid pulse."
+    },
+    "348": {
+      "name": "Five-Strangury Powder",
+      "function": "Clears heat and cools the blood; disinhibits water and unblocks strangury.",
+      "mainTreatment": "Damp-heat blood strangury with urine like bean juice, astringent painful urination, or urine like sand and stones, and gripping pain of the navel and abdomen."
+    },
+    "349": {
+      "name": "Two-Marvel Powder",
+      "function": "Clears heat, dries dampness, and stops itching.",
+      "mainTreatment": "Damp-heat pouring downward. Painful sinews and bones, weakness of the lower limbs, red swollen painful feet and knees, or damp-heat vaginal discharge, or damp sores of the lower body, scant dark urine, and a yellow greasy tongue coating."
+    },
+    "350": {
+      "name": "Three-Marvel Pill",
+      "function": "Clears heat and dries dampness.",
+      "mainTreatment": "Damp-heat pouring downward with numbness of both legs, or a burning heat as if scorched by fire."
+    },
+    "351": {
+      "name": "Four-Marvel Pill",
+      "function": "Clears heat and disinhibits dampness; relaxes the sinews and strengthens the bones.",
+      "mainTreatment": "Damp-heat wilting disorder."
+    },
+    "352": {
+      "name": "Tangkuei Decoction to Pull Out Pain",
+      "function": "Disinhibits dampness and clears heat; courses wind and relieves pain.",
+      "mainTreatment": "Damp-heat contending internally with wind evil received externally. Vexing pain of the joints throughout the body, or heaviness of the shoulders and back, or swollen painful leg qi with sores on the feet and knees, a white greasy, slightly yellow tongue coating, and a wiry, rapid pulse."
+    },
+    "353": {
+      "name": "Disband Painful Obstruction Decoction",
+      "function": "Clears heat and dispels dampness; unblocks the collaterals and relieves pain.",
+      "mainTreatment": "Damp-heat lodged in the channels and collaterals. Shivering chills with blazing heat, vexing joint pain, a sallow withered complexion, and a gray, dull tongue color."
+    },
+    "354": {
+      "name": "Five-Ingredient Powder with Poria",
+      "function": "Promotes urination and percolates dampness; warms the yang and transforms qi.",
+      "mainTreatment": "1. Water-amassment pattern. Inhibited urination, headache with mild fever, vexing thirst with a desire to drink, in severe cases vomiting as soon as water enters, a white tongue coating, and a floating pulse.\n2. Internal stopping of water-damp. Edema, diarrhea, inhibited urination, and sudden turmoil.\n3. Phlegm-rheum. Throbbing below the navel, spitting of foam with dizziness, or shortness of breath with cough."
+    },
+    "355": {
+      "name": "Artemisia Yinchenhao and Five-Ingredient Powder",
+      "function": "Disinhibits dampness and abates jaundice.",
+      "mainTreatment": "Damp-heat jaundice with more damp than heat, and inhibited urination."
+    },
+    "356": {
+      "name": "Four-Ingredient Powder with Poria",
+      "function": "Percolates dampness and disinhibits water.",
+      "mainTreatment": "Internal damage from food with dampness. Dark scant urine, and loose stool."
+    },
+    "357": {
+      "name": "Stomach and Poria Decoction",
+      "function": "Dispels dampness and harmonizes the Stomach; moves the qi and disinhibits water.",
+      "mainTreatment": "Injury to the Spleen and Stomach from cold in summer or autumn, failure to separate the clear from the turbid in water and grain, and unremitting diarrhea."
+    },
+    "358": {
+      "name": "Polyporus Decoction",
+      "function": "Disinhibits water, clears heat, and nourishes the yin.",
+      "mainTreatment": "Water and heat mutually binding. Inhibited urination, diarrhea, thirst with a desire to drink, Heart vexation and sleeplessness, cough, retching and nausea, a red tongue with a white or slightly yellow coating, and a thin, rapid pulse."
+    },
+    "359": {
+      "name": "Stephania and Astragalus Decoction",
+      "function": "Augments the qi and dispels wind; fortifies the Spleen and disinhibits water.",
+      "mainTreatment": "Wind-water or wind-damp. Sweating with aversion to wind, generalized heaviness, inhibited urination, a pale tongue with white coating, and a floating pulse."
+    },
+    "360": {
+      "name": "Stephania and Poria Decoction",
+      "function": "Augments the qi, unblocks the yang, and disinhibits water.",
+      "mainTreatment": "Skin-water. Swelling of the four limbs, water-qi in the skin, and slight twitching of the four limbs."
+    },
+    "361": {
+      "name": "Five-Peel Powder",
+      "function": "Disinhibits water and reduces swelling; regulates the qi and fortifies the Spleen.",
+      "mainTreatment": "Skin-water. Swelling of the whole body, heaviness of the limbs and body, distending fullness of the Heart and abdomen, rebellious qi with hurried wheezing, inhibited urination, a white greasy tongue coating, and a sunken, moderate pulse; also edema in pregnancy."
+    },
+    "362": {
+      "name": "Poria, Cinnamon Twig, Atractylodes, and Licorice Decoction",
+      "function": "Warms the yang and transforms thin mucus; fortifies the Spleen and disinhibits dampness.",
+      "mainTreatment": "Phlegm-rheum. Dizzy head and eyes, shortness of breath with cough, palpitations, distending fullness of the chest and rib-sides, a white slippery and somewhat thick tongue coating, and a sunken, wiry or sunken, slippery or sunken, tight pulse."
+    },
+    "363": {
+      "name": "True Warrior Decoction",
+      "function": "Warms the yang and disinhibits water.",
+      "mainTreatment": "1. Spleen-Kidney yang deficiency with internal stopping of water-qi. Inhibited urination, heavy painful limbs, abdominal pain and diarrhea, or puffy swelling of the limbs, a white uncoated tongue without thirst, and a sunken pulse.\n2. Greater yang disease with excessive sweating and yang deficiency with water flooding. Sweating that fails to resolve, persistent fever, throbbing below the Heart, dizzy head, and quivering of the body with a tendency to fall to the ground."
+    },
+    "364": {
+      "name": "Aconite Accessory Root Decoction",
+      "function": "Warms the channels and assists the yang; dispels cold and eliminates dampness.",
+      "mainTreatment": "Yang deficiency with cold-damp invading internally. Painful bones and joints of the body, aversion to cold and cold limbs, a white tongue coating, and a sunken, forceless pulse."
+    },
+    "365": {
+      "name": "Licorice, Dried Ginger, Poria, and Atractylodes Decoction",
+      "function": "Dispels cold and eliminates dampness.",
+      "mainTreatment": "Kidney-fixity disease. Generalized heaviness and cold pain below the waist, a heavy waist as if carrying five thousand cash, normal eating, no thirst, normal urination, a pale tongue with white coating, and a sunken, slow or sunken, moderate pulse."
+    },
+    "366": {
+      "name": "Bolster the Spleen Powder",
+      "function": "Warms the yang and fortifies the Spleen; moves the qi and disinhibits water.",
+      "mainTreatment": "Yin-type water from Spleen-Kidney yang deficiency with yang failing to transform water and internal stopping of water-qi. Yang-deficiency edema worse below the waist, cool hands and feet, no thirst, distention and fullness of the chest and abdomen, loose stool, a white greasy tongue coating, and a sunken, wiry, slow pulse."
+    },
+    "367": {
+      "name": "Dioscorea Hypoglauca Beverage to Separate the Clear",
+      "function": "Warms the lower origin; disinhibits dampness and transforms turbidity.",
+      "mainTreatment": "Deficiency-cold turbid discharge. Frequent urination, white urine like rice-water that congeals like paste, a pale tongue with white coating, and a sunken pulse."
+    },
+    "368": {
+      "name": "End Discharge Decoction",
+      "function": "Tonifies the Spleen and courses the Liver; transforms dampness and stops discharge.",
+      "mainTreatment": "Spleen deficiency with Liver constraint and turbid dampness causing discharge. White vaginal discharge, thin and watery like snivel, fatigue of the limbs and body, a pale tongue with white coating, and a moderate or soggy, weak pulse."
+    },
+    "369": {
+      "name": "Great Tonify the Origin Brew",
+      "function": "Rescues the root and banks up the origin; greatly tonifies the qi and blood.",
+      "mainTreatment": "Critical, severe patterns of great depletion of qi and blood with the spirit losing its guard."
+    },
+    "370": {
+      "name": "Stabilize the Yin Brew",
+      "function": "Tonifies the Kidneys and augments the qi; secures the penetrating vessel and regulates menstruation.",
+      "mainTreatment": "Kidney-qi deficiency with the penetrating and conception vessels unsecured."
+    },
+    "371": {
+      "name": "Kudzu Decoction",
+      "function": "Induces sweating and releases the exterior; releases the muscle layer.",
+      "mainTreatment": "Externally contracted wind-cold with the qi of the channels moving inhibited. Body heat and aversion to cold, absence of sweating and body pain, stiff painful neck, shoulders, and back, or diarrhea."
+    },
+    "372": {
+      "name": "Three-Golds Decoction to Expel Stones",
+      "function": "Expels and dissolves stones.",
+      "mainTreatment": "Calculi (urinary-tract stones, kidney stones, and the like)."
+    },
+    "373": {
+      "name": "Kelp and Seaweed Decoction to Expel Stones",
+      "function": "Expels and dissolves stones.",
+      "mainTreatment": "Calculi (urinary-tract stones, kidney stones, and the like)."
+    },
+    "374": {
+      "name": "Secure the Kidneys, Disinhibit Dampness, and Attack-Transform Decoction",
+      "function": "Expels and dissolves stones.",
+      "mainTreatment": "Calculi (urinary-tract stones, kidney stones, and the like)."
+    },
+    "375": {
+      "name": "Ginseng Toxin-Vanquishing Powder",
+      "function": "Augments the qi and releases the exterior; disperses wind and dispels dampness.",
+      "mainTreatment": "Insufficiency of the upright qi with externally contracted wind-cold-damp evils. Aversion to cold with vigorous fever, absence of sweating, stiff painful head and nape, aching sore limbs and body, nasal congestion and heavy muffled voice, cough with phlegm, and chest and diaphragm focal fullness."
+    },
+    "376": {
+      "name": "Fortify and Secure Decoction",
+      "function": "Warms the Kidneys and fortifies the Spleen."
+    },
+    "377": {
+      "name": "Warm the Uterus Beverage",
+      "function": "Warms the Kidneys and fortifies the Spleen."
+    },
+    "378": {
+      "name": "Eight-Substance Decoction",
+      "function": "Courses the Liver and resolves constraint."
+    },
+    "379": {
+      "name": "Clear the Liver and Stop Strangury Decoction",
+      "function": "Courses the Liver and drains fire."
+    },
+    "380": {
+      "name": "Open Constraint and Sow the Jade Decoction",
+      "function": "Courses the Liver and regulates the Spleen."
+    },
+    "381": {
+      "name": "Regulate the Liver Decoction",
+      "function": "Regulates the Liver and tonifies the Kidneys."
+    },
+    "382": {
+      "name": "Stabilize the Menses Decoction",
+      "function": "Regulates the Liver and tonifies the Kidneys."
+    },
+    "383": {
+      "name": "Enrich the Blood Decoction",
+      "function": "Nourishes the blood and softens the Liver."
+    },
+    "384": {
+      "name": "Nourish the Essence and Sow the Jade Decoction",
+      "function": "Nourishes the blood and softens the Liver."
+    },
+    "385": {
+      "name": "Three-Shell Decoction to Restore the Pulse",
+      "function": "Calms the Liver and subdues the yang."
+    },
+    "386": {
+      "name": "Tonify the Kidneys Rehmannia Pill",
+      "function": "Enriches the Kidneys and boosts the yin."
+    },
+    "387": {
+      "name": "Dahurian Angelica Decoction",
+      "mainTreatment": "Hemorrhoids."
+    },
+    "388": {
+      "name": "Cinnamon Twig, Peony, and Anemarrhena Decoction",
+      "function": "Dispels wind and eliminates dampness; warms the channels and disperses cold; enriches the yin and clears heat."
     }
   }
 }
