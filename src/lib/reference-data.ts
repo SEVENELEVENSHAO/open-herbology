@@ -158,9 +158,11 @@ function parseChannels(tasteAndNature: string | null): Channel[] {
 
 function toPinyin(value: string) {
   try {
-    return (pinyin(value, { toneType: "none", type: "string", nonZh: "consecutive" }) as string)
+    const raw = (pinyin(value, { toneType: "none", type: "string", nonZh: "consecutive" }) as string)
       .replace(/\s+/g, " ")
       .trim();
+    // Title-case each syllable: "gui zhi tang" -> "Gui Zhi Tang".
+    return raw.replace(/(^|\s)(\p{L})/gu, (_match, sep: string, ch: string) => sep + ch.toUpperCase());
   } catch {
     return "";
   }
