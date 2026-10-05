@@ -21,6 +21,7 @@ import { useEffect, useMemo, useState } from "react";
 import { getKeywordMapping } from "@/lib/reference-data";
 import { channelName, type Locale } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
+import { buildFinalExamStudyCards, type StudyPrompt } from "@/data/final-exam-study";
 import type { Formula, Herb, IngredientChip, ReferenceData } from "@/types/reference";
 
 // Which string leads and which follows in a name/pinyin pair. In the English
@@ -39,6 +40,8 @@ function displayNames(
 type Section = "home" | "herbs" | "compare" | "study";
 type Detail = { type: "formula"; item: Formula } | { type: "herb"; item: Herb };
 type ThermalFilter = "all" | "hot" | "warm" | "neutral" | "cool" | "cold";
+
+const MAX_COMPARE_FORMULAS = 5;
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -204,13 +207,15 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
     setCompareIds((current) =>
       current.includes(id)
         ? current.filter((item) => item !== id)
-        : current.length < 3 ? [...current, id] : [current[1], current[2], id]
+        : current.length < MAX_COMPARE_FORMULAS ? [...current, id] : [...current.slice(1), id]
     );
   }
 
   function addToCompare(id: string) {
     setCompareIds((current) =>
-      current.includes(id) ? current : current.length < 3 ? [...current, id] : [current[1], current[2], id]
+      current.includes(id)
+        ? current
+        : current.length < MAX_COMPARE_FORMULAS ? [...current, id] : [...current.slice(1), id]
     );
   }
 
@@ -309,7 +314,7 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
             />
           )}
           {section === "study" && (
-            <StudyView formulas={data.formulas} bookmarks={bookmarks} onOpen={openFormula} />
+            <StudyView formulas={data.formulas} onOpen={openFormula} />
           )}
         </div>
       </main>
@@ -559,12 +564,24 @@ function CompareView({ formulas, compareIds, onRemove, onBrowse }: {
   );
 }
 
-function StudyView({ formulas, bookmarks, onOpen }: { formulas: Formula[]; bookmarks: string[]; onOpen: (formula: Formula) => void }) {
-  const { t, locale } = useLocale();
-  const pool = bookmarks.length ? formulas.filter((formula) => bookmarks.includes(formula.id)) : formulas;
+type StudyFilter = "mixed" | StudyPrompt;
+
+function StudyView({ formulas, onOpen }: { formulas: Formula[]; onOpen: (formula: Formula) => void }) {
+  const { t } = useLocale();
+  const [filter, setFilter] = useState<StudyFilter>("mixed");
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
-  const formula = pool[index % Math.max(pool.length, 1)];
+  const allCards = useMemo(() => buildFinalExamStudyCards(formulas), [formulas]);
+  const pool = useMemo(
+    () => filter === "mixed" ? allCards : allCards.filter((card) => card.prompt === filter),
+    [allCards, filter],
+  );
+  const card = pool[index % Math.max(pool.length, 1)];
+
+  useEffect(() => {
+    setIndex(0);
+    setRevealed(false);
+  }, [filter]);
 
   function next(random = false) {
     if (!pool.length) return;
@@ -572,22 +589,79 @@ function StudyView({ formulas, bookmarks, onOpen }: { formulas: Formula[]; bookm
     setRevealed(false);
   }
 
+  const promptLabels: Record<StudyPrompt, string> = {
+    identify: t.study.identifyPrompt,
+    ingredients: t.study.ingredientsPrompt,
+    actions: t.study.actionsPrompt,
+  };
+
+  const filters: Array<[StudyFilter, string]> = [
+    ["mixed", t.study.mixed],
+    ["identify", t.study.identify],
+    ["ingredients", t.study.ingredients],
+    ["actions", t.study.actions],
+  ];
+
+  const pending = <span className="study-pending"><span>{t.study.pending}</span>{t.study.pendingDetail}</span>;
+
   return (
     <section>
       <PageHeading kicker={t.study.kicker} title={t.study.title} description={t.study.description(pool.length)} />
-      {formula && <div className="study-layout">
+      <div className="study-filter" role="group" aria-label={t.study.deckName}>
+        {filters.map(([value, label]) => (
+          <button key={value} className={filter === value ? "active" : ""} onClick={() => setFilter(value)} aria-pressed={filter === value}>{label}</button>
+        ))}
+      </div>
+      {card && <div className="study-layout">
         <div className={`study-card ${revealed ? "revealed" : ""}`}>
-          <div className="study-card-label">{t.study.cardLabel}</div>
-          <div className="study-clues">{formula.ingredients.slice(0, 6).map((item) => <span className={`ingredient-${item.thermalProperty}`} key={item.position}>{item.name}</span>)}</div>
-          {!revealed ? <button className="primary-button" onClick={() => setRevealed(true)}>{t.study.reveal}</button> : (
-            <div className="study-answer"><Check size={23} /><div><strong>{displayNames(formula, locale).primary}</strong><span>{displayNames(formula, locale).secondary}</span><small>{formula.mainTreatment ?? ""}</small></div></div>
+          <div className="study-card-label">{promptLabels[card.prompt]}</div>
+
+          {card.prompt === "identify" ? (
+            <>
+              <div className="study-herb-count">{card.entry.examHerbCount} 味</div>
+              {card.ingredients.length > 0 ? (
+                <div className="study-clues" lang="zh-CN">{card.ingredients.map((ingredient) => <span key={ingredient}>{ingredient}</span>)}</div>
+              ) : pending}
+            </>
+          ) : (
+            <div className="study-formula-prompt" lang="zh-CN">
+              <h2>{card.entry.nameZh}</h2>
+              <span>{card.entry.pinyin}</span>
+              <small>{card.entry.examHerbCount} 味</small>
+            </div>
           )}
+
+          {!revealed ? <button className="primary-button" onClick={() => setRevealed(true)}>{t.study.reveal}</button> : (
+            <div className="study-answer" aria-live="polite">
+              <Check size={23} />
+              {card.prompt === "identify" && (
+                <div lang="zh-CN"><strong>{card.entry.nameZh}</strong><span>{card.entry.pinyin}</span>{card.entry.catalogVariant && <small>{card.entry.catalogVariant}</small>}</div>
+              )}
+              {card.prompt === "ingredients" && (
+                <div className="study-answer-copy"><b>{t.study.composition}</b>{card.ingredients.length > 0 ? <p lang="zh-CN">{card.ingredients.join("、")}</p> : pending}</div>
+              )}
+              {card.prompt === "actions" && (
+                <div className="study-answer-grid" lang="zh-CN">
+                  <section><b>{t.study.actions}</b>{card.actions ? <ProseBlock value={card.actions} /> : pending}</section>
+                  <section><b>{t.study.indications}</b>{card.indications ? <ProseBlock value={card.indications} /> : pending}</section>
+                </div>
+              )}
+            </div>
+          )}
+          {card.entry.sourceNote && <p className="study-source-note" lang="zh-CN">{card.entry.sourceNote}</p>}
         </div>
         <div className="study-controls">
           <div><span>{t.study.deckProgress}</span><strong>{index + 1} / {pool.length}</strong></div><progress value={index + 1} max={pool.length} />
           <button onClick={() => next(false)}>{t.study.next} <ArrowRight size={16} /></button>
           <button onClick={() => next(true)}><Shuffle size={16} /> {t.study.shuffle}</button>
-          <button onClick={() => onOpen(formula)}><BookOpen size={16} /> {t.study.viewEntry}</button>
+          {card.formula && <button onClick={() => onOpen(card.formula!)}><BookOpen size={16} /> {t.study.viewEntry}</button>}
+          <div className="study-provenance">
+            <strong>{t.study.sourceLabel}</strong>
+            <span>Formulas for Final Exam.docx</span>
+            <span>formula runs 2026.docx</span>
+            <span>formula runs 2026 中文版.docx</span>
+            <small>{t.study.pending}</small>
+          </div>
         </div>
       </div>}
     </section>

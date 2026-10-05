@@ -69,7 +69,20 @@ export interface UIStrings {
     kicker: string;
     title: string;
     description: (count: number) => string;
-    cardLabel: string;
+    deckName: string;
+    mixed: string;
+    identify: string;
+    ingredients: string;
+    actions: string;
+    identifyPrompt: string;
+    ingredientsPrompt: string;
+    actionsPrompt: string;
+    formula: string;
+    composition: string;
+    indications: string;
+    pending: string;
+    pendingDetail: string;
+    sourceLabel: string;
     reveal: string;
     deckProgress: string;
     next: string;
@@ -152,7 +165,7 @@ const zh: UIStrings = {
   compare: {
     kicker: "并列比较",
     title: "方剂对照",
-    description: "最多选择三个方剂进行比较。",
+    description: "最多选择五个方剂进行比较。",
     emptyTitle: "选择至少两个方剂",
     browse: "浏览方剂",
     composition: "组成",
@@ -162,9 +175,22 @@ const zh: UIStrings = {
 
   study: {
     kicker: "研习模式",
-    title: "方剂研习",
-    description: (count) => `当前卡组含 ${count} 个方剂。`,
-    cardLabel: "辨认方剂",
+    title: "2026 期末方剂题库",
+    description: (count) => `中文优先 · ${count} 张卡 · 方名、组成、功效与主治。`,
+    deckName: "期末考试方剂",
+    mixed: "综合",
+    identify: "辨方",
+    ingredients: "组成",
+    actions: "功效主治",
+    identifyPrompt: "根据组成辨认方剂",
+    ingredientsPrompt: "回忆方剂组成",
+    actionsPrompt: "回忆功效与主治",
+    formula: "方名",
+    composition: "组成",
+    indications: "主治",
+    pending: "待复核",
+    pendingDetail: "所附课件未提供完整内容",
+    sourceLabel: "资料来源",
     reveal: "显示答案",
     deckProgress: "卡组进度",
     next: "下一张",
@@ -247,7 +273,7 @@ const en: UIStrings = {
   compare: {
     kicker: "Side by side",
     title: "Formula Comparison",
-    description: "Choose up to three formulas to compare.",
+    description: "Choose up to five formulas to compare.",
     emptyTitle: "Select at least two formulas",
     browse: "Browse formulas",
     composition: "Composition",
@@ -257,9 +283,22 @@ const en: UIStrings = {
 
   study: {
     kicker: "Study mode",
-    title: "Formula Study",
-    description: (count) => `This deck holds ${count} ${count === 1 ? "formula" : "formulas"}.`,
-    cardLabel: "Identify the formula",
+    title: "2026 Final Formula Deck",
+    description: (count) => `Chinese first · ${count} cards · names, ingredients, actions, and indications.`,
+    deckName: "Final exam formulas",
+    mixed: "Mixed",
+    identify: "Identify",
+    ingredients: "Ingredients",
+    actions: "Actions & indications",
+    identifyPrompt: "Identify the formula from its ingredients",
+    ingredientsPrompt: "Recall the ingredients",
+    actionsPrompt: "Recall the actions and indications",
+    formula: "Formula",
+    composition: "Composition",
+    indications: "Indications",
+    pending: "Pending review",
+    pendingDetail: "The supplied notes do not provide the complete field",
+    sourceLabel: "Sources",
     reveal: "Show answer",
     deckProgress: "Deck progress",
     next: "Next",
