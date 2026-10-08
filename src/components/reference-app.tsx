@@ -15,6 +15,7 @@ import {
   Menu,
   Search,
   Shuffle,
+  Star,
   X,
 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
@@ -23,6 +24,9 @@ import { channelName, type Locale } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
 import { buildFinalExamStudyCards, type StudyPrompt } from "@/data/final-exam-study";
 import type { Formula, Herb, IngredientChip, ReferenceData } from "@/types/reference";
+import { favoritesFirst } from "@/lib/user-data";
+import { useUserData } from "@/lib/use-user-data";
+import { PersonalNotes } from "@/components/personal-notes";
 
 // Which string leads and which follows in a name/pinyin pair. In the English
 // edition the romanized name reads as the primary label with the English
@@ -127,7 +131,9 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
   const [detail, setDetail] = useState<Detail | null>(null);
   const [mobileNav, setMobileNav] = useState(false);
   const [thermal, setThermal] = useState<ThermalFilter>("all");
-  const [bookmarks, setBookmarks] = useState<string[]>([]);
+  const userData = useUserData();
+  const bookmarks = useMemo(() => userData.data.favorites.filter((id) => id.startsWith("formula:")).map((id) => id.slice("formula:".length)), [userData.data.favorites]);
+  const [transferStatus, setTransferStatus] = useState<"imported" | "invalid" | null>(null);
   const [compareIds, setCompareIds] = useState<string[]>([]);
   const [brandIcon, setBrandIcon] = useState("🌿");
 
@@ -139,14 +145,6 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
   );
 
   useEffect(() => {
-    const saved = localStorage.getItem("fangyao-bookmarks");
-    if (saved) {
-      try {
-        setBookmarks(JSON.parse(saved) as string[]);
-      } catch {
-        // ignore malformed storage
-      }
-    }
     // In the Capacitor build the assets are already local; a service worker there
     // only risks pinning stale content across app updates.
     const inCapacitor = typeof window !== "undefined" && "Capacitor" in window;
@@ -196,11 +194,18 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
   ), [data.herbs, queryTerms, thermal]);
 
   function toggleBookmark(id: string) {
-    setBookmarks((current) => {
-      const next = current.includes(id) ? current.filter((item) => item !== id) : [...current, id];
-      localStorage.setItem("fangyao-bookmarks", JSON.stringify(next));
-      return next;
-    });
+    userData.toggleFavorite(`formula:${id}`);
+  }
+
+  function exportUserData() {
+    const url = URL.createObjectURL(new Blob([JSON.stringify(userData.data, null, 2)], { type: "application/json" }));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "open-herbology-user-data.json";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
   function toggleCompare(id: string) {
@@ -268,6 +273,26 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
             );
           })}
         </nav>
+        <div className="user-data-controls">
+          <strong>{locale === "zh" ? "用户数据" : "User data"}</strong>
+          <button disabled={!userData.ready} onClick={exportUserData}>{locale === "zh" ? "导出笔记与收藏" : "Export notes & stars"}</button>
+          <label className={!userData.ready ? "is-disabled" : ""}>
+            {locale === "zh" ? "导入用户数据" : "Import user data"}
+            <input type="file" accept=".json,application/json" disabled={!userData.ready} onChange={async (event) => {
+              const file = event.target.files?.[0];
+              event.target.value = "";
+              if (!file) return;
+              try {
+                const imported = JSON.parse(await file.text());
+                if (userData.importData(imported)) setTransferStatus("imported");
+              } catch {
+                setTransferStatus("invalid");
+              }
+            }} />
+          </label>
+          <small>{locale === "zh" ? "导入将合并收藏，同名条目的笔记将被替换。" : "Import merges stars and replaces notes for matching entries."}</small>
+          {transferStatus && <p role="status">{transferStatus === "imported" ? (locale === "zh" ? "用户数据已导入" : "User data imported") : (locale === "zh" ? "文件无效；数据未更改" : "Invalid file; data unchanged")}</p>}
+        </div>
       </aside>
 
       <main className="main">
@@ -290,11 +315,15 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
         </header>
 
         <div className="content">
+          {userData.error && <p className="user-data-error" role="alert">{locale === "zh" ? "无法读取或保存用户数据。请检查此设备的存储权限后重试；未覆盖原有数据。" : "Could not read or save user data. Check storage access on this device and retry. Existing data has been preserved."}</p>}
           {section === "home" && (
             <HomePage
               formulas={formulas}
               query={query}
               onOpenFormula={openFormula}
+              bookmarks={bookmarks}
+              onBookmark={toggleBookmark}
+              userDataReady={userData.ready}
             />
           )}
           {section === "herbs" && (
@@ -322,8 +351,8 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
       {detail && (
         <DetailDrawer
           detail={detail}
-          bookmarked={bookmarks.includes(detail.item.id)}
-          onBookmark={toggleBookmark}
+          bookmarked={userData.data.favorites.includes(`${detail.type}:${detail.item.id}`)}
+          onBookmark={(id) => userData.toggleFavorite(`${detail.type}:${id}`)}
           compareIds={compareIds}
           onAddCompare={addToCompare}
           onClose={() => setDetail(null)}
@@ -332,6 +361,10 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
           onOpenFormulaByName={openFormulaByName}
           herbById={herbById}
           formulaById={formulaById}
+          note={userData.data.notes[`${detail.type}:${detail.item.id}`] ?? ""}
+          onSaveNote={(note) => userData.saveNote(`${detail.type}:${detail.item.id}`, note)}
+          userDataReady={userData.ready}
+          storageError={userData.error}
         />
       )}
     </div>
@@ -368,10 +401,13 @@ function EmptyState({ label }: { label: string }) {
   return <div className="empty-state"><p>{label}</p></div>;
 }
 
-function HomePage({ formulas, query, onOpenFormula }: {
+function HomePage({ formulas, query, onOpenFormula, bookmarks, onBookmark, userDataReady }: {
   formulas: Formula[];
   query: string;
   onOpenFormula: (formula: Formula) => void;
+  bookmarks: string[];
+  onBookmark: (id: string) => void;
+  userDataReady: boolean;
 }) {
   const { t, locale } = useLocale();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -386,12 +422,15 @@ function HomePage({ formulas, query, onOpenFormula }: {
           {grouped.flatMap(({ category, subcategories }) =>
             subcategories.flatMap(({ subcategory, items }) =>
               items.map((formula) => (
-                <button className="navigator-formula-card" key={formula.id} onClick={() => onOpenFormula(formula)}>
+                <article className="formula-star-card" key={formula.id}>
+                <button className="navigator-formula-card" onClick={() => onOpenFormula(formula)}>
                   <span className="navigator-path">{category} / {subcategory}</span>
                   <strong>{displayNames(formula, locale).primary}</strong>
                   <span className="formula-pinyin">{displayNames(formula, locale).secondary}</span>
                   <ArrowRight size={16} />
                 </button>
+                <FormulaStar formula={formula} starred={bookmarks.includes(formula.id)} onToggle={onBookmark} ready={userDataReady} />
+                </article>
               ))
             )
           )}
@@ -431,6 +470,16 @@ function HomePage({ formulas, query, onOpenFormula }: {
                 </div>
                 {openGroup && (
                   <div className={`category-expansion-panel category-tone-${openIndex % 5}`}>
+                    {openGroup.subcategories.some(({ items }) => items.some((formula) => bookmarks.includes(formula.id))) && (
+                      <div className="category-favorites">
+                        <h3><Star size={17} fill="currentColor" />{locale === "zh" ? "收藏方剂" : "Starred formulas"}</h3>
+                        <div className="strip-formula-grid">
+                          {openGroup.subcategories.flatMap(({ items }) => items).filter((formula) => bookmarks.includes(formula.id)).map((formula) => (
+                            <CategoryFormulaCard key={formula.id} formula={formula} starred onOpen={onOpenFormula} onToggle={onBookmark} ready={userDataReady} />
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     <div className="subcategory-strip-list">
                       {openGroup.subcategories.map(({ subcategory, items }) => {
                         const subcategoryOpen = selectedSubcategory === subcategory;
@@ -442,11 +491,8 @@ function HomePage({ formulas, query, onOpenFormula }: {
                             </button>
                             {subcategoryOpen && (
                               <div className="strip-formula-grid">
-                                {items.map((formula) => (
-                                  <button className="strip-formula-card" key={formula.id} onClick={() => onOpenFormula(formula)}>
-                                    <strong>{displayNames(formula, locale).primary}</strong>
-                                    <span className="formula-pinyin">{displayNames(formula, locale).secondary}</span>
-                                  </button>
+                                {favoritesFirst(items, bookmarks).map((formula) => (
+                                  <CategoryFormulaCard key={formula.id} formula={formula} starred={bookmarks.includes(formula.id)} onOpen={onOpenFormula} onToggle={onBookmark} ready={userDataReady} />
                                 ))}
                               </div>
                             )}
@@ -462,6 +508,30 @@ function HomePage({ formulas, query, onOpenFormula }: {
       </div>
     </section>
   );
+}
+
+function FormulaStar({ formula, starred, onToggle, ready }: {
+  formula: Formula; starred: boolean; onToggle: (id: string) => void; ready: boolean;
+}) {
+  const { locale } = useLocale();
+  const label = locale === "zh" ? `${starred ? "取消收藏" : "收藏"}${formula.nameZh}` : `${starred ? "Unstar" : "Star"} ${displayNames(formula, locale).primary}`;
+  return <button className={`formula-star ${starred ? "is-starred" : ""}`} disabled={!ready}
+    aria-label={label} title={label} aria-pressed={starred} onClick={() => onToggle(formula.id)}>
+    <Star size={19} fill={starred ? "currentColor" : "none"} />
+  </button>;
+}
+
+function CategoryFormulaCard({ formula, starred, onOpen, onToggle, ready }: {
+  formula: Formula; starred: boolean; onOpen: (formula: Formula) => void; onToggle: (id: string) => void; ready: boolean;
+}) {
+  const { locale } = useLocale();
+  return <article className="formula-star-card">
+    <button className="strip-formula-card" onClick={() => onOpen(formula)}>
+      <strong>{displayNames(formula, locale).primary}</strong>
+      <span className="formula-pinyin">{displayNames(formula, locale).secondary}</span>
+    </button>
+    <FormulaStar formula={formula} starred={starred} onToggle={onToggle} ready={ready} />
+  </article>;
 }
 
 function HerbCard({ herb, onOpen }: { herb: Herb; onOpen: (herb: Herb) => void }) {
@@ -668,21 +738,23 @@ function StudyView({ formulas, onOpen }: { formulas: Formula[]; onOpen: (formula
   );
 }
 
-function DetailDrawer({ detail, bookmarked, compareIds, onBookmark, onAddCompare, onClose, onOpenFormula, onOpenHerb, onOpenFormulaByName, herbById, formulaById }: {
+function DetailDrawer({ detail, bookmarked, compareIds, onBookmark, onAddCompare, onClose, onOpenFormula, onOpenHerb, onOpenFormulaByName, herbById, formulaById, note, onSaveNote, userDataReady, storageError }: {
   detail: Detail; bookmarked: boolean; compareIds: string[];
   onBookmark: (id: string) => void; onAddCompare: (id: string) => void; onClose: () => void;
   onOpenFormula: (formula: Formula) => void; onOpenHerb: (herb: Herb) => void;
   onOpenFormulaByName: (name: string) => void;
   herbById: Map<string, Herb>; formulaById: Map<string, Formula>;
+  note: string; onSaveNote: (note: string) => boolean; userDataReady: boolean; storageError: boolean;
 }) {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   return (
     <div className="drawer-backdrop" onMouseDown={onClose}>
       <aside className="detail-drawer" onMouseDown={(event) => event.stopPropagation()}>
         <div className="drawer-toolbar">
           <button onClick={onClose}><ArrowLeft size={18} /> {t.drawer.back}</button>
           <span>{detail.type === "formula" ? t.drawer.formulaEntry : t.drawer.herbEntry}</span>
-          <button onClick={() => onBookmark(detail.item.id)}><Bookmark size={18} fill={bookmarked ? "currentColor" : "none"} /></button>
+          {detail.type === "formula" ? <FormulaStar formula={detail.item} starred={bookmarked} onToggle={onBookmark} ready={userDataReady} /> :
+            <button disabled={!userDataReady} aria-label={locale === "zh" ? "收藏中药" : "Bookmark herb"} aria-pressed={bookmarked} onClick={() => onBookmark(detail.item.id)}><Bookmark size={18} fill={bookmarked ? "currentColor" : "none"} /></button>}
         </div>
         {detail.type === "formula" ? (
           <FormulaDetail
@@ -700,6 +772,10 @@ function DetailDrawer({ detail, bookmarked, compareIds, onBookmark, onAddCompare
             formulaById={formulaById}
           />
         )}
+        <div className="detail-content personal-notes-container">
+          <PersonalNotes key={`${detail.type}:${detail.item.id}:${userDataReady}`} note={note} onSave={onSaveNote} ready={userDataReady} />
+          {storageError && <p className="user-data-error" role="alert">{locale === "zh" ? "无法保存用户数据；请重试。" : "Could not save user data. Please retry."}</p>}
+        </div>
       </aside>
     </div>
   );

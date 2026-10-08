@@ -1,5 +1,31 @@
 @import "tailwindcss";
 
+.formula-star-card { position: relative; min-width: 0; }
+.formula-star-card > .strip-formula-card,.formula-star-card > .navigator-formula-card { width: 100%; height: 100%; padding-right: 54px; }
+.formula-star { display: grid; place-items: center; min-width: 44px; min-height: 44px; border: 0; border-radius: 8px; background: transparent; color: var(--fg); cursor: pointer; }
+.formula-star-card > .formula-star { position: absolute; right: 5px; top: 5px; }
+.formula-star.is-starred { color: #f3bd4d; }
+.formula-star:hover { background: #e9bb4530; }
+.formula-star:focus-visible,.user-data-controls input:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.formula-star:disabled { opacity: .5; cursor: default; }
+.category-favorites { padding: 14px; border-bottom: 1px solid var(--line); }
+.category-favorites h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; font-size: 16px; }
+.personal-notes-container { padding-top: 0!important; }
+.personal-notes label { display: block; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+.personal-notes > p { margin-bottom: 12px; font-size: 14px; }
+.personal-notes textarea { display: block; width: 100%; min-height: 150px; resize: vertical; padding: 12px; border: 1px solid rgba(255,255,255,.3); border-radius: 8px; background: var(--surface-2); color: var(--fg); font: inherit; font-size: 16px; line-height: 1.6; }
+.personal-notes textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.personal-notes-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 12px; font-size: 14px; }
+.personal-notes-actions button:disabled { opacity: .5; cursor: default; }
+.user-data-controls { display: grid; gap: 10px; padding: 20px 18px; margin-top: auto; font-size: 14px; }
+.user-data-controls button,.user-data-controls label { display: block; padding: 9px; border: 1px solid currentColor; border-radius: 8px; background: transparent; color: inherit; cursor: pointer; text-align: center; }
+.user-data-controls input { display: block; max-width: 100%; margin-top: 8px; font-size: 12px; }
+.user-data-controls small { font-size: 12px; line-height: 1.5; }
+.user-data-controls button:disabled,.user-data-controls .is-disabled { opacity: .5; cursor: default; }
+.user-data-error { padding: 12px; border: 1px solid #ff9090; border-radius: 8px; color: #ffbaba; font-size: 14px; }
+.sidebar { overflow-y: auto; }
+.drawer-toolbar .formula-star.is-starred { color: #f3bd4d; }
+
 :root {
   --ink: #20211f; --muted: #66675f; --paper: #fffaf0; --page: #f8f0df;
   --line: #2b2b29; --green: #43825f; --green-dark: #285b42; --gold: #f3bd4d;

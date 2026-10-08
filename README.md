@@ -20,6 +20,25 @@ app. Built with the same visual design and UI system as `herbz-app`.
   is translated in batches — see `docs/EN_TRANSLATION.md`
 - PWA manifest and offline application shell
 
+## Personal notes and stars
+
+Each formula and herb has a **My notes** editor at the bottom of its entry.
+Use **Save notes** to persist changes; saving an empty note removes it.
+Formula cards and the formula drawer have a star button. Starred formulas
+appear first within each subcategory and in a **Starred formulas** section
+at the top of the category. Existing bookmarks are preserved.
+
+Notes and stars are stored separately from reference content as versioned
+user data (`fangyao-user-data`), using stable formula/herb IDs. They survive
+reloads, language changes, and app updates on the same browser or installed
+app. Clearing browser/app data or uninstalling the app removes local data.
+There is no automatic account or cross-device synchronization.
+
+Use **Export notes & stars** in the sidebar to download a JSON backup.
+**Import user data** transfers that backup to another device. Import merges
+stars, preserves unrelated notes, and replaces notes for matching entries.
+Invalid files are rejected without changing existing data.
+
 ## Data pipeline
 
 The two source `.db` files (`MedicineCh.db`, `FormulaCh.db`) were SQLCipher
