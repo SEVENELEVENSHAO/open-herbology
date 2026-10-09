@@ -39,6 +39,28 @@ Use **Export notes & stars** in the sidebar to download a JSON backup.
 stars, preserves unrelated notes, and replaces notes for matching entries.
 Invalid files are rejected without changing existing data.
 
+## Formula comparison and core structure
+
+The comparison screen supports one to four formulas. Add formulas directly
+with its search picker or from an entry's **Compare / analyze** button.
+At four selections, adding another is disabled rather than replacing a formula.
+
+The ingredient matrix uses a consistent color for each formula and shows doses,
+processing, shared ingredients (two or more formulas), and unique ingredients.
+Single-formula selection shows the full composition and core-formula analysis.
+
+Core compositions come from 13 existing library entries, including 四物汤,
+四君子汤, 桂枝汤 and 四逆散. The analysis shows complete ingredient coverage,
+partial overlap, missing ingredients, and extra ingredients. Coverage checks
+ingredient identity, not dose ratios or clinical equivalence. Processing changes
+and unspecified classical names are flagged. In particular, 芍药 is grouped with
+白芍 for visual comparison but marked for review; 赤芍 remains separate. 生地 and
+熟地, 生姜 and 干姜, 枳实 and 枳壳, and 人参 and 党参 are not interchangeable.
+地黄 only matches 熟地黄 when the composition explicitly specifies steaming.
+
+Run `npm run test:formula-analysis` to verify selection limits and ingredient
+matching, and `npm run test:user-data` to verify notes/bookmark persistence.
+
 ## Data pipeline
 
 The two source `.db` files (`MedicineCh.db`, `FormulaCh.db`) were SQLCipher

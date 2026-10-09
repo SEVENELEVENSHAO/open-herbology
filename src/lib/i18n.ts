@@ -165,8 +165,8 @@ const zh: UIStrings = {
   compare: {
     kicker: "并列比较",
     title: "方剂对照",
-    description: "最多选择五个方剂进行比较。",
-    emptyTitle: "选择至少两个方剂",
+    description: "可分析单方，也可同时对照最多四个方剂。",
+    emptyTitle: "选择一个至四个方剂",
     browse: "浏览方剂",
     composition: "组成",
     actions: "功效",
@@ -273,8 +273,8 @@ const en: UIStrings = {
   compare: {
     kicker: "Side by side",
     title: "Formula Comparison",
-    description: "Choose up to five formulas to compare.",
-    emptyTitle: "Select at least two formulas",
+    description: "Analyze one formula or compare up to four.",
+    emptyTitle: "Select one to four formulas",
     browse: "Browse formulas",
     composition: "Composition",
     actions: "Actions",

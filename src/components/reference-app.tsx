@@ -27,6 +27,8 @@ import type { Formula, Herb, IngredientChip, ReferenceData } from "@/types/refer
 import { favoritesFirst } from "@/lib/user-data";
 import { useUserData } from "@/lib/use-user-data";
 import { PersonalNotes } from "@/components/personal-notes";
+import { FormulaComparison } from "@/components/formula-comparison";
+import { addComparisonId, MAX_COMPARE_FORMULAS } from "@/lib/formula-analysis";
 
 // Which string leads and which follows in a name/pinyin pair. In the English
 // edition the romanized name reads as the primary label with the English
@@ -44,8 +46,6 @@ function displayNames(
 type Section = "home" | "herbs" | "compare" | "study";
 type Detail = { type: "formula"; item: Formula } | { type: "herb"; item: Herb };
 type ThermalFilter = "all" | "hot" | "warm" | "neutral" | "cool" | "cold";
-
-const MAX_COMPARE_FORMULAS = 5;
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -212,16 +212,12 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
     setCompareIds((current) =>
       current.includes(id)
         ? current.filter((item) => item !== id)
-        : current.length < MAX_COMPARE_FORMULAS ? [...current, id] : [...current.slice(1), id]
+        : addComparisonId(current, id)
     );
   }
 
   function addToCompare(id: string) {
-    setCompareIds((current) =>
-      current.includes(id)
-        ? current
-        : current.length < MAX_COMPARE_FORMULAS ? [...current, id] : [...current.slice(1), id]
-    );
+    setCompareIds((current) => addComparisonId(current, id));
   }
 
   function navigate(next: Section) {
@@ -268,7 +264,7 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
             return (
               <button key={key} className={section === key ? "active" : ""} onClick={() => navigate(key)}>
                 <Icon size={19} />
-                <span>{label}</span>
+                <span>{label}{key === "compare" && compareIds.length > 0 && <small>{compareIds.length} / {MAX_COMPARE_FORMULAS}</small>}</span>
               </button>
             );
           })}
@@ -335,11 +331,12 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
             />
           )}
           {section === "compare" && (
-            <CompareView
+            <FormulaComparison
               formulas={data.formulas}
               compareIds={compareIds}
               onRemove={toggleCompare}
-              onBrowse={() => navigate("home")}
+              onAdd={addToCompare}
+              onOpen={openFormula}
             />
           )}
           {section === "study" && (
@@ -354,7 +351,7 @@ export function ReferenceApp({ data }: { data: ReferenceData }) {
           bookmarked={userData.data.favorites.includes(`${detail.type}:${detail.item.id}`)}
           onBookmark={(id) => userData.toggleFavorite(`${detail.type}:${id}`)}
           compareIds={compareIds}
-          onAddCompare={addToCompare}
+          onAddCompare={(id) => { addToCompare(id); navigate("compare"); setDetail(null); }}
           onClose={() => setDetail(null)}
           onOpenFormula={openFormula}
           onOpenHerb={openHerb}
@@ -604,36 +601,6 @@ function HerbLibrary({ herbs, thermal, setThermal, onOpen }: {
   );
 }
 
-function CompareView({ formulas, compareIds, onRemove, onBrowse }: {
-  formulas: Formula[]; compareIds: string[]; onRemove: (id: string) => void; onBrowse: () => void;
-}) {
-  const { t, locale } = useLocale();
-  const selected = compareIds.map((id) => formulas.find((formula) => formula.id === id)).filter(Boolean) as Formula[];
-  return (
-    <section>
-      <PageHeading kicker={t.compare.kicker} title={t.compare.title} description={t.compare.description} />
-      {selected.length < 2 ? (
-        <div className="empty-panel"><Columns2 size={34} /><h3>{t.compare.emptyTitle}</h3><button className="primary-button" onClick={onBrowse}>{t.compare.browse}</button></div>
-      ) : (
-        <div className="comparison-grid" style={{ gridTemplateColumns: `repeat(${selected.length}, minmax(0, 1fr))` }}>
-          {selected.map((formula) => (
-            <article className="comparison-card" key={formula.id}>
-              <button className="comparison-remove" onClick={() => onRemove(formula.id)}><X size={16} /></button>
-              <h2>{displayNames(formula, locale).primary}</h2><span className="formula-pinyin">{displayNames(formula, locale).secondary}</span>
-              <section className="compare-section">
-                <h4>{t.compare.composition}</h4>
-                <div className="compare-ingredients">{formula.ingredients.map((item) => <span className={`ingredient-${item.thermalProperty}`} key={item.position}>{item.name}<small>{item.dose ?? ""}</small></span>)}</div>
-              </section>
-              <section className="compare-section"><h4>{t.compare.actions}</h4><p>{formula.function ?? t.dash}</p></section>
-              <section className="compare-section"><h4>{t.compare.indications}</h4><p>{formula.mainTreatment ?? t.dash}</p></section>
-            </article>
-          ))}
-        </div>
-      )}
-    </section>
-  );
-}
-
 type StudyFilter = "mixed" | StudyPrompt;
 
 function StudyView({ formulas, onOpen }: { formulas: Formula[]; onOpen: (formula: Formula) => void }) {
@@ -760,6 +727,7 @@ function DetailDrawer({ detail, bookmarked, compareIds, onBookmark, onAddCompare
           <FormulaDetail
             formula={detail.item}
             isCompared={compareIds.includes(detail.item.id)}
+            compareFull={compareIds.length >= MAX_COMPARE_FORMULAS}
             onAddCompare={onAddCompare}
             onOpenHerb={onOpenHerb}
             herbById={herbById}
@@ -834,8 +802,8 @@ function IngredientTile({ ingredient, onOpenHerb, herbById }: { ingredient: Ingr
   return <article className={tileClass}>{content}</article>;
 }
 
-function FormulaDetail({ formula, isCompared, onAddCompare, onOpenHerb, herbById }: {
-  formula: Formula; isCompared: boolean; onAddCompare: (id: string) => void;
+function FormulaDetail({ formula, isCompared, compareFull, onAddCompare, onOpenHerb, herbById }: {
+  formula: Formula; isCompared: boolean; compareFull: boolean; onAddCompare: (id: string) => void;
   onOpenHerb: (herb: Herb) => void; herbById: Map<string, Herb>;
 }) {
   const { t, locale } = useLocale();
@@ -843,9 +811,9 @@ function FormulaDetail({ formula, isCompared, onAddCompare, onOpenHerb, herbById
   const fname = displayNames(formula, locale);
   return (
     <div className="detail-content">
-      <button className={`formula-detail-compare-button ${isCompared ? "is-selected" : ""}`} onClick={() => onAddCompare(formula.id)}>
+      <button className={`formula-detail-compare-button ${isCompared ? "is-selected" : ""}`} disabled={compareFull && !isCompared} onClick={() => onAddCompare(formula.id)}>
         <Columns2 size={16} />
-        <span>{isCompared ? t.drawer.added : t.drawer.addCompare}</span>
+        <span>{isCompared ? (locale === "zh" ? "查看对照分析" : "View comparison") : compareFull ? (locale === "zh" ? "对照已满（4 / 4）" : "Comparison full (4 / 4)") : (locale === "zh" ? "加入对照／分析" : "Compare / analyze")}</span>
       </button>
       <div className="detail-title formula-detail-title">
         <div>
