@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test:user-data": "node --experimental-strip-types --test scripts/test-user-data.mjs",
+    "test:formula-analysis": "node --experimental-strip-types --test scripts/test-formula-analysis.mjs",
     "extract:apk-data": "python scripts/extract_apk_data.py",
     "i18n:progress": "node scripts/i18n_progress.mjs",
     "cap:sync": "next build && cap sync android",
